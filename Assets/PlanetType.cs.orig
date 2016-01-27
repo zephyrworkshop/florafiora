@@ -1,0 +1,68 @@
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class PlanetType {
+	public string assetLoc;
+
+	public GameObject prefab;
+
+<<<<<<< HEAD
+	public bool growsFlower = false;
+
+	public bool hasDemands = true;
+
+	public bool isVictory = false;
+
+	public string produces;
+
+=======
+	public bool growsFlower;
+
+	public string produces;
+
+	public List <string> demands;
+
+>>>>>>> 6e3120a32e85bfecd8b1f39b8126c08c8b6614f1
+	public PlanetType (string location) {
+		if (location == "victory") {
+			assetLoc = "";
+			hasDemands = false;
+
+			isVictory = true;
+		} else if (location == "flower") {
+			prefab = Resources.Load <GameObject> ("Planets/flowering");
+
+			growsFlower = true;
+			assetLoc = "";
+			hasDemands = false;
+		} else {
+			assetLoc = location;
+
+			produces = location;
+
+			//prefab = Resources.Load <GameObject> ("Planets/" + location + "Planet");
+			prefab = Resources.Load <GameObject> ("Planets/generic");
+		}
+	}
+
+	public GameObject GetInstance () {
+		var inst = GameObject.Instantiate (prefab) as GameObject;
+
+		if (assetLoc != "") {
+			inst.transform.FindChild ("planet").GetComponent <SpriteRenderer> ().sprite 
+				= Resources.Load <Sprite> ("PlanetImages/" + assetLoc + "Planet");
+
+			inst.GetComponent <PlanetComponent> ().seedizenPrefab 
+				= Resources.Load <GameObject> ("Prefabs/" + assetLoc + "Seedizen");
+		}
+
+		inst.GetComponent <PlanetComponent> ().planetType = this;
+
+		return inst;
+	}
+
+	public GameObject GetInstance () {
+		return GameObject.Instantiate (prefab) as GameObject;
+	}
+}
