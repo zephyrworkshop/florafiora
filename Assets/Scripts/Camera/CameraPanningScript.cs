@@ -31,9 +31,13 @@ public class CameraPanningScript : MonoBehaviour {
 	
 	public float zoomVelocity = 0f;
 	public float zoomDrag = 20f;
-	public float zoomLowLimit=5f;
-	private float zoomHighLimit=25f;
-	private float zoomAcceleration=100f;
+
+	private float zoomLowLimit=5f;
+	private float zoomHighLimit=10f;
+    private float currentZoom = 2;
+
+
+    private float zoomAcceleration=100f;
 	private float pinchDistance=0f;
 	private int prevTouchCount=0;
 
@@ -98,9 +102,6 @@ public class CameraPanningScript : MonoBehaviour {
 		return (position.x > highBoundaries.x || position.x < lowBoundaries.x || position.y > highBoundaries.y || position.y < lowBoundaries.y);
 	}
 
-	bool IsCameraZoomOutOfBounds(){
-		return (Camera.main.orthographicSize < zoomLowLimit || Camera.main.orthographicSize > zoomHighLimit);
-	}
 
 	void UpdatePan(){
 		if (!enablePan) {
@@ -156,27 +157,32 @@ public class CameraPanningScript : MonoBehaviour {
 		}*/
 	}
 
-	void UpdateZoom(){
-		if (!enableZoom) {
-			return;
-		}
+    void UpdateZoom() {
+        if (!enableZoom) {
+            return;
+        }
 
-		if (IsCameraZoomOutOfBounds()) {
-			if(Camera.main.orthographicSize>zoomHighLimit){
-				zoomVelocity-=(Camera.main.orthographicSize-zoomHighLimit)*Time.deltaTime*zoomAcceleration;
-			}
-			if(Camera.main.orthographicSize<zoomLowLimit){
-				zoomVelocity-=(Camera.main.orthographicSize-zoomLowLimit)*Time.deltaTime*zoomAcceleration;
-			}
+        if (currentZoom == 1)
+        {
+            zoomLowLimit = 5;
+            zoomHighLimit = 15;
+        }
+        else if (currentZoom == 2)
+        {
+            zoomLowLimit = 20;
+            zoomHighLimit = 20;
+        }
+        else if (currentZoom == 3)
+        {
+            zoomLowLimit = 25;
+            zoomHighLimit = 40;
+        }
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, zoomLowLimit, zoomHighLimit);
+        
 
 
-			Camera.main.orthographicSize += Time.deltaTime * zoomVelocity;
-			zoomVelocity = Mathf.Pow (1 / (zoomDrag + 1), Time.deltaTime) * zoomVelocity;
-			return;
-		}
-
-		//keyboard
-		if(Input.GetKey (KeyCode.Plus)||Input.GetKey (KeyCode.KeypadPlus)||Input.GetKey (KeyCode.Equals)){
+        //keyboard
+        if (Input.GetKey (KeyCode.Plus)||Input.GetKey (KeyCode.KeypadPlus)||Input.GetKey (KeyCode.Equals)){
 
 			zoomVelocity-=.1f*Camera.main.orthographicSize;
 		}
@@ -185,11 +191,8 @@ public class CameraPanningScript : MonoBehaviour {
 		}
 
 
-
-
-
-		//mouse
-		zoomVelocity += -50*Input.GetAxisRaw ("Mouse ScrollWheel");
+        //mouse
+        zoomVelocity += -50*Input.GetAxisRaw ("Mouse ScrollWheel");
 
 		//Google style zooming
 		Vector3 desiredPos = ClickToDrag.GetCursorWorldLocation ();
@@ -216,5 +219,26 @@ public class CameraPanningScript : MonoBehaviour {
 
 		Camera.main.orthographicSize += Time.deltaTime * zoomVelocity;
 		zoomVelocity = Mathf.Pow (1 / (zoomDrag + 1), Time.deltaTime) * zoomVelocity;
-	}
+
+        if (Camera.main.orthographicSize >= zoomHighLimit && currentZoom != 3 && currentZoom != 2 && zoomVelocity > 5)
+        {
+            currentZoom += 1;
+            Camera.main.orthographicSize = zoomHighLimit + zoomLowLimit / 2;
+        }
+        else if (Camera.main.orthographicSize <= zoomLowLimit && currentZoom != 1 && currentZoom != 2 && zoomVelocity < -5 )
+        {
+            currentZoom -= 1;
+            Camera.main.orthographicSize = zoomHighLimit + zoomLowLimit / 2;
+        }
+        else if (Camera.main.orthographicSize >= zoomHighLimit && currentZoom == 2 && zoomVelocity > 10)
+        {
+            currentZoom += 1;
+            Camera.main.orthographicSize = zoomHighLimit + zoomLowLimit / 2;
+        }
+        else if (Camera.main.orthographicSize <= zoomLowLimit && currentZoom == 2 && zoomVelocity < -10)
+        {
+            currentZoom -= 1;
+            Camera.main.orthographicSize = zoomHighLimit + zoomLowLimit / 2;
+        }
+    }
 }
