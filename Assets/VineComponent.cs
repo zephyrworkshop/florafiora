@@ -49,7 +49,14 @@ public class VineComponent : MonoBehaviour {
 		//freeze seedizens in place on the vine
 		//as we drag the vine find the vector between current and previous position
 		//add a falloff for the force on seedizens as a function of distance from the click location
-		VineDragComponent.StartVineDrag (this);
+        if (VineDragComponent.vineCut == false)
+        {
+            VineDragComponent.StartVineDrag(this);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
 	}
 
 	void OnCollisionEnter2D (Collision2D col) {

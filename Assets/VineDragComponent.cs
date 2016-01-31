@@ -21,7 +21,7 @@ public class VineDragComponent : MonoBehaviour {
 	private static Vector3 clickStopPosition;
 	private static float clickStartPercentage;
 
-    private static bool vineCut = false;
+    public static bool vineCut = false;
 
 	//private static GameObject debugSphere1;
 	//private static GameObject debugSphere2;
@@ -35,8 +35,6 @@ public class VineDragComponent : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (vineCut == false)
-        {
             if (vine != null)
             {
                 line1.transform.position = gameObject.transform.position;
@@ -113,13 +111,11 @@ public class VineDragComponent : MonoBehaviour {
 
                 UpdateFlingArrow();
             }
-        }
+        
 	}
 
     public static void StartVineDrag(VineComponent vc)
     {
-        if (vineCut == false)
-        {
             CameraPanningScript.Disable();
             vine = vc;
 
@@ -158,13 +154,11 @@ public class VineDragComponent : MonoBehaviour {
             vc.gameObject.GetComponent<Collider2D>().enabled = false;
 
             MakeFlingArrow();
-        }
+        
     }
 
     void OnDragRelease(Vector3 dir)
     {
-        if (vineCut == false)
-        {
             releasePositions.Clear();
             clickStopPosition = ClickToDrag.GetCursorWorldLocation();
             List<SeedizenComponent> seedizensCopy = new List<SeedizenComponent>(vine.seedizens);
@@ -192,25 +186,23 @@ public class VineDragComponent : MonoBehaviour {
             dragging = false;
 
             DestroyFlingArrow();
-        }
+        
     }
 
 	static GameObject flingArrow;
 
     static void MakeFlingArrow()
     {
-        if (vineCut == false)
-        {
+
             flingArrow = GameObject.Instantiate(Resources.Load<GameObject>("FlingArrow")) as GameObject;
             flingArrow.transform.position = clickStartPosition;
             UpdateFlingArrow();
-        }
+        
     }
 
     static void UpdateFlingArrow()
     {
-        if (vineCut == false)
-        {
+
             if (flingArrow == null)
             {
                 Debug.Log("Fling arrow is null");
@@ -225,15 +217,14 @@ public class VineDragComponent : MonoBehaviour {
             flingArrow.transform.rotation = Quaternion.Euler(0, 0, angle);
 
             flingArrow.transform.localScale = Vector3.one * (differenceVector.magnitude / 4f);
-        }
+        
     }
 
     static void DestroyFlingArrow()
     {
-        if (vineCut == false)
-        {
+
             GameObject.Destroy(flingArrow);
-        }
+        
     }
 
     public void VineCut()

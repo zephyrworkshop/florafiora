@@ -28,8 +28,9 @@ public class CameraPanningScript : MonoBehaviour {
 	public static Vector2 highBoundaries = new Vector2(100f,100f);
 	public static float minDepth = -100f;
 	private float edgeAcceleration=100f;
-	
-	public float zoomVelocity = 0f;
+
+
+    public float zoomVelocity = 0f;
 	public float zoomDrag = 20f;
 
 	private float zoomLowLimit=5f;
@@ -103,59 +104,55 @@ public class CameraPanningScript : MonoBehaviour {
 	}
 
 
-	void UpdatePan(){
-		if (!enablePan) {
-			return;
-		}
-		if (IsCameraOutOfBounds ()) {
-
-			if (gameObject.transform.position.x > highBoundaries.x) {
-				//gameObject.transform.position=new Vector3((gameObject.transform.position.x+highBoundaries.x)/2f,gameObject.transform.position.y,gameObject.transform.position.z);
-				velocity-=Vector3.right*edgeAcceleration*Time.deltaTime*(gameObject.transform.position.x-highBoundaries.x);
-			}
-			if (gameObject.transform.position.x < lowBoundaries.x) {
-				//gameObject.transform.position=new Vector3((gameObject.transform.position.x+lowBoundaries.x)/2f,gameObject.transform.position.y,gameObject.transform.position.z);
-				velocity-=Vector3.right*edgeAcceleration*Time.deltaTime*(gameObject.transform.position.x-lowBoundaries.x);
-			}
-			if (gameObject.transform.position.y > highBoundaries.y) {
-				//gameObject.transform.position=new Vector3(gameObject.transform.position.x,(gameObject.transform.position.y+highBoundaries.y)/2f,gameObject.transform.position.z);
-				velocity-=Vector3.up*edgeAcceleration*Time.deltaTime*(gameObject.transform.position.y-highBoundaries.y);
-			}
-			if (gameObject.transform.position.y < lowBoundaries.y) {
-				//gameObject.transform.position=new Vector3(gameObject.transform.position.x,(gameObject.transform.position.y+lowBoundaries.y)/2f,gameObject.transform.position.z);
-				velocity-=Vector3.up*edgeAcceleration*Time.deltaTime*(gameObject.transform.position.y-lowBoundaries.y);
-			}
-			gameObject.transform.position=gameObject.transform.position+Time.deltaTime*velocity;
-			velocity=Mathf.Pow (1/(drag+1),Time.deltaTime)*velocity;
-			return;
-		}
-
-		if (Input.GetKey (KeyCode.Mouse0) && (startTouchOneWorldPosition - MathTools.ScreenToWorldPosition (Input.mousePosition)).sqrMagnitude > .00001) {
-			var change = (previousTouchOneWorldPosition-MathTools.ScreenToWorldPosition(Input.mousePosition));
-			gameObject.transform.position += change;
-			velocity = change/Time.deltaTime;
-			return;
-		} else {
-			gameObject.transform.position=gameObject.transform.position+Time.deltaTime*velocity;
-			velocity=Mathf.Pow (1/(drag+1),Time.deltaTime)*velocity;
-		}
-
-		/*
-		if (Input.GetKey (KeyCode.Mouse0)&&!Input.GetKeyDown(KeyCode.Mouse0)&&Input.touchCount<=1&&prevTouchCount<=1) {//TODO make this also happen during a touch/drag
-			var moveX = -.0438f*Camera.main.orthographicSize*Input.GetAxisRaw ("Mouse X");
-			var moveY = -.0438f*Camera.main.orthographicSize*Input.GetAxisRaw ("Mouse Y");
+    void UpdatePan()
+    {
+        if (!enablePan)
+        {
+            return;
+        }
 
 
-			velocity=(5*velocity+new Vector3(moveX/Time.deltaTime, moveY/Time.deltaTime, 0f))/6;
-			gameObject.transform.position=gameObject.transform.position+new Vector3(moveX,moveY,0f);
-			//move the camera to keep the point under the cursor/finger
-			//this is orthographic so in theory any translation in pixels of the cursor should cause the same
-			//if that doesn't work I can project throught the mouse cursor 
-			//make the velocity a weighted average with the delta
-		} else {
+        if (Input.GetKey(KeyCode.Mouse0) && (startTouchOneWorldPosition - MathTools.ScreenToWorldPosition(Input.mousePosition)).sqrMagnitude > .00001)
+        {
+            var change = (previousTouchOneWorldPosition - MathTools.ScreenToWorldPosition(Input.mousePosition));
 
-		}*/
-	}
+            var _position = transform.position;
+            _position += change;
+            _position.x = Mathf.Clamp(_position.x, lowBoundaries.x, highBoundaries.x);
+            _position.y = Mathf.Clamp(_position.y, lowBoundaries.y, highBoundaries.y);
+            gameObject.transform.position = _position;
+
+            /*var _velocity = transform.position;
+            _velocity += change/Time.deltaTime;
+            _velocity.x = Mathf.Clamp(_velocity.x, -10, 10);
+            _velocity.y = Mathf.Clamp(_velocity.y, -10, 10);
+            velocity = _velocity;*/
+            return;
+
+        }
+        else {
+            gameObject.transform.position = gameObject.transform.position + Time.deltaTime * velocity;
+            velocity = Mathf.Pow(1 / (drag + 1), Time.deltaTime) * velocity;
+        }
+
+
+        /*
+        if (Input.GetKey (KeyCode.Mouse0)&&!Input.GetKeyDown(KeyCode.Mouse0)&&Input.touchCount<=1&&prevTouchCount<=1) {//TODO make this also happen during a touch/drag
+            var moveX = -.0438f*Camera.main.orthographicSize*Input.GetAxisRaw ("Mouse X");
+            var moveY = -.0438f*Camera.main.orthographicSize*Input.GetAxisRaw ("Mouse Y");
+
+
+            velocity=(5*velocity+new Vector3(moveX/Time.deltaTime, moveY/Time.deltaTime, 0f))/6;
+            gameObject.transform.position=gameObject.transform.position+new Vector3(moveX,moveY,0f);
+            //move the camera to keep the point under the cursor/finger
+            //this is orthographic so in theory any translation in pixels of the cursor should cause the same
+            //if that doesn't work I can project throught the mouse cursor 
+            //make the velocity a weighted average with the delta
+        } else {
+
+        }*/
+    }
+    
 
     void UpdateZoom() {
         if (!enableZoom) {
