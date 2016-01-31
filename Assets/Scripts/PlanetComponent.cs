@@ -21,12 +21,22 @@ public class PlanetComponent : MonoBehaviour {
 	/// </summary>
 	public List <VineComponent> startConnected = new List<VineComponent> ();
 
-	public void AddConnectedPlanet (PlanetComponent pc, VineComponent v) {
+	public void AddConnectedPlanet (PlanetComponent pc, VineComponent v) 
+	{
 		connectedPlanets.Add (pc);
 		pc.connectedPlanets.Add (this);
 
 		vines [pc] = v;
 		pc.vines [this] = v;
+	}
+
+	public void DeleteConnectedPlanet(PlanetComponent pc)
+	{
+		pc.vines [this] = null;
+		vines [pc] = null;
+
+		pc.connectedPlanets.Remove (this);
+		connectedPlanets.Remove (pc);
 	}
 
 	/// <summary>

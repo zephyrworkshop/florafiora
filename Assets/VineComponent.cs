@@ -8,6 +8,8 @@ public class VineComponent : MonoBehaviour {
 
 	public List <PlanetComponent> ends = new List <PlanetComponent> ();
 
+	public PlanetComponent flowerPlanet;
+
 	public List <SeedizenComponent> seedizens = new List <SeedizenComponent> ();
 	
 	public float colliderOnAgainTime = float.MaxValue;
@@ -55,6 +57,11 @@ public class VineComponent : MonoBehaviour {
         }
         else
         {
+			if (flowerPlanet != null) 
+			{
+				flowerPlanet.DeleteConnectedPlanet (ends[1]);
+				flowerPlanet.flower.VineDelete();
+			}
             Destroy(this.gameObject);
         }
 	}

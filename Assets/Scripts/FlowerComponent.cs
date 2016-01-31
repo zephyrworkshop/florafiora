@@ -32,7 +32,7 @@ public class FlowerComponent : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 
 	public void DecrementNumBridges () {
@@ -56,6 +56,20 @@ public class FlowerComponent : MonoBehaviour {
 			gameObject.GetComponent <SpriteRenderer> ().sprite = happyFlower;
 		}
 
+		if (ftc != null)
+			ftc.Refresh ();
+	}
+
+	public void VineDelete()
+	{
+		numBridges++;
+
+
+
+		if (numBridges > 0) 
+		{
+			gameObject.GetComponent <SpriteRenderer> ().sprite = happyFlower;
+		}
 		if (ftc != null)
 			ftc.Refresh ();
 	}

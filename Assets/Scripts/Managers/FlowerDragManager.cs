@@ -131,6 +131,7 @@ public class FlowerDragManager : MonoBehaviour {
 		var v = GameObject.Instantiate (instance.vinePrefab);
 		vine = v.GetComponent <VineComponent> ();
 		vine.ends.Add (flower.planet);
+		vine.flowerPlanet = flower.planet;
 		vine.gameObject.transform.SetAsFirstSibling ();
 		startPos = flo.gameObject.transform.parent.position;
 	}
