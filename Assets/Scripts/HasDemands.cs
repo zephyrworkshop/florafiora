@@ -10,7 +10,7 @@ public class HasDemands : MonoBehaviour {
 
 	public bool startWithNoDemands = false;
 	
-	public static string [] demandTypes = new string[] {"water", "fire", "life", "snow", "pinecone"};
+	public static string [] demandTypes = new string[] {"water", "fire", "life" /*,"snow", "pinecone"*/};
 	//public static string [] seedizenDemandTypes = new string[] 
 	//		{"WaterSeedizen", "FireSeedizen", "LifeSeedizen", "SnowSeedizen", "SoilSeedizen"};
 
