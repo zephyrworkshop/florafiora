@@ -24,8 +24,8 @@ public class CameraPanningScript : MonoBehaviour {
 
 	public Vector3 velocity = new Vector3 (0f, 0f, 0f);
 	public float drag = 30f;
-	public static Vector2 lowBoundaries = new Vector2(-100f,0f);
-	public static Vector2 highBoundaries = new Vector2(100f,100f);
+	public static Vector2 lowBoundaries = new Vector2(-200f,0f);
+	public static Vector2 highBoundaries = new Vector2(200f,200f);
 	public static float minDepth = -100f;
 	private float edgeAcceleration=100f;
 
