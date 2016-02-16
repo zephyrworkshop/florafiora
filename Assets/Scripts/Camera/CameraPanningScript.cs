@@ -33,8 +33,8 @@ public class CameraPanningScript : MonoBehaviour {
     public float zoomVelocity = 0f;
 	public float zoomDrag = 20f;
 
-	private float zoomLowLimit=10f;
-	private float zoomHighLimit=15f;
+	private float zoomLowLimit=5f;
+	private float zoomHighLimit=10f;
     private float currentZoom = 2;
 
 
@@ -161,7 +161,7 @@ public class CameraPanningScript : MonoBehaviour {
 
         if (currentZoom == 1)
         {
-            zoomLowLimit = 10;
+            zoomLowLimit = 5;
             zoomHighLimit = 15;
         }
         else if (currentZoom == 2)
@@ -172,7 +172,7 @@ public class CameraPanningScript : MonoBehaviour {
         else if (currentZoom == 3)
         {
             zoomLowLimit = 25;
-            zoomHighLimit = 50;
+            zoomHighLimit = 40;
         }
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, zoomLowLimit, zoomHighLimit);
         

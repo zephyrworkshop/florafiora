@@ -14,13 +14,13 @@ public class HasDemands : MonoBehaviour {
 	//public static string [] seedizenDemandTypes = new string[] 
 	//		{"WaterSeedizen", "FireSeedizen", "LifeSeedizen", "SnowSeedizen", "SoilSeedizen"};
 
-	public float distance = 10f;
+	public float distance = 2.5f;
 
 	// Use this for initialization
 	void Start () {
 		var cc = gameObject.GetComponent <CircleCollider2D> ();
 		if (cc != null) {
-			distance = cc.radius + 2.5f;//this is obviously just a sort of made up formula that has no good thought behind it
+			distance = cc.radius * .5f + 1f;//this is obviously just a sort of made up formula that has no good thought behind it
 		}
 
 		//TESTING
