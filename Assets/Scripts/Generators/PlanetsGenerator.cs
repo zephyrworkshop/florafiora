@@ -39,7 +39,7 @@ public class PlanetsGenerator : MonoBehaviour {
 			                   , 0f);
 
 			foreach (var p in planets) {
-				if (Vector3.Distance (p.transform.position, pos) < 8f) {
+				if (Vector3.Distance (p.transform.position, pos) < 16f) {
 					isolated = false;
 					break;
 				}
