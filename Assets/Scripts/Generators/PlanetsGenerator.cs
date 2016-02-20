@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlanetsGenerator : MonoBehaviour {
+public class PlanetsGenerator : MonoBehaviour
+{
 	
 	public GameObject stuffHolder;
 
@@ -10,36 +11,46 @@ public class PlanetsGenerator : MonoBehaviour {
 
 	public List <GameObject> planets = new List<GameObject> ();
 
-	string level = "";//"Level1";
+	string level = "";
+	//"Level1";
 
 	// Use this for initialization
-	void Start () {
-		if (level == "") {
-			for (int i = 0; i < 100; i++) {
+	void Start ()
+	{
+		if (level == "")
+		{
+			for (int i = 0; i < 80; i++)
+			{
 				SpawnPlanet (GetLocation (), GetType ());
 			}
-		} else {
+		} else
+		{
 			Debug.Log ("Loading level, surprisingly");
 			var planets = LevelLoader.LoadLevel (level);
-			foreach (var p in planets) {
+			foreach (var p in planets)
+			{
 				SpawnPlanet (p.position, new PlanetType (p.type));
 			}
 		}
 	}
 
-	public Vector3 GetLocation () {
+	public Vector3 GetLocation ()
+	{
 		Vector3 pos;
 		bool isolated = true;
 		int tries = 200;
-		do {
+		do
+		{
 			isolated = true;
-			tries --;
+			tries--;
 			pos = new Vector3 (Random.Range (CameraPanningScript.lowBoundaries.x, CameraPanningScript.highBoundaries.x)
 			                   , Random.Range (CameraPanningScript.lowBoundaries.y, CameraPanningScript.highBoundaries.y)
 			                   , 0f);
 
-			foreach (var p in planets) {
-				if (Vector3.Distance (p.transform.position, pos) < 16f) {
+			foreach (var p in planets)
+			{
+				if (Vector3.Distance (p.transform.position, pos) < 16f)
+				{
 					isolated = false;
 					break;
 				}
@@ -48,19 +59,21 @@ public class PlanetsGenerator : MonoBehaviour {
 		return pos;
 	}
 
-	public PlanetType GetType () {
+	public PlanetType GetType ()
+	{
 		if (Random.value < .4f)
 			return new PlanetType ("flower");
 
 		if (Random.value < .25f)
 			return new PlanetType ("pollen");
 
-		string [] options = HasDemands.demandTypes;
+		string[] options = HasDemands.demandTypes;
 		var pt = options [Random.Range (0, options.Length)];
 		return new PlanetType (pt + "");
 	}
 
-	public void SpawnPlanet (Vector3 pos, PlanetType pt) {
+	public void SpawnPlanet (Vector3 pos, PlanetType pt)
+	{
 
 		GameObject plan = pt.GetInstance ();
 
@@ -75,7 +88,8 @@ public class PlanetsGenerator : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 	
 	}
 
