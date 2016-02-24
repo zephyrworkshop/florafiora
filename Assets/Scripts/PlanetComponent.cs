@@ -103,6 +103,11 @@ public class PlanetComponent : MonoBehaviour {
 			neighbors = neighbors + p.gameObject.name + ", ";
 		//Debug.Log ("Clicked on a planet! " + gameObject.name + " Neighbors: " + neighbors);
 
+		if (flower != null)
+		{
+			FlowerDragManager.StartDrag (flower);
+		}
+
 		if (vines.Count <= 0)
 			return;
 
