@@ -77,12 +77,15 @@ public class SeedizenComponent : MonoBehaviour {
 			gameObject.transform.position += dir;
 
 			//facing
-			var rot = gameObject.transform.rotation;
+			/*var rot = gameObject.transform.rotation;
 			if (dir.x < 0)
 				rot.y = 0f;
 			else
 				rot.y = 180f;
-			//gameObject.transform.rotation = rot;
+			gameObject.transform.rotation = rot;*/
+
+			//var angle = Mathf.Atan2(currentVine.dir.y, currentVine.dir.x) * Mathf.Rad2Deg;
+			//gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 		}
 
 		if (destinationPlanet != null) {
@@ -92,7 +95,21 @@ public class SeedizenComponent : MonoBehaviour {
 			}
 		}
 		if (currentPlanet != null) {
-			gameObject.transform.rotation = Quaternion.LookRotation (Vector3.forward,(gameObject.transform.position-currentPlanet.gameObject.transform.position).normalized);
+			if (gameObject.transform.position.x > currentPlanet.gameObject.transform.position.x)
+			{
+				gameObject.transform.rotation = Quaternion.LookRotation (Vector3.forward, (gameObject.transform.position - currentPlanet.gameObject.transform.position).normalized) * Quaternion.Euler(0,0,90);
+
+				var rot = gameObject.transform.rotation;
+				rot.y = 180f;
+				gameObject.transform.rotation = rot;
+			} else
+			{
+				gameObject.transform.rotation = Quaternion.LookRotation (Vector3.forward, (currentPlanet.gameObject.transform.position - gameObject.transform.position).normalized) * Quaternion.Euler(0,0,90);
+
+				var rot = gameObject.transform.rotation;
+				rot.y = 0f;
+				gameObject.transform.rotation = rot;
+			}
 		}
 			
 		//randomly choosing a new destination when it gets to its planet
@@ -107,19 +124,19 @@ public class SeedizenComponent : MonoBehaviour {
 		}
 
 		//try to remain upright
-		float angleDif = gameObject.transform.rotation.z - idealAngle;
+		/*float angleDif = gameObject.transform.rotation.z - idealAngle;
 		if (angleDif != 0) {
 			angleDif = Mathf.Max (angleDif, angleDif * Time.deltaTime * 3f);
 			var rot = gameObject.transform.rotation;
 			rot.z -= angleDif;
 			//Debug.Log (gameObject.transform.rotation + " " + angleDif + " " + rot);
 			gameObject.transform.rotation = rot;
-		}
+		}*/
 
 		//catch the fallen ones
-		if (gameObject.transform.position.y < CameraPanningScript.minDepth) {
+		/*if (gameObject.transform.position.y < CameraPanningScript.minDepth) {
 			AbyssComponent.instance.CaptureSeedizen (this);
-		}
+		}*/
 	}
 
 
