@@ -20,7 +20,7 @@ public class OwlScript : MonoBehaviour {
         direction.Normalize();
         GetComponent<Rigidbody2D>().velocity = direction * owlSpeed;
         
-        Debug.Log(GetComponent<Rigidbody2D>().velocity.magnitude);
+        //Debug.Log(GetComponent<Rigidbody2D>().velocity.magnitude);
     }
 
     void FixedUpdate()
@@ -45,6 +45,14 @@ public class OwlScript : MonoBehaviour {
                 FindNewTarget();
                 stuckTimer = 0;
             }
+        }
+    }
+    
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.collider.tag == "planet")
+        {
+            FindNewTarget();
         }
     }
 }
