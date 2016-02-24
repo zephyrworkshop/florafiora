@@ -29,14 +29,14 @@ public class PlanetType {
 
 			prefab = Resources.Load <GameObject> ("Planets/Victory");
 		} else if (location == "flower") {
-			prefab = Resources.Load <GameObject> ("Planets/Flora");
+			prefab = Resources.Load <GameObject> ("Planets/flowering");
 
 			growsFlower = true;
 			assetLoc = "";
 			hasDemands = false;
 			produces = "";
 		} else if (location == "pollen") {
-			prefab = Resources.Load <GameObject> ("Planets/Pollen");
+			prefab = Resources.Load <GameObject> ("Planets/pollen");
 
 			makesPollen = true;
 			assetLoc = "";
