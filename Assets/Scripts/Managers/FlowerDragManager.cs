@@ -61,8 +61,8 @@ public class FlowerDragManager : MonoBehaviour {
 
 		//limit their distance
 		var dif = mousePos - startPos;
-		if (flower != null && dif.magnitude > flower.maxDragDist)
-			mousePos = startPos + dif.normalized * flower.maxDragDist;
+		//if (flower != null && dif.magnitude > flower.maxDragDist)
+			//mousePos = startPos + dif.normalized * flower.maxDragDist;
 
 		if (flower != null) {
 			PlaceVine (startPos, mousePos, vine.gameObject);

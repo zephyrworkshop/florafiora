@@ -5,7 +5,7 @@ public class FlowerComponent : MonoBehaviour {
 
 	public PlanetComponent planet;
 
-	public float maxDragDist = 30f;
+	public float maxDragDist = 300f;
 	
 	public int numBridges = 2;
 	public int maxNumBridges = 2;
