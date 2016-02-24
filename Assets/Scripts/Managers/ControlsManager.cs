@@ -71,7 +71,7 @@ public class MenuControls : ControlsState {
 public class ControlsManager : MonoBehaviour {
 	public enum KeyStatuses{Press, Pressed, Release, Released};
 	private static Dictionary<string, ControlsState> states = new Dictionary<string, ControlsState>() ;
-	private static List<ControlsState> stateStack = new List<ControlsState> ();
+//	private static List<ControlsState> stateStack = new List<ControlsState> ();
 	private static ControlsState currentState;
 
 	// Use this for initialization

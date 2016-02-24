@@ -23,7 +23,7 @@ public class FlowerComponent : MonoBehaviour {
 		if (textPrefab == null)
 			textPrefab = Resources.Load <GameObject> ("FlowerText");
 		var t = GameObject.Instantiate (textPrefab);
-		t.transform.parent = GameObject.Find ("Canvas").transform;
+		t.transform.SetParent (GameObject.Find ("Canvas").transform, false);
 		ftc = t.GetComponent <FlowerTextComponent> ();
 		ftc.flower = this;
 		ftc.planet = planet;

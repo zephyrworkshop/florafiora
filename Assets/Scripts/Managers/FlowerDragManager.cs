@@ -60,7 +60,7 @@ public class FlowerDragManager : MonoBehaviour {
 		}
 
 		//limit their distance
-		var dif = mousePos - startPos;
+		//var dif = mousePos - startPos;
 		//if (flower != null && dif.magnitude > flower.maxDragDist)
 			//mousePos = startPos + dif.normalized * flower.maxDragDist;
 

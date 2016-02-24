@@ -18,7 +18,7 @@ public class VineDragComponent : MonoBehaviour {
 	private static List<float> vinePercentagePositions = new List<float> ();
 	private static List<Vector3> releasePositions = new List<Vector3>();
 	private static Vector3 clickStartPosition;
-	private static Vector3 clickStopPosition;
+	//private static Vector3 clickStopPosition;
 	private static float clickStartPercentage;
 
     public static bool vineCut = false;
@@ -160,7 +160,7 @@ public class VineDragComponent : MonoBehaviour {
     void OnDragRelease(Vector3 dir)
     {
             releasePositions.Clear();
-            clickStopPosition = ClickToDrag.GetCursorWorldLocation();
+           // clickStopPosition = ClickToDrag.GetCursorWorldLocation();
             List<SeedizenComponent> seedizensCopy = new List<SeedizenComponent>(vine.seedizens);
             for (int i = 0; i < seedizensCopy.Count; i++)
             {

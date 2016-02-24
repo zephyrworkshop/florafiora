@@ -27,7 +27,7 @@ public class CameraPanningScript : MonoBehaviour {
 	public static Vector2 lowBoundaries = new Vector2(-200f,0f);
 	public static Vector2 highBoundaries = new Vector2(200f,200f);
 	public static float minDepth = -100f;
-	private float edgeAcceleration=100f;
+	//private float edgeAcceleration=100f;
 
 
     public float zoomVelocity = 0f;
@@ -38,17 +38,17 @@ public class CameraPanningScript : MonoBehaviour {
     private float currentZoom = 2;
 
 
-    private float zoomAcceleration=100f;
+//    private float zoomAcceleration=100f;
 	private float pinchDistance=0f;
 	private int prevTouchCount=0;
 
 
 	private Vector3 startTouchOneWorldPosition;
 	private Vector3 previousTouchOneWorldPosition;
-	private Vector3 startTouchOneCameraPosition;
-	private Vector3 startTouchTwoWorldPosition;
-	private Vector3 previousTouchTwoWorldPosition;
-	private Vector3 startTouchTwoCameraPosition;
+//	private Vector3 startTouchOneCameraPosition;
+//	private Vector3 startTouchTwoWorldPosition;
+//	private Vector3 previousTouchTwoWorldPosition;
+//	private Vector3 startTouchTwoCameraPosition;
 	
 
 	
@@ -74,14 +74,14 @@ public class CameraPanningScript : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Mouse0)||(Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)) {
 			startTouchOneWorldPosition=MathTools.ScreenToWorldPosition(Input.mousePosition);
-			startTouchOneCameraPosition=Camera.main.transform.position;
+			//startTouchOneCameraPosition=Camera.main.transform.position;
 			previousTouchOneWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
 		}
 
 		if ((Input.touchCount>1&&Input.GetTouch(1).phase==TouchPhase.Began)) {
-			startTouchTwoWorldPosition=MathTools.ScreenToWorldPosition(Input.mousePosition);
-			startTouchTwoCameraPosition=Camera.main.transform.position;
-			previousTouchTwoWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
+			//startTouchTwoWorldPosition=MathTools.ScreenToWorldPosition(Input.mousePosition);
+			//startTouchTwoCameraPosition=Camera.main.transform.position;
+			//previousTouchTwoWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
 		}
 
 		UpdatePan ();
@@ -91,7 +91,7 @@ public class CameraPanningScript : MonoBehaviour {
 			previousTouchOneWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
 		}
 		if ((Input.touchCount>1&&Input.GetTouch(1).phase==TouchPhase.Moved)) {
-			previousTouchTwoWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
+			//previousTouchTwoWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
 		}
 	}
 

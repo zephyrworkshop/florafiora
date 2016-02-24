@@ -64,7 +64,7 @@ public class ClickToDrag : MonoBehaviour {
             joint.enabled = true;
             joint.connectedBody = anchorRB;
             joint.connectedAnchor = Vector2.zero;
-            var offset = GetCursorWorldLocation() - gameObject.transform.position;
+            //var offset = GetCursorWorldLocation() - gameObject.transform.position;
             joint.anchor = Vector2.zero;//new Vector2(offset.x, offset.y);
             joint.dampingRatio = 1f;
             joint.frequency = 8f;

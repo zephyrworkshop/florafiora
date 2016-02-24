@@ -40,7 +40,7 @@ public class ResourcesDisplay : MonoBehaviour {
 			//add a display
 			var disp = GameObject.Instantiate (resourceCountPrefab);
 
-			disp.transform.parent = gameObject.transform;
+			disp.transform.SetParent (gameObject.transform, false);
 
 			var rc = disp.GetComponent <ResourceCount> ();
 			rc.position = new Vector3 (0f, -75f * displays.Count, 0f);

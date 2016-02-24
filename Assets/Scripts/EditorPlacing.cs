@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class EditorPlacing : MonoBehaviour {
-	static EditorPlacing instance;
+	//static EditorPlacing instance;
 
 	//the record
 	public static List <PlacementDetails> record = new List<PlacementDetails> ();
@@ -32,7 +32,7 @@ public class EditorPlacing : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		instance = this;
+		//instance = this;
 	}
 	
 	// Update is called once per frame

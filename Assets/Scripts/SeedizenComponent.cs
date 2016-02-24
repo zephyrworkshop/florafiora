@@ -19,7 +19,7 @@ public class SeedizenComponent : MonoBehaviour {
 	public bool inTransit = true;
 
 	public float speed = 3.2f;
-	float flightSpeed = 8f;
+//	float flightSpeed = 8f;
 
 	bool inFling = false;
 
@@ -31,7 +31,7 @@ public class SeedizenComponent : MonoBehaviour {
 
 	Vector3 mousePosAtStartOfFling;
 
-	Vector3 flightDir;
+	//Vector3 flightDir;
 
 	public float idealAngle = 0f;
 
@@ -154,12 +154,14 @@ public class SeedizenComponent : MonoBehaviour {
 
 	public void TurnOffPollen () {
 		hasPollen = false;
-		pollenParticles.enableEmission = false;
+		ParticleSystem.EmissionModule em = pollenParticles.emission;
+		em.enabled = true;
 	}
 	
 	public void TurnOnPollen () {
 		hasPollen = true;
-		pollenParticles.enableEmission = true;
+		ParticleSystem.EmissionModule em = pollenParticles.emission;
+		em.enabled = false;
 	}
 
 	public void StartFlight (Vector3 dir) {
@@ -173,7 +175,7 @@ public class SeedizenComponent : MonoBehaviour {
 		currentPlanet = null;
 		destinationPlanet = null;
 		currentVine = null;
-		flightDir = dir;
+		//flightDir = dir;
 
 		//Debug.Log (this);
 		//Debug.Log (gameObject);
@@ -204,7 +206,7 @@ public class SeedizenComponent : MonoBehaviour {
 		if (planet == null)
 			return;
 		planet.ProcessSeedizen (this);
-		var oldPlanet = planet;
+//		var oldPlanet = planet;
 		/*var options = new List <PlanetComponent> (planet.connectedPlanets);
 		foreach (var p in planet.connectedPlanets)
 			if (planet.vines [p].dispreferred)

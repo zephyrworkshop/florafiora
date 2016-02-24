@@ -16,7 +16,7 @@ public class PlanetsGenerator : MonoBehaviour {
 	void Start () {
 		if (level == "") {
 			for (int i = 0; i < 100; i++) {
-				SpawnPlanet (GetLocation (), GetType ());
+				SpawnPlanet (GetLocation (), GetPlanetType ());
 			}
 		} else {
 			Debug.Log ("Loading level, surprisingly");
@@ -48,7 +48,7 @@ public class PlanetsGenerator : MonoBehaviour {
 		return pos;
 	}
 
-	public PlanetType GetType () {
+	public PlanetType GetPlanetType () {
 		if (Random.value < .4f)
 			return new PlanetType ("flower");
 
