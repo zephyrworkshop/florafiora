@@ -175,14 +175,24 @@ public class PlanetComponent : MonoBehaviour {
 			return true;*/
 	}
 
-	public Sprite colonizedSprite;
-	bool isColonized = false;
+	public Sprite bgSprite;
+    public Sprite fgSprite;
+    bool isColonized = false;
 	public void BeColonized () {
 		if (isColonized)
 			return;
 		//change image
-		if (colonizedSprite != null)
-			transform.FindChild ("planet").GetComponent <SpriteRenderer> ().sprite = colonizedSprite;
+		if (bgSprite != null)
+        {
+            transform.FindChild("bg_2").GetComponent<SpriteRenderer>().sprite = bgSprite;
+            transform.FindChild("bg_1").GetComponent<SpriteRenderer>().enabled = false;
+        }
+		if (fgSprite != null)
+        {
+            transform.FindChild("fg_2").GetComponent<SpriteRenderer>().sprite = fgSprite;
+            transform.FindChild("fg_1").GetComponent<SpriteRenderer>().enabled = false;
+        }
+            
 		isColonized = true;
 	}
 }
