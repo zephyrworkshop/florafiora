@@ -1,9 +1,35 @@
 fileFormatVersion: 2
 guid: 35c19040651955e419e57fcdb3751221
-timeCreated: 1429645332
-licenseType: Pro
+timeCreated: 1456440511
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: FireSeedizen_0
+    21300002: FireSeedizen_1
+    21300004: FireSeedizen_2
+    21300006: FireSeedizen_3
+    21300008: FireSeedizen_4
+    21300010: FireSeedizen_5
+    21300012: FireSeedizen_6
+    21300014: FireSeedizen_7
+    21300016: FireSeedizen_8
+    21300018: FireSeedizen_9
+    21300020: FireSeedizen_10
+    21300022: FireSeedizen_11
+    21300024: FireSeedizen_12
+    21300026: FireSeedizen_13
+    21300028: FireSeedizen_14
+    21300030: FireSeedizen_15
+    21300032: FireSeedizen_16
+    21300034: FireSeedizen_17
+    21300036: FireSeedizen_18
+    21300038: FireSeedizen_19
+    21300040: FireSeedizen_20
+    21300042: FireSeedizen_21
+    21300044: FireSeedizen_22
+    21300046: FireSeedizen_23
+    21300048: FireSeedizen_24
+    21300050: FireSeedizen_25
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -17,7 +43,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -30,25 +56,550 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  allowsAlphaSplitting: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: FireSeedizen_0
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 503
+        width: 239
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.87793, y: 80.50293}
+        - {x: -39.87793, y: 70.50293}
+        - {x: -39.87793, y: -64.49707}
+        - {x: -22.87793, y: -79.49707}
+        - {x: 29.12207, y: -79.49707}
+        - {x: 41.12207, y: -76.49707}
+        - {x: 41.12207, y: 80.50293}
+    - name: FireSeedizen_1
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 503
+        width: 239
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.043945, y: 80.50293}
+        - {x: -40.043945, y: 66.50293}
+        - {x: -40.043945, y: -65.49707}
+        - {x: -28.043945, y: -79.49707}
+        - {x: 27.956055, y: -79.49707}
+        - {x: 40.956055, y: -73.49707}
+        - {x: 40.956055, y: 75.50293}
+        - {x: 33.956055, y: 80.50293}
+    - name: FireSeedizen_2
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 500
+        width: 239
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.70996, y: 81.50391}
+        - {x: -39.70996, y: -72.49609}
+        - {x: -15.709961, y: -80.49609}
+        - {x: 11.290039, y: -80.49609}
+        - {x: 40.29004, y: -62.496094}
+        - {x: 40.29004, y: 71.50391}
+        - {x: 35.29004, y: 81.50391}
+    - name: FireSeedizen_3
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 500
+        width: 239
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.124023, y: 44.003906}
+        - {x: 28.124023, y: 44.003906}
+        - {x: 32.124023, y: 45.003906}
+        - {x: 35.124023, y: 47.003906}
+        - {x: 33.124023, y: 53.003906}
+        - {x: 39.124023, y: 61.003906}
+        - {x: 40.124023, y: 66.00391}
+        - {x: 40.124023, y: 69.00391}
+        - {x: 29.124023, y: 82.00391}
+        - {x: -16.875977, y: 82.00391}
+        - {x: -39.875977, y: 73.00391}
+        - {x: -39.875977, y: -57.996094}
+        - {x: -22.875977, y: -80.99609}
+        - {x: 19.124023, y: -80.99609}
+        - {x: 40.124023, y: -68.99609}
+        - {x: 40.124023, y: 45.003906}
+        - {x: 31.124023, y: 45.003906}
+    - name: FireSeedizen_4
+      rect:
+        serializedVersion: 2
+        x: 2180
+        y: 503
+        width: 242
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.042969, y: 81.00293}
+        - {x: -40.04297, y: 66.00293}
+        - {x: -40.04297, y: -52.99707}
+        - {x: -32.04297, y: -62.99707}
+        - {x: -13.042969, y: -79.99707}
+        - {x: 15.957031, y: -79.99707}
+        - {x: 41.95703, y: -65.99707}
+        - {x: 41.95703, y: 75.00293}
+        - {x: 26.957031, y: 81.00293}
+    - name: FireSeedizen_5
+      rect:
+        serializedVersion: 2
+        x: 2693
+        y: 503
+        width: 242
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40.20996, y: 81.00293}
+        - {x: -40.20996, y: -65.99707}
+        - {x: -24.20996, y: -79.99707}
+        - {x: 17.79004, y: -79.99707}
+        - {x: 41.79004, y: -64.99707}
+        - {x: 41.79004, y: 81.00293}
+    - name: FireSeedizen_6
+      rect:
+        serializedVersion: 2
+        x: 3209
+        y: 503
+        width: 239
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.87793, y: 80.50293}
+        - {x: -39.87793, y: 63.50293}
+        - {x: -39.87793, y: -68.49707}
+        - {x: -19.87793, y: -79.49707}
+        - {x: 22.12207, y: -79.49707}
+        - {x: 41.12207, y: -59.49707}
+        - {x: 41.12207, y: 80.50293}
+    - name: FireSeedizen_7
+      rect:
+        serializedVersion: 2
+        x: 3722
+        y: 503
+        width: 239
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.95508, y: 61.50293}
+        - {x: 40.95508, y: 62.50293}
+        - {x: 40.95508, y: 79.50293}
+        - {x: 37.95508, y: 80.50293}
+        - {x: -31.044922, y: 80.50293}
+        - {x: -38.04492, y: 77.50293}
+        - {x: -40.04492, y: 51.50293}
+        - {x: -40.04492, y: -62.49707}
+        - {x: -32.04492, y: -79.49707}
+        - {x: 21.955078, y: -79.49707}
+        - {x: 40.95508, y: -72.49707}
+        - {x: 40.95508, y: 46.50293}
+        - {x: 31.955078, y: 52.50293}
+    - name: FireSeedizen_8
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 503
+        width: 239
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40.288086, y: 81.00293}
+        - {x: -39.711914, y: 81.00293}
+        - {x: -39.711914, y: -79.99707}
+        - {x: 13.288086, y: -79.99707}
+        - {x: 40.288086, y: -59.99707}
+    - name: FireSeedizen_9
+      rect:
+        serializedVersion: 2
+        x: 4748
+        y: 503
+        width: 236
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.378906, y: 81.00293}
+        - {x: -39.378906, y: 79.00293}
+        - {x: -39.378906, y: -50.99707}
+        - {x: -30.378906, y: -57.99707}
+        - {x: -27.378906, y: -56.99707}
+        - {x: -20.378906, y: -79.99707}
+        - {x: 13.621094, y: -79.99707}
+        - {x: 39.621094, y: -59.99707}
+        - {x: 39.621094, y: 81.00293}
+    - name: FireSeedizen_10
+      rect:
+        serializedVersion: 2
+        x: 5261
+        y: 503
+        width: 236
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38.0459, y: 81.00293}
+        - {x: -38.0459, y: -62.99707}
+        - {x: -25.045898, y: -79.99707}
+        - {x: 13.954102, y: -79.99707}
+        - {x: 40.9541, y: -67.99707}
+        - {x: 40.9541, y: 81.00293}
+    - name: FireSeedizen_11
+      rect:
+        serializedVersion: 2
+        x: 5768
+        y: 503
+        width: 239
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.710938, y: 80.50293}
+        - {x: -38.710938, y: 77.50293}
+        - {x: -38.710938, y: -52.49707}
+        - {x: -33.710938, y: -55.49707}
+        - {x: -25.710938, y: -59.49707}
+        - {x: -23.710938, y: -54.49707}
+        - {x: -23.710938, y: -51.49707}
+        - {x: -23.710938, y: -52.49707}
+        - {x: -21.710938, y: -57.49707}
+        - {x: -16.710938, y: -77.49707}
+        - {x: -7.7109375, y: -79.49707}
+        - {x: -6.7109375, y: -79.49707}
+        - {x: -4.7109375, y: -75.49707}
+        - {x: -2.7109375, y: -78.49707}
+        - {x: -1.7109375, y: -79.49707}
+        - {x: 12.2890625, y: -79.49707}
+        - {x: 41.289062, y: -65.49707}
+        - {x: 41.289062, y: 80.50293}
+    - name: FireSeedizen_12
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 41
+        width: 212
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.379883, y: 71.15332}
+        - {x: -35.379883, y: -69.84668}
+        - {x: 31.620117, y: -69.84668}
+        - {x: 36.620117, y: -62.84668}
+        - {x: 36.620117, y: 71.15332}
+    - name: FireSeedizen_13
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 41
+        width: 212
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.47754, y: -11.34668}
+        - {x: 36.47754, y: 39.65332}
+        - {x: 29.47754, y: 39.65332}
+        - {x: 28.47754, y: 38.65332}
+        - {x: 25.47754, y: 38.65332}
+        - {x: 27.47754, y: 38.65332}
+        - {x: 31.47754, y: 41.65332}
+        - {x: 29.47754, y: 47.65332}
+        - {x: 35.47754, y: 53.65332}
+        - {x: 35.47754, y: 61.65332}
+        - {x: 28.47754, y: 67.65332}
+        - {x: 22.47754, y: 70.65332}
+        - {x: -14.522461, y: 70.65332}
+        - {x: -27.52246, y: 69.65332}
+        - {x: -35.52246, y: 46.65332}
+        - {x: -35.52246, y: -56.34668}
+        - {x: -19.52246, y: -69.34668}
+        - {x: 23.47754, y: -69.34668}
+        - {x: 32.47754, y: -58.34668}
+        - {x: 34.47754, y: -51.34668}
+        - {x: 34.47754, y: -42.34668}
+    - name: FireSeedizen_14
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 38
+        width: 215
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.665039, y: 71.1543}
+        - {x: -24.66504, y: 67.1543}
+        - {x: -35.66504, y: 48.154297}
+        - {x: -35.66504, y: -57.845703}
+        - {x: -32.66504, y: -69.8457}
+        - {x: 27.33496, y: -69.8457}
+        - {x: 36.33496, y: -66.8457}
+        - {x: 36.33496, y: 71.1543}
+    - name: FireSeedizen_15
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 35
+        width: 212
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.308594, y: 72.15527}
+        - {x: -35.308594, y: -54.844727}
+        - {x: -15.308594, y: -70.84473}
+        - {x: 28.691406, y: -70.84473}
+        - {x: 35.691406, y: -68.84473}
+        - {x: 35.691406, y: 72.15527}
+    - name: FireSeedizen_16
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 36
+        width: 212
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.451172, y: 72.48828}
+        - {x: -29.451172, y: 70.48828}
+        - {x: -35.45117, y: 60.48828}
+        - {x: -35.45117, y: -62.51172}
+        - {x: -6.451172, y: -70.51172}
+        - {x: 26.548828, y: -70.51172}
+        - {x: 35.54883, y: -63.51172}
+        - {x: 35.54883, y: 69.48828}
+        - {x: 26.548828, y: 72.48828}
+    - name: FireSeedizen_17
+      rect:
+        serializedVersion: 2
+        x: 2774
+        y: 44
+        width: 215
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.736328, y: -69.34766}
+        - {x: 31.263672, y: -69.34766}
+        - {x: 37.26367, y: -68.34766}
+        - {x: 37.26367, y: 70.65234}
+        - {x: -33.73633, y: 70.65234}
+        - {x: -35.73633, y: 69.65234}
+        - {x: -35.73633, y: -61.347656}
+    - name: FireSeedizen_18
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 41
+        width: 212
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.379883, y: 71.15332}
+        - {x: -35.379883, y: -65.84668}
+        - {x: -25.379883, y: -69.84668}
+        - {x: 36.620117, y: -69.84668}
+        - {x: 36.620117, y: 71.15332}
+    - name: FireSeedizen_19
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 44
+        width: 212
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.52246, y: 70.65234}
+        - {x: -35.52246, y: -50.347656}
+        - {x: -28.52246, y: -53.347656}
+        - {x: -24.52246, y: -52.347656}
+        - {x: -22.52246, y: -50.347656}
+        - {x: -8.522461, y: -67.34766}
+        - {x: -5.522461, y: -69.34766}
+        - {x: 7.477539, y: -69.34766}
+        - {x: 36.47754, y: -58.347656}
+        - {x: 36.47754, y: 68.65234}
+        - {x: 34.47754, y: 70.65234}
+    - name: FireSeedizen_20
+      rect:
+        serializedVersion: 2
+        x: 4091
+        y: 38
+        width: 215
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.33496, y: 71.1543}
+        - {x: 2.334961, y: 71.1543}
+        - {x: -22.66504, y: 65.1543}
+        - {x: -25.66504, y: 61.154297}
+        - {x: -29.66504, y: 54.154297}
+        - {x: -33.66504, y: 41.154297}
+        - {x: -33.66504, y: 36.154297}
+        - {x: -35.66504, y: 8.154297}
+        - {x: -35.66504, y: -52.845703}
+        - {x: -29.66504, y: -69.8457}
+        - {x: 36.33496, y: -69.8457}
+        - {x: 36.33496, y: 63.154297}
+        - {x: 34.33496, y: 64.1543}
+    - name: FireSeedizen_21
+      rect:
+        serializedVersion: 2
+        x: 4532
+        y: 38
+        width: 212
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.308594, y: 71.6543}
+        - {x: -35.308594, y: 69.6543}
+        - {x: -35.308594, y: -50.345703}
+        - {x: -27.308594, y: -52.345703}
+        - {x: -24.308594, y: -51.345703}
+        - {x: -14.308594, y: -70.3457}
+        - {x: 22.691406, y: -70.3457}
+        - {x: 35.691406, y: -60.345703}
+        - {x: 35.691406, y: 71.6543}
+    - name: FireSeedizen_22
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 36
+        width: 212
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.548828, y: 72.48828}
+        - {x: -9.451172, y: 72.48828}
+        - {x: -28.451172, y: 70.48828}
+        - {x: -35.45117, y: 59.48828}
+        - {x: -35.45117, y: -61.51172}
+        - {x: -6.451172, y: -70.51172}
+        - {x: 34.54883, y: -70.51172}
+        - {x: 35.54883, y: -69.51172}
+        - {x: 35.54883, y: 64.48828}
+        - {x: 28.548828, y: 70.48828}
+    - name: FireSeedizen_23
+      rect:
+        serializedVersion: 2
+        x: 5846
+        y: 44
+        width: 215
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.736328, y: 70.65234}
+        - {x: -33.73633, y: 65.65234}
+        - {x: -34.73633, y: 48.652344}
+        - {x: -34.73633, y: -60.347656}
+        - {x: -26.736328, y: -69.34766}
+        - {x: 36.26367, y: -69.34766}
+        - {x: 37.26367, y: -65.34766}
+        - {x: 37.26367, y: 66.65234}
+        - {x: 33.26367, y: 70.65234}
+    - name: FireSeedizen_24
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 38
+        width: 212
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.09375, y: 71.1543}
+        - {x: -35.09375, y: 62.154297}
+        - {x: -35.09375, y: -69.8457}
+        - {x: 36.90625, y: -69.8457}
+        - {x: 36.90625, y: 67.1543}
+        - {x: 31.90625, y: 71.1543}
+    - name: FireSeedizen_25
+      rect:
+        serializedVersion: 2
+        x: 5405
+        y: 38
+        width: 215
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.592773, y: 71.1543}
+        - {x: -34.592773, y: 61.154297}
+        - {x: -34.592773, y: -69.8457}
+        - {x: 37.407227, y: -69.8457}
+        - {x: 37.407227, y: 70.1543}
+        - {x: 36.407227, y: 71.1543}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

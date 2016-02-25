@@ -1,9 +1,45 @@
 fileFormatVersion: 2
 guid: d8b6acbca31357340935aabbb87520cc
-timeCreated: 1429645333
-licenseType: Pro
+timeCreated: 1456440553
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: LifeSeedizen_0
+    21300002: LifeSeedizen_1
+    21300004: LifeSeedizen_2
+    21300006: LifeSeedizen_3
+    21300008: LifeSeedizen_4
+    21300010: LifeSeedizen_5
+    21300012: LifeSeedizen_6
+    21300014: LifeSeedizen_7
+    21300016: LifeSeedizen_8
+    21300018: LifeSeedizen_9
+    21300020: LifeSeedizen_10
+    21300022: LifeSeedizen_11
+    21300024: LifeSeedizen_12
+    21300026: LifeSeedizen_13
+    21300028: LifeSeedizen_14
+    21300030: LifeSeedizen_15
+    21300032: LifeSeedizen_16
+    21300034: LifeSeedizen_17
+    21300036: LifeSeedizen_18
+    21300038: LifeSeedizen_19
+    21300040: LifeSeedizen_20
+    21300042: LifeSeedizen_21
+    21300044: LifeSeedizen_22
+    21300046: LifeSeedizen_23
+    21300048: LifeSeedizen_24
+    21300050: LifeSeedizen_25
+    21300052: LifeSeedizen_26
+    21300054: LifeSeedizen_27
+    21300056: LifeSeedizen_28
+    21300058: LifeSeedizen_29
+    21300060: LifeSeedizen_30
+    21300062: LifeSeedizen_31
+    21300064: LifeSeedizen_32
+    21300066: LifeSeedizen_33
+    21300068: LifeSeedizen_34
+    21300070: LifeSeedizen_35
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -17,7 +53,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -30,25 +66,722 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  allowsAlphaSplitting: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: LifeSeedizen_0
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 519
+        width: 225
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.055555, y: 109.16667}
+        - {x: -14.944445, y: 109.16667}
+        - {x: -24.944445, y: 100.16667}
+        - {x: -24.944445, y: 36.16667}
+        - {x: -6.9444447, y: 0.16667175}
+        - {x: 13.055555, y: 0.16667175}
+        - {x: 26.055555, y: 7.1666718}
+        - {x: 26.055555, y: 78.16667}
+        - {x: 23.055555, y: 106.16667}
+    - name: LifeSeedizen_1
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 519
+        width: 225
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.944443, y: 109.16667}
+        - {x: -24.944443, y: 16.166672}
+        - {x: -8.944443, y: 0.16667175}
+        - {x: 13.055557, y: 0.16667175}
+        - {x: 26.055557, y: 6.1666718}
+        - {x: 26.055557, y: 101.16667}
+        - {x: 25.055557, y: 109.16667}
+    - name: LifeSeedizen_2
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 519
+        width: 225
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.944427, y: 26.166672}
+        - {x: -18.944427, y: 0.16667175}
+        - {x: 26.055573, y: 0.16667175}
+        - {x: 26.055573, y: 85.16667}
+        - {x: 23.055573, y: 109.16667}
+        - {x: -13.9444275, y: 109.16667}
+        - {x: -24.944427, y: 100.16667}
+    - name: LifeSeedizen_3
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 519
+        width: 216
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.944427, y: 108.72223}
+        - {x: -23.944427, y: 13.722229}
+        - {x: -6.9444275, y: -0.277771}
+        - {x: -0.9444275, y: -0.277771}
+        - {x: 2.0555725, y: 2.722229}
+        - {x: 2.0555725, y: 4.722229}
+        - {x: 4.0555725, y: 6.722229}
+        - {x: 4.0555725, y: 8.722229}
+        - {x: 3.0555725, y: 0.722229}
+        - {x: 3.0555725, y: -0.277771}
+        - {x: 12.0555725, y: -0.277771}
+        - {x: 15.0555725, y: 0.722229}
+        - {x: 25.055573, y: 8.722229}
+        - {x: 25.055573, y: 87.72223}
+        - {x: 24.055573, y: 108.72223}
+    - name: LifeSeedizen_4
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 519
+        width: 221
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.555542, y: 89.16667}
+        - {x: -24.555542, y: 27.166672}
+        - {x: -21.555542, y: 0.16667175}
+        - {x: 18.444458, y: 0.16667175}
+        - {x: 25.444458, y: 5.1666718}
+        - {x: 25.444458, y: 92.16667}
+        - {x: 24.444458, y: 109.16667}
+        - {x: -11.555542, y: 109.16667}
+        - {x: -21.555542, y: 101.16667}
+    - name: LifeSeedizen_5
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 519
+        width: 225
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.944458, y: 82.16667}
+        - {x: 3.944458, y: 82.16667}
+        - {x: 5.944458, y: 82.16667}
+        - {x: 14.944458, y: 87.16667}
+        - {x: 22.944458, y: 109.16667}
+        - {x: -16.055542, y: 109.16667}
+        - {x: -25.055542, y: 100.16667}
+        - {x: -25.055542, y: 33.16667}
+        - {x: -13.055542, y: 0.16667175}
+        - {x: 18.944458, y: 0.16667175}
+        - {x: 25.944458, y: 9.166672}
+        - {x: 25.944458, y: 35.16667}
+        - {x: 17.944458, y: 81.16667}
+    - name: LifeSeedizen_6
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 519
+        width: 225
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.055542, y: 109.16667}
+        - {x: -22.055542, y: 103.16667}
+        - {x: -25.055542, y: 96.16667}
+        - {x: -25.055542, y: 82.16667}
+        - {x: -20.055542, y: 75.16667}
+        - {x: -25.055542, y: 44.16667}
+        - {x: -25.055542, y: 34.16667}
+        - {x: -8.055542, y: 1.1666718}
+        - {x: -6.055542, y: 0.16667175}
+        - {x: 17.944458, y: 0.16667175}
+        - {x: 25.944458, y: 5.1666718}
+        - {x: 25.944458, y: 109.16667}
+    - name: LifeSeedizen_7
+      rect:
+        serializedVersion: 2
+        x: 3728
+        y: 519
+        width: 225
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.055542, y: 109.16667}
+        - {x: -25.055542, y: 32.16667}
+        - {x: -16.055542, y: 0.16667175}
+        - {x: 25.944458, y: 0.16667175}
+        - {x: 25.944458, y: 109.16667}
+    - name: LifeSeedizen_8
+      rect:
+        serializedVersion: 2
+        x: 4237
+        y: 519
+        width: 229
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.444458, y: 109.16667}
+        - {x: -25.444458, y: 100.16667}
+        - {x: -25.444458, y: 37.16667}
+        - {x: -10.444458, y: 0.16667175}
+        - {x: 13.555542, y: 0.16667175}
+        - {x: 26.555542, y: 11.166672}
+        - {x: 26.555542, y: 61.16667}
+        - {x: 23.555542, y: 109.16667}
+    - name: LifeSeedizen_9
+      rect:
+        serializedVersion: 2
+        x: 4750
+        y: 523
+        width: 225
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.944458, y: 109.05556}
+        - {x: -24.944458, y: 97.05556}
+        - {x: -24.944458, y: 79.05556}
+        - {x: -21.944458, y: 75.05556}
+        - {x: -17.944458, y: 75.05556}
+        - {x: -24.944458, y: 45.055557}
+        - {x: -24.944458, y: 32.055557}
+        - {x: -9.944458, y: 0.05555725}
+        - {x: 23.055542, y: 0.05555725}
+        - {x: 26.055542, y: 6.0555573}
+        - {x: 26.055542, y: 85.05556}
+        - {x: 23.055542, y: 109.05556}
+    - name: LifeSeedizen_10
+      rect:
+        serializedVersion: 2
+        x: 5263
+        y: 523
+        width: 225
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.944458, y: 108.111115}
+        - {x: -24.944458, y: 22.111115}
+        - {x: -10.944458, y: 0.1111145}
+        - {x: 19.055542, y: 0.1111145}
+        - {x: 26.055542, y: 4.1111145}
+        - {x: 26.055542, y: 108.111115}
+    - name: LifeSeedizen_11
+      rect:
+        serializedVersion: 2
+        x: 5776
+        y: 523
+        width: 225
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.944458, y: 108.111115}
+        - {x: -24.944458, y: 105.111115}
+        - {x: -24.944458, y: 33.111115}
+        - {x: -7.944458, y: 0.1111145}
+        - {x: 26.055542, y: 0.1111145}
+        - {x: 26.055542, y: 108.111115}
+    - name: LifeSeedizen_12
+      rect:
+        serializedVersion: 2
+        x: 6289
+        y: 519
+        width: 216
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.055542, y: 109.16667}
+        - {x: -15.944458, y: 109.16667}
+        - {x: -23.944458, y: 108.16667}
+        - {x: -23.944458, y: 34.16667}
+        - {x: -8.944458, y: 0.16667175}
+        - {x: 13.055542, y: 0.16667175}
+        - {x: 25.055542, y: 6.1666718}
+        - {x: 25.055542, y: 97.16667}
+        - {x: 24.055542, y: 106.16667}
+    - name: LifeSeedizen_13
+      rect:
+        serializedVersion: 2
+        x: 6797
+        y: 523
+        width: 221
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.444458, y: 83.111115}
+        - {x: 23.444458, y: 108.111115}
+        - {x: -19.555542, y: 108.111115}
+        - {x: -24.555542, y: 95.111115}
+        - {x: -24.555542, y: 23.111115}
+        - {x: -7.555542, y: 0.1111145}
+        - {x: 24.444458, y: 0.1111145}
+        - {x: 25.444458, y: 1.1111145}
+        - {x: 25.444458, y: 57.111115}
+        - {x: 21.444458, y: 80.111115}
+    - name: LifeSeedizen_14
+      rect:
+        serializedVersion: 2
+        x: 7310
+        y: 523
+        width: 225
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.055542, y: 108.111115}
+        - {x: -21.055542, y: 101.111115}
+        - {x: -25.055542, y: 95.111115}
+        - {x: -25.055542, y: 26.111115}
+        - {x: -8.055542, y: 0.1111145}
+        - {x: 19.944458, y: 0.1111145}
+        - {x: 25.944458, y: 3.1111145}
+        - {x: 25.944458, y: 89.111115}
+        - {x: 22.944458, y: 108.111115}
+    - name: LifeSeedizen_15
+      rect:
+        serializedVersion: 2
+        x: 7823
+        y: 523
+        width: 225
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.055542, y: 108.111115}
+        - {x: -25.055542, y: 101.111115}
+        - {x: -25.055542, y: 41.111115}
+        - {x: -17.055542, y: 0.1111145}
+        - {x: 22.944458, y: 0.1111145}
+        - {x: 25.944458, y: 1.1111145}
+        - {x: 25.944458, y: 88.111115}
+        - {x: 22.944458, y: 106.111115}
+        - {x: 21.944458, y: 108.111115}
+    - name: LifeSeedizen_16
+      rect:
+        serializedVersion: 2
+        x: 8336
+        y: 523
+        width: 225
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.055542, y: 108.111115}
+        - {x: -25.055542, y: 103.111115}
+        - {x: -25.055542, y: 24.111115}
+        - {x: -9.055542, y: 0.1111145}
+        - {x: 13.944458, y: 0.1111145}
+        - {x: 25.944458, y: 6.1111145}
+        - {x: 25.944458, y: 87.111115}
+        - {x: 23.944458, y: 108.111115}
+    - name: LifeSeedizen_17
+      rect:
+        serializedVersion: 2
+        x: 8845
+        y: 523
+        width: 229
+        height: 489
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.444458, y: 109.05556}
+        - {x: -25.444458, y: 100.05556}
+        - {x: -25.444458, y: 13.055557}
+        - {x: -9.444458, y: 0.05555725}
+        - {x: 26.555542, y: 0.05555725}
+        - {x: 26.555542, y: 109.05556}
+    - name: LifeSeedizen_18
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 7
+        width: 216
+        height: 467
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.055553, y: 104.94444}
+        - {x: -24.055553, y: -0.055555105}
+        - {x: 24.944447, y: -0.055555105}
+        - {x: 24.944447, y: 61.944447}
+        - {x: 22.944447, y: 104.94444}
+    - name: LifeSeedizen_19
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 7
+        width: 216
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.055557, y: 105.888885}
+        - {x: -24.055557, y: 99.888885}
+        - {x: -24.055557, y: 35.88889}
+        - {x: -13.055557, y: -0.111112356}
+        - {x: 14.944443, y: -0.111112356}
+        - {x: 24.944443, y: 9.888887}
+        - {x: 24.944443, y: 105.888885}
+    - name: LifeSeedizen_20
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 7
+        width: 216
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.944427, y: 105.888885}
+        - {x: -23.944427, y: 97.888885}
+        - {x: -23.944427, y: 34.88889}
+        - {x: -17.944427, y: 15.888887}
+        - {x: 1.0555725, y: -0.111112356}
+        - {x: 10.0555725, y: -0.111112356}
+        - {x: 25.055573, y: 7.8888874}
+        - {x: 25.055573, y: 105.888885}
+    - name: LifeSeedizen_21
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 7
+        width: 216
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.944427, y: 105.888885}
+        - {x: -23.944427, y: -0.111112356}
+        - {x: 2.0555725, y: -0.111112356}
+        - {x: 2.0555725, y: 1.8888876}
+        - {x: 5.0555725, y: -0.111112356}
+        - {x: 16.055573, y: -0.111112356}
+        - {x: 25.055573, y: 4.8888874}
+        - {x: 25.055573, y: 105.888885}
+    - name: LifeSeedizen_22
+      rect:
+        serializedVersion: 2
+        x: 2194
+        y: 2
+        width: 225
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.944427, y: 105.88889}
+        - {x: -23.944427, y: 104.88889}
+        - {x: -24.944427, y: 96.88889}
+        - {x: -24.944427, y: 16.888891}
+        - {x: -19.944427, y: -0.11110899}
+        - {x: 26.055573, y: -0.11110899}
+        - {x: 26.055573, y: 101.88889}
+        - {x: 25.055573, y: 105.88889}
+    - name: LifeSeedizen_23
+      rect:
+        serializedVersion: 2
+        x: 2716
+        y: 7
+        width: 216
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.944458, y: 105.888885}
+        - {x: -23.944458, y: 18.888887}
+        - {x: -9.944458, y: -0.111112356}
+        - {x: 23.055542, y: -0.111112356}
+        - {x: 25.055542, y: 1.8888876}
+        - {x: 25.055542, y: 105.888885}
+    - name: LifeSeedizen_24
+      rect:
+        serializedVersion: 2
+        x: 3226
+        y: 2
+        width: 219
+        height: 476
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.111084, y: 106.833336}
+        - {x: -24.111084, y: 93.833336}
+        - {x: -24.111084, y: 53.833332}
+        - {x: -14.111084, y: 15.833334}
+        - {x: 3.888916, y: -0.16666624}
+        - {x: 20.888916, y: -0.16666624}
+        - {x: 25.888916, y: 4.833334}
+        - {x: 25.888916, y: 98.833336}
+        - {x: 24.888916, y: 106.833336}
+    - name: LifeSeedizen_25
+      rect:
+        serializedVersion: 2
+        x: 3737
+        y: 7
+        width: 216
+        height: 467
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.055542, y: 31.944445}
+        - {x: -23.055542, y: 13.944445}
+        - {x: -2.055542, y: -0.055555105}
+        - {x: 24.944458, y: -0.055555105}
+        - {x: 24.944458, y: 104.94444}
+        - {x: -24.055542, y: 104.94444}
+    - name: LifeSeedizen_26
+      rect:
+        serializedVersion: 2
+        x: 4250
+        y: 7
+        width: 216
+        height: 467
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.055542, y: 104.94444}
+        - {x: -21.055542, y: 100.94444}
+        - {x: -24.055542, y: 89.94444}
+        - {x: -24.055542, y: 59.944447}
+        - {x: -14.055542, y: -0.055555105}
+        - {x: 24.944458, y: -0.055555105}
+        - {x: 24.944458, y: 104.94444}
+    - name: LifeSeedizen_27
+      rect:
+        serializedVersion: 2
+        x: 4763
+        y: 7
+        width: 216
+        height: 467
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.944458, y: 104.94444}
+        - {x: -18.055542, y: 104.94444}
+        - {x: -24.055542, y: 97.94444}
+        - {x: -24.055542, y: 37.944447}
+        - {x: -9.055542, y: -0.055555105}
+        - {x: 24.944458, y: -0.055555105}
+        - {x: 24.944458, y: 79.94444}
+        - {x: 22.944458, y: 101.94444}
+    - name: LifeSeedizen_28
+      rect:
+        serializedVersion: 2
+        x: 5276
+        y: 7
+        width: 216
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.055542, y: 105.888885}
+        - {x: -24.055542, y: 94.888885}
+        - {x: -24.055542, y: 40.88889}
+        - {x: -23.055542, y: 32.88889}
+        - {x: -7.055542, y: -0.111112356}
+        - {x: 8.944458, y: -0.111112356}
+        - {x: 11.944458, y: 0.88888764}
+        - {x: 24.944458, y: 9.888887}
+        - {x: 24.944458, y: 105.888885}
+    - name: LifeSeedizen_29
+      rect:
+        serializedVersion: 2
+        x: 5789
+        y: 7
+        width: 216
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.055542, y: 105.888885}
+        - {x: -24.055542, y: 16.888887}
+        - {x: -6.055542, y: -0.111112356}
+        - {x: 17.944458, y: -0.111112356}
+        - {x: 24.944458, y: 7.8888874}
+        - {x: 24.944458, y: 91.888885}
+        - {x: 23.944458, y: 105.888885}
+    - name: LifeSeedizen_30
+      rect:
+        serializedVersion: 2
+        x: 6298
+        y: 7
+        width: 216
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.944458, y: 20.888887}
+        - {x: -4.944458, y: -0.111112356}
+        - {x: 18.055542, y: -0.111112356}
+        - {x: 25.055542, y: 5.8888874}
+        - {x: 25.055542, y: 105.888885}
+        - {x: -14.944458, y: 105.888885}
+        - {x: -23.944458, y: 103.888885}
+    - name: LifeSeedizen_31
+      rect:
+        serializedVersion: 2
+        x: 6806
+        y: 2
+        width: 221
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.444458, y: 105.88889}
+        - {x: -10.555542, y: 105.88889}
+        - {x: -22.555542, y: 99.88889}
+        - {x: -24.555542, y: 86.88889}
+        - {x: -24.555542, y: 78.88889}
+        - {x: -21.555542, y: 74.88889}
+        - {x: -24.555542, y: 53.88889}
+        - {x: -24.555542, y: 19.888891}
+        - {x: -21.555542, y: -0.11110899}
+        - {x: 25.444458, y: -0.11110899}
+        - {x: 25.444458, y: 84.88889}
+    - name: LifeSeedizen_32
+      rect:
+        serializedVersion: 2
+        x: 7324
+        y: 7
+        width: 216
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.055542, y: 4.8888874}
+        - {x: 25.055542, y: 80.888885}
+        - {x: 24.055542, y: 105.888885}
+        - {x: -17.944458, y: 105.888885}
+        - {x: -23.944458, y: 97.888885}
+        - {x: -23.944458, y: 28.888887}
+        - {x: -13.944458, y: -0.111112356}
+        - {x: 5.055542, y: -0.111112356}
+        - {x: 6.055542, y: 1.8888876}
+        - {x: 10.055542, y: -0.111112356}
+        - {x: 22.055542, y: -0.111112356}
+    - name: LifeSeedizen_33
+      rect:
+        serializedVersion: 2
+        x: 7837
+        y: 2
+        width: 216
+        height: 476
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.944458, y: 106.833336}
+        - {x: -23.944458, y: 96.833336}
+        - {x: -23.944458, y: 41.833332}
+        - {x: -18.944458, y: 21.833334}
+        - {x: 1.055542, y: 0.83333373}
+        - {x: 3.055542, y: -0.16666624}
+        - {x: 13.055542, y: -0.16666624}
+        - {x: 25.055542, y: 5.833334}
+        - {x: 25.055542, y: 87.833336}
+        - {x: 24.055542, y: 106.833336}
+    - name: LifeSeedizen_34
+      rect:
+        serializedVersion: 2
+        x: 8346
+        y: 7
+        width: 220
+        height: 467
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.333374, y: 104.94444}
+        - {x: -24.333374, y: 103.94444}
+        - {x: -24.333374, y: 8.944445}
+        - {x: -9.333374, y: -0.055555105}
+        - {x: 25.666626, y: -0.055555105}
+        - {x: 25.666626, y: 104.94444}
+    - name: LifeSeedizen_35
+      rect:
+        serializedVersion: 2
+        x: 8858
+        y: 7
+        width: 216
+        height: 467
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.055542, y: 17.944445}
+        - {x: -14.055542, y: -0.055555105}
+        - {x: 24.944458, y: -0.055555105}
+        - {x: 24.944458, y: 104.94444}
+        - {x: -24.055542, y: 104.94444}
+        - {x: -24.055542, y: 61.944447}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
