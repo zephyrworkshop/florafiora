@@ -61,8 +61,8 @@ public class PlanetType {
 			inst.GetComponent <PlanetComponent> ().seedizenPrefab 
 				= Resources.Load <GameObject> ("Prefabs/" + assetLoc + "Seedizen");
 
-            inst.GetComponent<PlanetComponent>().fgSprite
-                = Resources.Load <Sprite> ("PlanetImages/Flora/" + assetLoc + "PlanetControlled");
+			inst.GetComponent <PlanetComponent> ().colonizedSprite
+				= Resources.Load <Sprite> ("PlanetImages/Flora/" + assetLoc + "PlanetControlled");
 		}
 
 		inst.GetComponent <PlanetComponent> ().planetType = this;
