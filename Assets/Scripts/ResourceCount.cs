@@ -21,6 +21,6 @@ public class ResourceCount : MonoBehaviour {
 
 	public void Display (int num, string asset) {
 		count.text = "" + num;
-		image.sprite = Resources.Load <Sprite> ("PlanetImages/" + asset);
+		image.sprite = Resources.Load <Sprite> ("UI/" + asset);
 	}
 }

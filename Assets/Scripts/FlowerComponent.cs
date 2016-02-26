@@ -16,7 +16,7 @@ public class FlowerComponent : MonoBehaviour {
 
 	public GameObject textPrefab;
 
-	FlowerTextComponent ftc;
+	//FlowerTextComponent ftc;
 
 	// Use this for initialization
 	void Start () {
@@ -24,10 +24,10 @@ public class FlowerComponent : MonoBehaviour {
 			textPrefab = Resources.Load <GameObject> ("FlowerText");
 		var t = GameObject.Instantiate (textPrefab);
 		t.transform.SetParent (GameObject.Find ("Canvas").transform, false);
-		ftc = t.GetComponent <FlowerTextComponent> ();
-		ftc.flower = this;
-		ftc.planet = planet;
-		ftc.Refresh ();
+		//ftc = t.GetComponent <FlowerTextComponent> ();
+		//ftc.flower = this;
+		//ftc.planet = planet;
+		//ftc.Refresh ();
 	}
 	
 	// Update is called once per frame
@@ -44,8 +44,8 @@ public class FlowerComponent : MonoBehaviour {
 			planet.hasDemands.GainPollenAfterWait (maxNumBridges * maxNumBridges);
 		}
 
-		if (ftc != null)
-			ftc.Refresh ();
+		/*if (ftc != null)
+			ftc.Refresh ();*/
 	}
 
 	public void IncrementNumBridges () {
@@ -56,8 +56,8 @@ public class FlowerComponent : MonoBehaviour {
 			gameObject.GetComponent <SpriteRenderer> ().sprite = happyFlower;
 		}
 
-		if (ftc != null)
-			ftc.Refresh ();
+		/*if (ftc != null)
+			ftc.Refresh ();*/
 	}
 
 	public void VineDelete()
@@ -70,8 +70,8 @@ public class FlowerComponent : MonoBehaviour {
 		{
 			gameObject.GetComponent <SpriteRenderer> ().sprite = happyFlower;
 		}
-		if (ftc != null)
-			ftc.Refresh ();
+		/*if (ftc != null)
+			ftc.Refresh ();*/
 	}
 
 	public void OnMouseDown () {
