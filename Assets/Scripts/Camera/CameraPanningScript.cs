@@ -45,10 +45,10 @@ public class CameraPanningScript : MonoBehaviour {
 
 	private Vector3 startTouchOneWorldPosition;
 	private Vector3 previousTouchOneWorldPosition;
-//	private Vector3 startTouchOneCameraPosition;
-//	private Vector3 startTouchTwoWorldPosition;
-//	private Vector3 previousTouchTwoWorldPosition;
-//	private Vector3 startTouchTwoCameraPosition;
+	private Vector3 startTouchOneCameraPosition;
+	private Vector3 startTouchTwoWorldPosition;
+	private Vector3 previousTouchTwoWorldPosition;
+	private Vector3 startTouchTwoCameraPosition;
 	
 
 	
@@ -74,14 +74,14 @@ public class CameraPanningScript : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Mouse0)||(Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)) {
 			startTouchOneWorldPosition=MathTools.ScreenToWorldPosition(Input.mousePosition);
-			//startTouchOneCameraPosition=Camera.main.transform.position;
+			startTouchOneCameraPosition=Camera.main.transform.position;
 			previousTouchOneWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
 		}
 
 		if ((Input.touchCount>1&&Input.GetTouch(1).phase==TouchPhase.Began)) {
-			//startTouchTwoWorldPosition=MathTools.ScreenToWorldPosition(Input.mousePosition);
-			//startTouchTwoCameraPosition=Camera.main.transform.position;
-			//previousTouchTwoWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
+			startTouchTwoWorldPosition=MathTools.ScreenToWorldPosition(Input.mousePosition);
+			startTouchTwoCameraPosition=Camera.main.transform.position;
+			previousTouchTwoWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
 		}
 
 		UpdatePan ();
@@ -91,7 +91,7 @@ public class CameraPanningScript : MonoBehaviour {
 			previousTouchOneWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
 		}
 		if ((Input.touchCount>1&&Input.GetTouch(1).phase==TouchPhase.Moved)) {
-			//previousTouchTwoWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
+			previousTouchTwoWorldPosition=MathTools.ScreenToWorldPosition (Input.mousePosition);
 		}
 	}
 
@@ -136,7 +136,7 @@ public class CameraPanningScript : MonoBehaviour {
         }
 
 
-        /*
+        
         if (Input.GetKey (KeyCode.Mouse0)&&!Input.GetKeyDown(KeyCode.Mouse0)&&Input.touchCount<=1&&prevTouchCount<=1) {//TODO make this also happen during a touch/drag
             var moveX = -.0438f*Camera.main.orthographicSize*Input.GetAxisRaw ("Mouse X");
             var moveY = -.0438f*Camera.main.orthographicSize*Input.GetAxisRaw ("Mouse Y");
@@ -150,7 +150,7 @@ public class CameraPanningScript : MonoBehaviour {
             //make the velocity a weighted average with the delta
         } else {
 
-        }*/
+        }
     }
     
 
