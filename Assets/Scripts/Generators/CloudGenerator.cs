@@ -7,7 +7,7 @@ public class CloudGenerator : MonoBehaviour {
 
 	void Update () {
         timer += Time.deltaTime;
-        if (timer >= 12)
+        if (timer >= 6)
         {
             GameObject clone;
             clone = Instantiate(clouds[Random.Range(0, 7)], transform.position, transform.rotation) as GameObject;
