@@ -103,7 +103,7 @@ public class PlanetComponent : MonoBehaviour {
 			neighbors = neighbors + p.gameObject.name + ", ";
 		//Debug.Log ("Clicked on a planet! " + gameObject.name + " Neighbors: " + neighbors);
 
-		if (flower != null)
+		if (planetType.myTypeString == "starting planet" || planetType.myTypeString == "flower")
 		{
 			FlowerDragManager.StartDrag (flower);
 		}

@@ -14,20 +14,20 @@ public class FlowerComponent : MonoBehaviour {
 
 	public Sprite happyFlower;
 
-	public GameObject textPrefab;
+	//public GameObject textPrefab;
 
 	//FlowerTextComponent ftc;
 
 	// Use this for initialization
 	void Start () {
-		if (textPrefab == null)
+		/*if (textPrefab == null)
 			textPrefab = Resources.Load <GameObject> ("FlowerText");
 		var t = GameObject.Instantiate (textPrefab);
 		t.transform.SetParent (GameObject.Find ("Canvas").transform, false);
 		//ftc = t.GetComponent <FlowerTextComponent> ();
 		//ftc.flower = this;
 		//ftc.planet = planet;
-		//ftc.Refresh ();
+		//ftc.Refresh ();*/
 	}
 	
 	// Update is called once per frame
