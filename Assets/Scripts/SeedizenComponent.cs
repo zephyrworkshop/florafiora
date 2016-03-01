@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class SeedizenComponent : MonoBehaviour {
+public class SeedizenComponent : MonoBehaviour
+{
 
 	public static bool flingWithMouse = false;
 
@@ -33,6 +34,8 @@ public class SeedizenComponent : MonoBehaviour {
 
 	//Vector3 flightDir;
 
+	public Vector3 dragStartPosition;
+
 	public float idealAngle = 0f;
 
 	public string type = "";
@@ -41,7 +44,8 @@ public class SeedizenComponent : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		/*if (!flingWithMouse) {
 			gameObject.GetComponent <Collider2D> ().enabled = false;
 		}*/
@@ -53,16 +57,20 @@ public class SeedizenComponent : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (flingWithMouse) {
+	void Update ()
+	{
+		if (flingWithMouse)
+		{
 			//flinging
-			if (Time.time > flingTime + flingDur) {
+			if (Time.time > flingTime + flingDur)
+			{
 				//CameraPanningScript.EnableControls ();
 				flingTime = float.MaxValue;
-				StartFlight (Camera.main.ScreenToWorldPoint(Input.mousePosition) - mousePosAtStartOfFling);
+				StartFlight (Camera.main.ScreenToWorldPoint (Input.mousePosition) - mousePosAtStartOfFling);
 			}
 			//ending fling
-			if (inFling && Input.GetKeyUp (KeyCode.Mouse0)) {
+			if (inFling && Input.GetKeyUp (KeyCode.Mouse0))
+			{
 				inFling = false;
 				CameraPanningScript.Enable ();
 				speed = 2f;
@@ -70,7 +78,8 @@ public class SeedizenComponent : MonoBehaviour {
 		}
 
 		//walking
-		if (inTransit && destinationPlanet != null) {
+		if (inTransit && destinationPlanet != null)
+		{
 			Vector3 dir = destinationPlanet.gameObject.transform.position - gameObject.transform.position;
 			dir.Normalize ();
 			dir = dir * Time.deltaTime * speed;
@@ -88,12 +97,15 @@ public class SeedizenComponent : MonoBehaviour {
 			//gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 		}
 
-		if (destinationPlanet != null) {
-			if (Vector3.Distance (destinationPlanet.gameObject.transform.position, gameObject.transform.position) < .5f) {
+		if (destinationPlanet != null)
+		{
+			if (Vector3.Distance (destinationPlanet.gameObject.transform.position, gameObject.transform.position) < .5f)
+			{
 				currentPlanet = destinationPlanet;
 				destinationPlanet = null;
 			}
 		}
+<<<<<<< HEAD
 		if (currentPlanet != null) {
 			if (gameObject.transform.position.x > currentPlanet.gameObject.transform.position.x)
 			{
@@ -110,22 +122,35 @@ public class SeedizenComponent : MonoBehaviour {
 				rot.y = 0f;
 				gameObject.transform.rotation = rot;
 			}
+=======
+		if (currentPlanet != null)
+		{
+			gameObject.transform.rotation = Quaternion.LookRotation (Vector3.forward, (gameObject.transform.position - currentPlanet.gameObject.transform.position).normalized);
+>>>>>>> parent of 4995a90... Revert "Vine Drag Update"
 		}
 			
 		//randomly choosing a new destination when it gets to its planet
-		if (currentPlanet != null && destinationPlanet == null) {
+		if (currentPlanet != null && destinationPlanet == null)
+		{
 			GoToRandomNeighbor (currentPlanet);
 		}
 
 		//walk around the currentplanet
-		if (!flying && currentPlanet != null && destinationPlanet == null) {
+		if (!flying && currentPlanet != null && destinationPlanet == null)
+		{
 			//TODO calculate ideal angle
 			gameObject.transform.up = (gameObject.transform.position - currentPlanet.gameObject.transform.position).normalized;
 		}
 
 		//try to remain upright
+<<<<<<< HEAD
 		/*float angleDif = gameObject.transform.rotation.z - idealAngle;
 		if (angleDif != 0) {
+=======
+		float angleDif = gameObject.transform.rotation.z - idealAngle;
+		if (angleDif != 0)
+		{
+>>>>>>> parent of 4995a90... Revert "Vine Drag Update"
 			angleDif = Mathf.Max (angleDif, angleDif * Time.deltaTime * 3f);
 			var rot = gameObject.transform.rotation;
 			rot.z -= angleDif;
@@ -134,37 +159,49 @@ public class SeedizenComponent : MonoBehaviour {
 		}*/
 
 		//catch the fallen ones
+<<<<<<< HEAD
 		/*if (gameObject.transform.position.y < CameraPanningScript.minDepth) {
 			AbyssComponent.instance.CaptureSeedizen (this);
 		}*/
+=======
+		if (gameObject.transform.position.y < CameraPanningScript.minDepth)
+		{
+			//AbyssComponent.instance.CaptureSeedizen (this);
+		}
+>>>>>>> parent of 4995a90... Revert "Vine Drag Update"
 	}
 
 
-	public IEnumerator ColliderDisableCoroutine(float t){
+	public IEnumerator ColliderDisableCoroutine (float t)
+	{
 		col.enabled = false;
 		yield return new WaitForSeconds (t);
 		Debug.Log ("Turning on collision");
 		col.enabled = true;
 	}
 
-	public void temporarilyDisableCollider(float t){
+	public void temporarilyDisableCollider (float t)
+	{
 		//col.enabled = false;
 		StartCoroutine (ColliderDisableCoroutine (t));
 	}
 
-	public void TurnOffPollen () {
+	public void TurnOffPollen ()
+	{
 		hasPollen = false;
 		ParticleSystem.EmissionModule em = pollenParticles.emission;
 		em.enabled = false;
 	}
-	
-	public void TurnOnPollen () {
+
+	public void TurnOnPollen ()
+	{
 		hasPollen = true;
 		ParticleSystem.EmissionModule em = pollenParticles.emission;
 		em.enabled = true;
 	}
 
-	public void StartFlight (Vector3 dir) {
+	public void StartFlight (Vector3 dir)
+	{
 		Debug.Log (dir);
 		Vector2 dir2d = dir;
 
@@ -187,7 +224,8 @@ public class SeedizenComponent : MonoBehaviour {
 		rigid.AddForce (dir2d.normalized * Mathf.Sqrt (dir2d.magnitude) * 500f);
 	}
 
-	public void EndFlight () {
+	public void EndFlight ()
+	{
 		flying = false;
 		inTransit = true;
 
@@ -202,7 +240,8 @@ public class SeedizenComponent : MonoBehaviour {
 	/// <summary>
 	/// It's assumed this will only be called when they're at the planet
 	/// </summary>
-	public void GoToRandomNeighbor (PlanetComponent planet) {
+	public void GoToRandomNeighbor (PlanetComponent planet)
+	{
 		if (planet == null)
 			return;
 		planet.ProcessSeedizen (this);
@@ -230,10 +269,12 @@ public class SeedizenComponent : MonoBehaviour {
 		idealAngle = 0f;
 	}
 
-	public void GoToRandomNeighbor (VineComponent vine) {
+	public void GoToRandomNeighbor (VineComponent vine)
+	{
 		if (vine == null)
 			return;
-		if (vine.ends.Count < 2) {
+		if (vine.ends.Count < 2)
+		{
 			Debug.Log ("Weird vine collision");
 			return;
 		}
@@ -245,26 +286,36 @@ public class SeedizenComponent : MonoBehaviour {
 		destinationPlanet = dest;
 	}
 
-	void OnMouseDown () {
-		if (flingWithMouse) {
+	void OnMouseDown ()
+	{
+		if (flingWithMouse)
+		{
 			Debug.Log ("Clicked on a seedizen");
 			flingTime = Time.time;
 			inFling = true;
 			CameraPanningScript.Disable ();
 			speed = 0f;
-			mousePosAtStartOfFling = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			mousePosAtStartOfFling = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		}
+		Debug.Log ("Clicked on a seedizen");
+		if (currentVine != null)
+		{
+			currentVine.VineDragStart (this);
 		}
 	}
 
-	void OnCollisionEnter2D (Collision2D col) {
+	void OnCollisionEnter2D (Collision2D col)
+	{
 		//Debug.Log ("Collided with: " + col.gameObject.name + " at speed: " + col.relativeVelocity);
 		
 		var v = col.gameObject.GetComponent <VineComponent> ();
-		if (v != null) {
+		if (v != null)
+		{
 			//Debug.Log ("Velocity colliding with " + col.gameObject + " is " + col.relativeVelocity + " with magnitude: " + col.relativeVelocity.magnitude);
 			if (col.relativeVelocity.magnitude < 6f)
 				AttachToVine (v);
-			else {
+			else
+			{
 				//BOUNCE!
 				//gameObject.GetComponent <Rigidbody2D> ().AddRelativeForce (col.relativeVelocity * -100f);
 				//TODO fix bouncing
@@ -273,7 +324,8 @@ public class SeedizenComponent : MonoBehaviour {
 		}
 
 		var p = col.gameObject.GetComponent <PlanetComponent> ();
-		if (p != null) {
+		if (p != null)
+		{
 			p.ProcessSeedizen (this);
 			//var ccol = col.gameObject.GetComponent<CircleCollider2D>();
 			//var displ = ccol.radius*(gameObject.transform.position-col.transform.position).normalized;
@@ -282,7 +334,8 @@ public class SeedizenComponent : MonoBehaviour {
 		}
 	}
 
-	void AttachToVine (VineComponent vc) {
+	void AttachToVine (VineComponent vc)
+	{
 		EndFlight ();
 		currentVine = vc;
 		if (!vc.seedizens.Contains (this))
@@ -290,10 +343,12 @@ public class SeedizenComponent : MonoBehaviour {
 		GoToRandomNeighbor (vc);
 	}
 
-	public void AttachToPlanet (PlanetComponent pc) {
+	public void AttachToPlanet (PlanetComponent pc)
+	{
 		EndFlight ();
 		currentPlanet = pc;
 		destinationPlanet = null;
 		GoToRandomNeighbor (pc);
 	}
+		
 }
