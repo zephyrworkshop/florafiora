@@ -7,7 +7,7 @@ public class IsDemandBubble : MonoBehaviour {
 
 	public GameObject host;
 
-	public float distance = 2f;
+	public float distance = 4f;
 
 	public float angle = 0f;
 
