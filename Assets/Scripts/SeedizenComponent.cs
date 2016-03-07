@@ -55,121 +55,123 @@ public class SeedizenComponent : MonoBehaviour
 		TurnOffPollen ();
 		col = gameObject.GetComponent<BoxCollider2D> ();
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		if (flingWithMouse)
-		{
-			//flinging
-			if (Time.time > flingTime + flingDur)
-			{
-				//CameraPanningScript.EnableControls ();
-				flingTime = float.MaxValue;
-				StartFlight (Camera.main.ScreenToWorldPoint (Input.mousePosition) - mousePosAtStartOfFling);
-			}
-			//ending fling
-			if (inFling && Input.GetKeyUp (KeyCode.Mouse0))
-			{
-				inFling = false;
-				CameraPanningScript.Enable ();
-				speed = 2f;
-			}
-		}
 
-		//walking
-		if (inTransit && destinationPlanet != null)
-		{
-			Vector3 dir = destinationPlanet.gameObject.transform.position - gameObject.transform.position;
-			dir.Normalize ();
-			dir = dir * Time.deltaTime * speed;
-			gameObject.transform.position += dir;
+    // Update is called once per frame
+    void Update()
+    {
+        if (flingWithMouse)
+        {
+            //flinging
+            if (Time.time > flingTime + flingDur)
+            {
+                //CameraPanningScript.EnableControls ();
+                flingTime = float.MaxValue;
+                StartFlight(Camera.main.ScreenToWorldPoint(Input.mousePosition) - mousePosAtStartOfFling);
+            }
+            //ending fling
+            if (inFling && Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                inFling = false;
+                CameraPanningScript.Enable();
+                speed = 2f;
+            }
+        }
 
-			//facing
-			/*var rot = gameObject.transform.rotation;
+        //walking
+        if (inTransit && destinationPlanet != null)
+        {
+            Vector3 dir = destinationPlanet.gameObject.transform.position - gameObject.transform.position;
+            dir.Normalize();
+            dir = dir * Time.deltaTime * speed;
+            gameObject.transform.position += dir;
+
+            //facing
+            /*var rot = gameObject.transform.rotation;
 			if (dir.x < 0)
 				rot.y = 0f;
 			else
 				rot.y = 180f;
 			gameObject.transform.rotation = rot;*/
 
-			//var angle = Mathf.Atan2(currentVine.dir.y, currentVine.dir.x) * Mathf.Rad2Deg;
-			//gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-		}
+            //var angle = Mathf.Atan2(currentVine.dir.y, currentVine.dir.x) * Mathf.Rad2Deg;
+            //gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
 
-		if (destinationPlanet != null)
-		{
-			if (Vector3.Distance (destinationPlanet.gameObject.transform.position, gameObject.transform.position) < .5f)
-			{
-				currentPlanet = destinationPlanet;
-				destinationPlanet = null;
-			}
-		}
-<<<<<<< HEAD
-		if (currentPlanet != null) {
-			if (gameObject.transform.position.x > currentPlanet.gameObject.transform.position.x)
-			{
-				gameObject.transform.rotation = Quaternion.LookRotation (Vector3.forward, (gameObject.transform.position - currentPlanet.gameObject.transform.position).normalized) * Quaternion.Euler(0,0,90);
+        if (destinationPlanet != null)
+        {
+            if (Vector3.Distance(destinationPlanet.gameObject.transform.position, gameObject.transform.position) < .5f)
+            {
+                currentPlanet = destinationPlanet;
+                destinationPlanet = null;
+            }
+        }
 
-				var rot = gameObject.transform.rotation;
-				rot.y = 180f;
-				gameObject.transform.rotation = rot;
-			} else
-			{
-				gameObject.transform.rotation = Quaternion.LookRotation (Vector3.forward, (currentPlanet.gameObject.transform.position - gameObject.transform.position).normalized) * Quaternion.Euler(0,0,90);
+        if (currentPlanet != null)
+        {
+            if (gameObject.transform.position.x > currentPlanet.gameObject.transform.position.x)
+            {
+                gameObject.transform.rotation = Quaternion.LookRotation(Vector3.forward, (gameObject.transform.position - currentPlanet.gameObject.transform.position).normalized) * Quaternion.Euler(0, 0, 90);
 
-				var rot = gameObject.transform.rotation;
-				rot.y = 0f;
-				gameObject.transform.rotation = rot;
-			}
-=======
-		if (currentPlanet != null)
-		{
-			gameObject.transform.rotation = Quaternion.LookRotation (Vector3.forward, (gameObject.transform.position - currentPlanet.gameObject.transform.position).normalized);
->>>>>>> parent of 4995a90... Revert "Vine Drag Update"
-		}
-			
-		//randomly choosing a new destination when it gets to its planet
-		if (currentPlanet != null && destinationPlanet == null)
-		{
-			GoToRandomNeighbor (currentPlanet);
-		}
+                var rot = gameObject.transform.rotation;
+                rot.y = 180f;
+                gameObject.transform.rotation = rot;
+            }
+            else
+            {
+                gameObject.transform.rotation = Quaternion.LookRotation(Vector3.forward, (currentPlanet.gameObject.transform.position - gameObject.transform.position).normalized) * Quaternion.Euler(0, 0, 90);
 
-		//walk around the currentplanet
-		if (!flying && currentPlanet != null && destinationPlanet == null)
-		{
-			//TODO calculate ideal angle
-			gameObject.transform.up = (gameObject.transform.position - currentPlanet.gameObject.transform.position).normalized;
-		}
+                var rot = gameObject.transform.rotation;
+                rot.y = 0f;
+                gameObject.transform.rotation = rot;
+            }
 
-		//try to remain upright
-<<<<<<< HEAD
-		/*float angleDif = gameObject.transform.rotation.z - idealAngle;
-		if (angleDif != 0) {
-=======
-		float angleDif = gameObject.transform.rotation.z - idealAngle;
-		if (angleDif != 0)
-		{
->>>>>>> parent of 4995a90... Revert "Vine Drag Update"
-			angleDif = Mathf.Max (angleDif, angleDif * Time.deltaTime * 3f);
-			var rot = gameObject.transform.rotation;
-			rot.z -= angleDif;
-			//Debug.Log (gameObject.transform.rotation + " " + angleDif + " " + rot);
-			gameObject.transform.rotation = rot;
-		}*/
+            if (currentPlanet != null)
+            {
+                gameObject.transform.rotation = Quaternion.LookRotation(Vector3.forward, (gameObject.transform.position - currentPlanet.gameObject.transform.position).normalized);
+            }
 
-		//catch the fallen ones
-<<<<<<< HEAD
-		/*if (gameObject.transform.position.y < CameraPanningScript.minDepth) {
-			AbyssComponent.instance.CaptureSeedizen (this);
-		}*/
-=======
-		if (gameObject.transform.position.y < CameraPanningScript.minDepth)
-		{
-			//AbyssComponent.instance.CaptureSeedizen (this);
-		}
->>>>>>> parent of 4995a90... Revert "Vine Drag Update"
-	}
+            //randomly choosing a new destination when it gets to its planet
+            if (currentPlanet != null && destinationPlanet == null)
+            {
+                GoToRandomNeighbor(currentPlanet);
+            }
+
+            //walk around the currentplanet
+            if (!flying && currentPlanet != null && destinationPlanet == null)
+            {
+                //TODO calculate ideal angle
+                gameObject.transform.up = (gameObject.transform.position - currentPlanet.gameObject.transform.position).normalized;
+            }
+
+            //try to remain upright
+
+            /*float angleDif = gameObject.transform.rotation.z - idealAngle;
+            if (angleDif != 0) {
+    =======
+            float angleDif = gameObject.transform.rotation.z - idealAngle;
+            if (angleDif != 0)
+            {
+    >>>>>>> parent of 4995a90... Revert "Vine Drag Update"
+                angleDif = Mathf.Max (angleDif, angleDif * Time.deltaTime * 3f);
+                var rot = gameObject.transform.rotation;
+                rot.z -= angleDif;
+                //Debug.Log (gameObject.transform.rotation + " " + angleDif + " " + rot);
+                gameObject.transform.rotation = rot;
+            }*/
+
+            //catch the fallen ones
+
+            /*if (gameObject.transform.position.y < CameraPanningScript.minDepth) {
+                AbyssComponent.instance.CaptureSeedizen (this);
+            }*/
+
+            if (gameObject.transform.position.y < CameraPanningScript.minDepth)
+            {
+                //AbyssComponent.instance.CaptureSeedizen (this);
+            }
+
+        }
+    }
 
 
 	public IEnumerator ColliderDisableCoroutine (float t)

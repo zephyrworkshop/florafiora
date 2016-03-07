@@ -171,7 +171,6 @@ public class VineDragComponent : MonoBehaviour
 
 		MakeFlingArrow ();
         
-<<<<<<< HEAD
     }
 
     void OnDragRelease(Vector3 dir)
@@ -203,51 +202,49 @@ public class VineDragComponent : MonoBehaviour
             dragging = false;
 
             DestroyFlingArrow();
-=======
 	}
 
-	void OnDragRelease (Vector3 dir)
-	{
-		releasePositions.Clear ();
-		clickStopPosition = ClickToDrag.GetCursorWorldLocation ();
-		List<SeedizenComponent> seedizensCopy = new List<SeedizenComponent> (vine.seedizens);
-		var dragSeedizenCopy = draggingSeedizen;
+	//void OnDragRelease (Vector3 dir)
+	//{
+	//	releasePositions.Clear ();
+	//	clickStopPosition = ClickToDrag.GetCursorWorldLocation ();
+	//	List<SeedizenComponent> seedizensCopy = new List<SeedizenComponent> (vine.seedizens);
+	//	var dragSeedizenCopy = draggingSeedizen;
 
-		for (int i = 0; i < seedizensCopy.Count; i++)
-		{
-			var seedizen = seedizensCopy [i];
-			if (seedizen == null || seedizen.gameObject == null)
-			{
-				Debug.Log ("Null seedizen");
-			}
-			releasePositions.Add (seedizen.transform.position);
-			//debugSphere1.transform.position=releasePositions[i];
-			//debugSphere2.transform.position=startDragPositions[i];
-			seedizen.temporarilyDisableCollider (.5f);
-			if (i >= startDragPositions.Count || i >= releasePositions.Count)
-			{
-				Debug.Log ("The system of coordinating positions on lists stored on multiple classes has failed!!! Consider storing this data on the seedizens");
-				continue;
-			}
-		}
+	//	for (int i = 0; i < seedizensCopy.Count; i++)
+	//	{
+	//		var seedizen = seedizensCopy [i];
+	//		if (seedizen == null || seedizen.gameObject == null)
+	//		{
+	//			Debug.Log ("Null seedizen");
+	//		}
+	//		releasePositions.Add (seedizen.transform.position);
+	//		//debugSphere1.transform.position=releasePositions[i];
+	//		//debugSphere2.transform.position=startDragPositions[i];
+	//		seedizen.temporarilyDisableCollider (.5f);
+	//		if (i >= startDragPositions.Count || i >= releasePositions.Count)
+	//		{
+	//			Debug.Log ("The system of coordinating positions on lists stored on multiple classes has failed!!! Consider storing this data on the seedizens");
+	//			continue;
+	//		}
+	//	}
 
-		dragSeedizenCopy.StartFlight ((startDrag - draggingSeedizen.transform.position));//still need to make the falloff for this greater than linear
+	//	dragSeedizenCopy.StartFlight ((startDrag - draggingSeedizen.transform.position));//still need to make the falloff for this greater than linear
 
-		foreach (var seedizen in vine.seedizens)
-		{
-				seedizen.transform.position = seedizen.dragStartPosition;
-				seedizen.inTransit = true;
-		}
+	//	foreach (var seedizen in vine.seedizens)
+	//	{
+	//			seedizen.transform.position = seedizen.dragStartPosition;
+	//			seedizen.inTransit = true;
+	//	}
 
-		//vine.seedizens.Clear ();
+	//	//vine.seedizens.Clear ();
 
-		draggingSeedizen = null;
-		dragging = false;
+	//	draggingSeedizen = null;
+	//	dragging = false;
 
-		DestroyFlingArrow ();
->>>>>>> parent of 4995a90... Revert "Vine Drag Update"
+	//	DestroyFlingArrow ();
         
-	}
+	//}
 
 	static GameObject flingArrow;
 
