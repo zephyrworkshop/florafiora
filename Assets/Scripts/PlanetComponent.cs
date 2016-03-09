@@ -186,6 +186,7 @@ public class PlanetComponent : MonoBehaviour
 		{
 			var seedizen = GameObject.Instantiate (seedizenPrefab);
 			seedizen.GetComponent <SeedizenComponent> ().currentPlanet = this;
+			seedizen.GetComponent <SeedizenComponent> ().startPlanet = this;
 			seedizen.transform.position = gameObject.transform.position;
 		}
 	}

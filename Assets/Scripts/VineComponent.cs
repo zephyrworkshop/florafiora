@@ -62,6 +62,7 @@ public class VineComponent : MonoBehaviour
 		//add a falloff for the force on seedizens as a function of distance from the click location
 		if (VineDragComponent.vineCut == false)
 		{
+			VineDragComponent.StartVineDrag(this);
 		} else
 		{
 			if (flowerPlanet != null)
@@ -73,10 +74,10 @@ public class VineComponent : MonoBehaviour
 		}
 	}
 
-	public void VineDragStart (SeedizenComponent dragSeedizen)
+	/*public void VineDragStart (SeedizenComponent dragSeedizen)
 	{
 		VineDragComponent.StartVineDrag (this, dragSeedizen);
-	}
+	}*/
 
 
 	void OnCollisionEnter2D (Collision2D col)

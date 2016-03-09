@@ -29,9 +29,12 @@ public class CameraPanningScript : MonoBehaviour {
 	public static float minDepth = -100f;
 	//private float edgeAcceleration=100f;
 
-
+	public CloudGenerator generator;
     public float zoomVelocity = 0f;
 	public float zoomDrag = 10f;
+
+	private float baseSize = 20f;
+	private float opacity;
 
 	private float zoomLowLimit=10f;
 	private float zoomHighLimit=50f;
@@ -175,7 +178,9 @@ public class CameraPanningScript : MonoBehaviour {
             zoomHighLimit = 50;
         }*/
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, zoomLowLimit, zoomHighLimit);
-        
+		opacity = (Camera.main.orthographicSize / baseSize);
+		opacity = Mathf.Clamp (opacity, 0.1f, 1);
+		generator.Opacity (opacity);
 
 
         //keyboard
