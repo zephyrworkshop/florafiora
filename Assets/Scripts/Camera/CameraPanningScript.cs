@@ -179,7 +179,7 @@ public class CameraPanningScript : MonoBehaviour {
         }*/
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, zoomLowLimit, zoomHighLimit);
 		opacity = (Camera.main.orthographicSize / baseSize);
-		opacity = Mathf.Clamp (opacity, 0.1f, 1);
+		opacity = Mathf.Clamp (opacity, 0.1f, 0.9f);
 		generator.Opacity (opacity);
 
 
