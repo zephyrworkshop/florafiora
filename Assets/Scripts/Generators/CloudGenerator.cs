@@ -16,7 +16,7 @@ public class CloudGenerator : MonoBehaviour {
             clone.transform.position += new Vector3(0, Random.Range(-150, 150));
             clone.GetComponent<Rigidbody2D>().velocity = -transform.right * Random.Range(1.55f, 4.5f);
 			cloudList.Add (clone);
-            Destroy(clone.gameObject, 365);
+            Destroy(clone.gameObject, 120);
             timer = Random.Range(0, 3.5f);
         }
 	}

@@ -10,7 +10,7 @@ public class HasDemands : MonoBehaviour {
 
 	public bool startWithNoDemands = false;
 	
-	public static string [] demandTypes = new string[] {"water", "fire", "life" /*,"snow", "pinecone"*/};
+	public static string [] demandTypes = new string[] {"water", "fire", "life"};
 	//public static string [] seedizenDemandTypes = new string[] 
 	//		{"WaterSeedizen", "FireSeedizen", "LifeSeedizen", "SnowSeedizen", "SoilSeedizen"};
 
@@ -71,7 +71,7 @@ public class HasDemands : MonoBehaviour {
 
 		idb.host = gameObject;
 
-		idb.distance = distance;
+		idb.distance = distance + .5f;
 
 		//idb.angle = Random.Range (0f, 6.3f);
 		idb.angle = 1f + myDemandBubbles.Count * .5f;//TODO this should be based on angle

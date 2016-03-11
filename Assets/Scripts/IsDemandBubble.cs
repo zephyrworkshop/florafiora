@@ -41,7 +41,7 @@ public class IsDemandBubble : MonoBehaviour {
 				}
 			} else {
 				if (isSeedizenDemand) {
-					sprite = Resources.Load <Sprite> ("PlanetImages/" + 
+					sprite = Resources.Load <Sprite> ("PlanetImages/SeedizenSprites/" + 
 						demanded.Substring (0, 1).ToUpper () + demanded.Substring (1) + "Seedizen");
 				} else {
 					sprite = Resources.Load <Sprite> ("PlanetImages/" + 
