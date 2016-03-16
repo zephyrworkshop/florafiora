@@ -146,6 +146,8 @@ public class SeedizenComponent : MonoBehaviour {
 		yield return new WaitForSeconds (t);
 		Debug.Log ("Turning on collision");
 		col.enabled = true;
+		yield return new WaitForSeconds (10);
+		col.enabled = false;
 	}
 
 	public void temporarilyDisableCollider(float t){

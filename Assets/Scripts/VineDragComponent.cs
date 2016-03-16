@@ -139,6 +139,7 @@ public class VineDragComponent : MonoBehaviour {
 				continue;
 			}
 			seedizen.inTransit = false;
+
 			startDragPositions.Add(seedizen.transform.position);
 			vinePercentagePositions.Add((seedizen.transform.position - vine.ends[0].gameObject.transform.position).magnitude / vineVector.magnitude);
 		}
@@ -173,7 +174,7 @@ public class VineDragComponent : MonoBehaviour {
 			releasePositions.Add(seedizen.transform.position);
 			//debugSphere1.transform.position=releasePositions[i];
 			//debugSphere2.transform.position=startDragPositions[i];
-			seedizen.temporarilyDisableCollider(.5f);
+			seedizen.temporarilyDisableCollider(1.0f);
 			if (i >= startDragPositions.Count || i >= releasePositions.Count)
 			{
 				Debug.Log("The system of coordinating positions on lists stored on multiple classes has failed!!! Consider storing this data on the seedizens");
