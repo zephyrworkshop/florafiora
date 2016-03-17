@@ -146,7 +146,7 @@ public class SeedizenComponent : MonoBehaviour {
 		yield return new WaitForSeconds (t);
 		Debug.Log ("Turning on collision");
 		col.enabled = true;
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (20);
 		col.enabled = false;
 	}
 
@@ -158,13 +158,13 @@ public class SeedizenComponent : MonoBehaviour {
 	public void TurnOffPollen () {
 		hasPollen = false;
 		ParticleSystem.EmissionModule em = pollenParticles.emission;
-		em.enabled = true;
+		em.enabled = false;
 	}
 
 	public void TurnOnPollen () {
 		hasPollen = true;
 		ParticleSystem.EmissionModule em = pollenParticles.emission;
-		em.enabled = false;
+		em.enabled = true;
 	}
 
 	public void StartFlight (Vector3 dir) {

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour {
 	public PitchScreen splashCanvas;
-	public CloudGenerator menuClouds;
+	public CloudGeneratorMainMenu menuClouds;
 	public Canvas playCanvas;
 
     public void StartGame()

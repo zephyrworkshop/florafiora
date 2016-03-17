@@ -108,7 +108,7 @@ public class FlowerDragManager : MonoBehaviour {
 		
 		//vine stretching
 		var scale = v.transform.localScale;
-		scale.x = dir.magnitude / 8f;
+		scale.x = dir.magnitude / 10f;
 		scale.y = 2f;
 		//Debug.Log (mousePos + " " + startPos + " " + d
 		v.transform.localScale = scale;
