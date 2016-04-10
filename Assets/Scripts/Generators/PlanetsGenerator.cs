@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -48,19 +48,19 @@ public class PlanetsGenerator : MonoBehaviour {
 		return pos;
 	}
 
-	public PlanetType GetPlanetType () {
+	public string GetPlanetType () {
 		if (Random.value < .4f)
-			return new PlanetType ("flower");
+			return "flower";
 
 		if (Random.value < .25f)
-			return new PlanetType ("pollen");
+			return "pollen";
 
 		string [] options = HasDemands.demandTypes;
 		var pt = options [Random.Range (0, options.Length)];
-		return new PlanetType (pt + "");
+		return pt + "";
 	}
 
-	public void SpawnPlanet (Vector3 pos, PlanetType pt) {
+	public void SpawnPlanet (Vector3 pos, string pt) {
 
 		GameObject plan = pt.GetInstance ();
 
@@ -80,4 +80,4 @@ public class PlanetsGenerator : MonoBehaviour {
 	}
 
 
-}
+}*/

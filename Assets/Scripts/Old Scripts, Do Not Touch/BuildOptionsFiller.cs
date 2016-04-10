@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -14,7 +14,7 @@ public class BuildOptionsFiller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		FillPlanets ();
+//		FillPlanets ();
 	}
 	
 	// Update is called once per frame
@@ -51,7 +51,7 @@ public class BuildOptionsFiller : MonoBehaviour {
 		Clear ();
 	}
 
-	public void FillPlanets () {
+	/*public void FillPlanets () {
 		Clear ();
 		AddButton (GetSprite ("PlanetImages/EmptyPlanet"), () => {EditorPlacing.StartPlacingPlanet ("Empty");});
 
@@ -96,3 +96,4 @@ public class BuildOptionsFiller : MonoBehaviour {
 		}
 	}
 }
+*/

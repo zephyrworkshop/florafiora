@@ -9,7 +9,7 @@ public class HasDemands : MonoBehaviour {
 	public PlanetComponent planet;
 
 	public bool startWithNoDemands = false;
-	
+
 	public static string [] demandTypes = new string[] {"water", "fire", "life"};
 	//public static string [] seedizenDemandTypes = new string[] 
 	//		{"WaterSeedizen", "FireSeedizen", "LifeSeedizen", "SnowSeedizen", "SoilSeedizen"};
@@ -25,10 +25,10 @@ public class HasDemands : MonoBehaviour {
 
 		//TESTING
 		planet = gameObject.GetComponent <PlanetComponent> ();
-		var pt = planet.planetType;
-		var vpc = gameObject.GetComponent <VictoryPlanetComponent> ();
+		string pt = planet.planetType;
+		//var vpc = gameObject.GetComponent <VictoryPlanetComponent> ();
 
-		if (!startWithNoDemands && (vpc != null || pt != null && pt.hasDemands)) {
+		if (!startWithNoDemands && (pt != null && planet.demands)) {
 			if (Random.value < .5f) {
 			
 				//needs seedizens
@@ -52,7 +52,7 @@ public class HasDemands : MonoBehaviour {
 						d = demandTypes [Random.Range (0, demandTypes.Length)];
 				}
 			}
-		} else if (pt.growsFlower && planet.connectedPlanets.Count == 0) {
+		} else if (pt == "flower" && planet.connectedPlanets.Count == 0) {
 
 			//flowers need a person at first
 			AddDemand ("", true, true);
@@ -168,18 +168,18 @@ public class HasDemands : MonoBehaviour {
 			planet = gameObject.GetComponent <PlanetComponent> ();
 		var pt = planet.planetType;
 
-		if (pt.isVictory) {
+		/*if (pt.isVictory) {
 			GenericUtilityScript.instance.victoryText.SetActive (true);
 			return;
-		}
+		}*/
 
-		if (pt.growsFlower && planet.flower != null) {
+		if (pt == "flower" && planet.flower != null) {
 			planet.flower.IncrementNumBridges ();
-		} else if (pt.produces != "") {
-			ResourcesDisplay.instance.Add (Random.Range (1,2), pt.produces);
+		} else if (pt != "") {
+			ResourcesDisplay.instance.Add (Random.Range (1,2), pt);
 		}
 
-		if (planet != null && planet.flower != null && planet.flower.numBridges > 0 && planet.planetType != null && planet.planetType.growsFlower) {
+		if (planet != null && planet.flower != null && planet.flower.numBridges > 0 && planet.planetType != null && planet.planetType == "flower") {
 			Debug.Log ("Doing nothing");
 			//do nothing. Flowers wait until they are out of bridges
 		} else 

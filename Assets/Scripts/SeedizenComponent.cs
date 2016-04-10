@@ -264,7 +264,7 @@ public class SeedizenComponent : MonoBehaviour {
 		var g = col.gameObject.GetComponent<TheGroundComponent>();
 		if (g != null)
 		{
-			ResourcesDisplay.instance.Add (1, startPlanet.planetType.produces);
+			ResourcesDisplay.instance.Add (1, startPlanet.planetType);
 			Destroy (this.gameObject);
 		}
 
