@@ -2,29 +2,30 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlanetComponent : MonoBehaviour
+public class PregenPlanet : MonoBehaviour
 {
 
-	public FlowerComponent flower;
+	public PregenFlower flower;
 
 	public GameObject seedizenPrefab;
 
-	public List <PlanetComponent> connectedPlanets = new List<PlanetComponent> ();
+	public List <PregenPlanet> connectedPlanets = new List<PregenPlanet> ();
 
-	public Dictionary <PlanetComponent, VineComponent> vines = new Dictionary<PlanetComponent, VineComponent> ();
+	public Dictionary <PregenPlanet, PregenVine> vines = new Dictionary<PregenPlanet, PregenVine> ();
 
 	public string planetType;
 
 	public bool demands;
+	public bool makesPollen;
 
-	public HasDemands hasDemands;
+	public PregenDemands hasDemands;
 
 	/// <summary>
 	/// This is so you can wire up planets in the editor
 	/// </summary>
-	public List <VineComponent> startConnected = new List<VineComponent> ();
+	public List <PregenVine> startConnected = new List<PregenVine> ();
 
-	public void AddConnectedPlanet (PlanetComponent pc, VineComponent v)
+	public void AddConnectedPlanet (PregenPlanet pc, PregenVine v)
 	{
 		connectedPlanets.Add (pc);
 		pc.connectedPlanets.Add (this);
@@ -33,7 +34,7 @@ public class PlanetComponent : MonoBehaviour
 		pc.vines [this] = v;
 	}
 
-	public void DeleteConnectedPlanet (PlanetComponent pc)
+	public void DeleteConnectedPlanet (PregenPlanet pc)
 	{
 		pc.vines [this] = null;
 		vines [pc] = null;
@@ -44,7 +45,7 @@ public class PlanetComponent : MonoBehaviour
 
 
 	// Use this for initialization
-	void Start ()
+	public virtual void Start ()
 	{
 		//gameObject.name = GetPlanetName ();
 
@@ -53,10 +54,11 @@ public class PlanetComponent : MonoBehaviour
 			AddConnectedPlanet (s.ends [0], s);//so yeah, this is the behavior of startconnected
 		}
 
+		makesPollen = false;
 		//planets have needs
-		hasDemands = gameObject.GetComponent <HasDemands> ();
+		hasDemands = gameObject.GetComponent <PregenDemands> ();
 		if (hasDemands == null)
-			hasDemands = gameObject.AddComponent <HasDemands> ();
+			hasDemands = gameObject.AddComponent <PregenDemands> ();
 	}
 
 	// Update is called once per frame
@@ -75,7 +77,7 @@ public class PlanetComponent : MonoBehaviour
 			neighbors = neighbors + p.gameObject.name + ", ";
 		//Debug.Log ("Clicked on a planet! " + gameObject.name + " Neighbors: " + neighbors);
 
-		FlowerDragManager.StartDrag (flower);
+		PregenFlowerDrag.StartDrag (flower);
 
 
 		if (vines.Count <= 0)
@@ -103,30 +105,30 @@ public class PlanetComponent : MonoBehaviour
 		if (seedizenPrefab != null)
 		{
 			var seedizen = GameObject.Instantiate (seedizenPrefab);
-			seedizen.GetComponent <SeedizenComponent> ().currentPlanet = this;
-			seedizen.GetComponent <SeedizenComponent> ().startPlanet = this;
+			seedizen.GetComponent <PregenSeedizen> ().currentPlanet = this;
+			seedizen.GetComponent <PregenSeedizen> ().startPlanet = this;
 			seedizen.transform.position = gameObject.transform.position;
 		}
 	}
 
 	public void OnMouseEnter ()
 	{
-		FlowerDragManager.RegisterMouseOnPlanet (this);
+		PregenFlowerDrag.RegisterMouseOnPlanet (this);
 	}
 
 	public void OnMouseExit ()
 	{
-		FlowerDragManager.RegisterNoMouseOnPlanet (this);
+		PregenFlowerDrag.RegisterNoMouseOnPlanet (this);
 	}
 
-	public void ProcessSeedizen (SeedizenComponent seedizen)
+	public void ProcessSeedizen (PregenSeedizen seedizen)
 	{
 		if (planetType != null && planetType == "pollen")
 		{
 			seedizen.TurnOnPollen ();
 		}
 
-		var hd = gameObject.GetComponent <HasDemands> ();
+		var hd = gameObject.GetComponent <PregenDemands> ();
 		if (hd.MeetDemandWithSeedizen (seedizen))
 		{
 			GameObject.Destroy (seedizen.gameObject);
@@ -152,7 +154,7 @@ public class PlanetComponent : MonoBehaviour
 		else
 			return true;
 	}
-		
+
 
 	public Sprite colonizedSprite;
 	bool isColonized = false;
