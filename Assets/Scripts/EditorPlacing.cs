@@ -1,4 +1,4 @@
-﻿/*using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -10,7 +10,7 @@ public class EditorPlacing : MonoBehaviour {
 
 	//planets
 	static GameObject currentlyPlacing;
-	//static PlanetType currentlyTyped;
+	static PlanetType currentlyTyped;
 	static bool useGrid = true;
 
 	//vines
@@ -34,7 +34,7 @@ public class EditorPlacing : MonoBehaviour {
 	void Awake () {
 		//instance = this;
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
 		//mouse
@@ -84,13 +84,13 @@ public class EditorPlacing : MonoBehaviour {
 				if (vineEnd1 == null) {
 					//Debug.Log ("Vine1");
 					vineEnd1 = currentPlanetByMouse;
-
+					
 					vine.gameObject.transform.SetAsFirstSibling ();
 					//startPos = flo.gameObject.transform.parent.position;
 				} else if (currentPlanetByMouse != vineEnd1) {
 					//Debug.Log ("Vine2");
 					vineEnd2 = currentPlanetByMouse;
-
+					
 					//record vine
 					PlacementDetails p1 = null;
 					PlacementDetails p2 = null;
@@ -152,7 +152,7 @@ public class EditorPlacing : MonoBehaviour {
 		currentDemand = "";
 	}
 
-	/*public static void StartPlacingPlanet (string name) {
+	public static void StartPlacingPlanet (string name) {
 		PlanetType pt = new PlanetType (name);
 
 		currentlyPlacing = pt.GetInstance ();
@@ -162,14 +162,14 @@ public class EditorPlacing : MonoBehaviour {
 
 		state = editingState.planets;
 	}
-
+	
 	public static void StartPlacingSeedizen (string name) {
 		//TODO
 		Debug.Log ("Seedizen: " + name);
-
+		
 		state = editingState.seedizens;
 	}
-
+	
 	public static void StartPlacingFlower (string name) {
 		//Debug.Log ("Flower: " + name);
 
@@ -177,10 +177,10 @@ public class EditorPlacing : MonoBehaviour {
 		underCursor = flower;
 
 		Debug.Log (flower);
-
+		
 		state = editingState.flower;
 	}
-
+	
 	public static void StartPlacingVine (string name) {
 		//Debug.Log ("Vine: " + name);
 
@@ -189,23 +189,23 @@ public class EditorPlacing : MonoBehaviour {
 
 		state = editingState.vine;
 	}
-
+	
 	public static void StartPlacingDemand (string name) {
 		//TODO
 		//Debug.Log ("Demand: " + name);
 
 		currentDemand = name;
-
+		
 		state = editingState.demands;
 	}
-
+	
 	//click click
 	static PlanetComponent currentPlanetByMouse;
 
 	public static void RegisterMouseOnPlanet (PlanetComponent planet) {
 		currentPlanetByMouse = planet;
 	}
-
+	
 	public static void RegisterNoMouseOnPlanet (PlanetComponent planet) {
 		if (currentPlanetByMouse == planet)
 			currentPlanetByMouse = null;
@@ -230,8 +230,8 @@ public class EditorPlacing : MonoBehaviour {
 public class PlacementDetails {
 	static int idCount = 0;
 
-	//public PlanetType planetType;
-
+	public PlanetType planetType;
+	
 	public Vector3 pos;
 
 	public bool hasFlower = false;
@@ -241,9 +241,9 @@ public class PlacementDetails {
 	public int id;
 
 	List <int> neighbors = new List<int> ();
-
-	public PlacementDetails (/*PlanetType pt, Vector3 p) {
-		//planetType = pt;
+	
+	public PlacementDetails (PlanetType pt, Vector3 p) {
+		planetType = pt;
 		pos = p;
 
 		id = idCount;
@@ -252,7 +252,7 @@ public class PlacementDetails {
 
 	public string PrintString ()
 	{
-		string s = "" + id + "|" + pos.x + "|" + pos.y + "|" /*+ planetType.myTypeString + "|" + hasFlower + "|" + thePlanetGob.GetComponent <HasDemands> ().PrintDemands () + "|";
+		string s = "" + id + "|" + pos.x + "|" + pos.y + "|" + planetType.myTypeString + "|" + hasFlower + "|" + thePlanetGob.GetComponent <HasDemands> ().PrintDemands () + "|";
 		foreach (var n in neighbors)
 			s = s + n + ",";
 
@@ -264,4 +264,3 @@ public class PlacementDetails {
 		pd.neighbors.Add (id);
 	}
 }
-*/

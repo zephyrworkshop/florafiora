@@ -64,7 +64,7 @@ public class PathfindingManager {
 		if (seedizen.hasPollen) {
 			return planet.hasDemands.NeedsPollenOf (seedizen);
 		} else {
-			return planet.planetType == "pollen";
+			return planet.planetType.makesPollen;
 		}
 	}
 }

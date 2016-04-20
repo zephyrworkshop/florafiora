@@ -1,4 +1,4 @@
-﻿/*using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class VictoryPlanetComponent : MonoBehaviour {
@@ -13,4 +13,4 @@ public class VictoryPlanetComponent : MonoBehaviour {
 	void Update () {
 	
 	}
-}*/
+}
