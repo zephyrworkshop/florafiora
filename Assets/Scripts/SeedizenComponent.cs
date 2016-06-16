@@ -55,6 +55,9 @@ public class SeedizenComponent : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+        AnimationHandler();
+
 		if (flingWithMouse) {
 			//flinging
 			if (Time.time > flingTime + flingDur) {
@@ -115,7 +118,7 @@ public class SeedizenComponent : MonoBehaviour {
 
 		//randomly choosing a new destination when it gets to its planet
 		if (currentPlanet != null && destinationPlanet == null) {
-			GoToRandomNeighbor (currentPlanet);
+                GoToRandomNeighbor(currentPlanet);
 		}
 
 		//walk around the currentplanet
@@ -140,6 +143,17 @@ public class SeedizenComponent : MonoBehaviour {
 		}*/
 	}
 
+    void AnimationHandler()
+    {
+        if (inTransit)
+        {
+            GetComponent<Animator>().SetInteger("Stance", 1);
+        }
+        else
+        {
+            GetComponent<Animator>().SetInteger("Stance", 0);
+        }
+    }
 
 	public IEnumerator ColliderDisableCoroutine(float t){
 		col.enabled = false;
