@@ -15,7 +15,7 @@ public class CloudScript : MonoBehaviour {
         opacityTimer += Time.deltaTime;
 
         normTimer = Mathf.InverseLerp(opacityTimer, 0, 1);
-        Debug.Log(normTimer);
+        //Debug.Log(normTimer);
             if (opacityTimer <= 30)
         {
             GetComponent<SpriteRenderer>().material.color = new Color(1, 1, 1, normTimer);
