@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PregenFlowerDrag : MonoBehaviour {
 
-	static PregenFlower flower;
+	static VinePlanet VinePlanet;
 
 	static PregenPlanet currentPlanetByMouse;
 
@@ -24,11 +24,11 @@ public class PregenFlowerDrag : MonoBehaviour {
 	}
 
 	void OnFlowerDragSuccessfulEnd () {
-		flower.planet.AddConnectedPlanet (currentPlanetByMouse, vine);
+		VinePlanet.AddConnectedPlanet (currentPlanetByMouse, vine);
 		vine.ends.Add (currentPlanetByMouse);
 		vine.gameObject.name = "Vine from " + vine.ends [0].gameObject.name + " to " + vine.ends [1].gameObject.name;
 		vine.StopStretching ();
-		flower.DecrementNumBridges ();
+		VinePlanet.DecrementNumBridges ();
 
 		vine.ends [0].BeColonized ();
 		vine.ends [1].BeColonized ();
@@ -43,10 +43,10 @@ public class PregenFlowerDrag : MonoBehaviour {
 		bool destroy = false;
 
 		if (Input.GetMouseButtonUp (0)) {
-			if (flower != null) {
+			if (VinePlanet != null) {
 				if (currentPlanetByMouse == null
-					|| currentPlanetByMouse.connectedPlanets.Contains (flower.planet)
-					|| currentPlanetByMouse == flower.planet
+					|| currentPlanetByMouse.connectedPlanets.Contains (VinePlanet)
+					|| currentPlanetByMouse == VinePlanet
 					|| !currentPlanetByMouse.CanConnectVine ()
 				) {//|| !vine.IsNotColliding ()) {
 					destroy = true;
@@ -64,7 +64,7 @@ public class PregenFlowerDrag : MonoBehaviour {
 		//if (flower != null && dif.magnitude > flower.maxDragDist)
 		//mousePos = startPos + dif.normalized * flower.maxDragDist;
 
-		if (flower != null) {
+		if (VinePlanet != null) {
 			PlaceVine (startPos, mousePos, vine.gameObject);
 			/*
 			//position the vine between the two points
@@ -89,7 +89,7 @@ public class PregenFlowerDrag : MonoBehaviour {
 			GameObject.Destroy (vine.gameObject);
 		}
 		if (end) {
-			flower = null;
+			VinePlanet = null;
 			vine = null;
 			CameraPanningScript.Enable ();
 		}
@@ -114,7 +114,7 @@ public class PregenFlowerDrag : MonoBehaviour {
 		v.transform.localScale = scale;
 	}
 
-	public static void StartDrag (PregenFlower flo) {
+	public static void StartDrag (VinePlanet flo) {
 		if (flo == null || flo.gameObject == null) {
 			Debug.Log ("ERRORS");
 			return;
@@ -126,14 +126,14 @@ public class PregenFlowerDrag : MonoBehaviour {
 		}
 
 		CameraPanningScript.Disable ();
-		flower = flo;
+		VinePlanet = flo;
 
 		var v = GameObject.Instantiate (instance.vinePrefab);
 		vine = v.GetComponent <PregenVine> ();
-		vine.ends.Add (flower.planet);
-		vine.flowerPlanet = flower.planet;
+		vine.ends.Add (VinePlanet);
+		vine.flowerPlanet = VinePlanet;
 		vine.gameObject.transform.SetAsFirstSibling ();
-		startPos = flo.gameObject.transform.parent.position;
+		startPos = flo.gameObject.transform.position;
 	}
 
 	public static void RegisterMouseOnPlanet (PregenPlanet planet) {

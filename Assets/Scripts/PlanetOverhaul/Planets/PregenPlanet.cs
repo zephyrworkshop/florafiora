@@ -5,8 +5,6 @@ using System.Collections.Generic;
 public class PregenPlanet : MonoBehaviour
 {
 
-	public PregenFlower flower;
-
 	public GameObject seedizenPrefab;
 
 	public List <PregenPlanet> connectedPlanets = new List<PregenPlanet> ();
@@ -17,6 +15,9 @@ public class PregenPlanet : MonoBehaviour
 
 	public bool demands;
 	public bool makesPollen;
+
+	public int numBridges;
+	public int maxNumBridges;
 
 	public PregenDemands hasDemands;
 
@@ -67,8 +68,6 @@ public class PregenPlanet : MonoBehaviour
 
 	}
 
-	private float lastSpawned = 0f;
-
 	public virtual void OnMouseDown ()
 	{
 		string neighbors = "";
@@ -77,38 +76,10 @@ public class PregenPlanet : MonoBehaviour
 			neighbors = neighbors + p.gameObject.name + ", ";
 		//Debug.Log ("Clicked on a planet! " + gameObject.name + " Neighbors: " + neighbors);
 
-		PregenFlowerDrag.StartDrag (flower);
-
-
-		if (vines.Count <= 0)
-			return;
-
-		if (Time.time < lastSpawned + .5f)
-			return;
-
-		if (ResourcesDisplay.instance == null || planetType == null)
-		{
-			return;
-		}
-
-		if (ResourcesDisplay.instance.GetAvailable (planetType) > 0)
-		{
-			ResourcesDisplay.instance.Add (-1, planetType);
-			LoadSeedizenHere ();
-			lastSpawned = Time.time;
-		}
-
 	}
 
-	public void LoadSeedizenHere ()
+	public virtual void LoadSeedizenHere ()
 	{
-		if (seedizenPrefab != null)
-		{
-			var seedizen = GameObject.Instantiate (seedizenPrefab);
-			seedizen.GetComponent <PregenSeedizen> ().currentPlanet = this;
-			seedizen.GetComponent <PregenSeedizen> ().startPlanet = this;
-			seedizen.transform.position = gameObject.transform.position;
-		}
 	}
 
 	public void OnMouseEnter ()
@@ -167,5 +138,9 @@ public class PregenPlanet : MonoBehaviour
 		if (colonizedSprite != null)
 			transform.FindChild ("planet").GetComponent <SpriteRenderer> ().sprite = colonizedSprite;
 		isColonized = true;
+	}
+
+	public virtual void IncrementNumBridges ()
+	{
 	}
 }

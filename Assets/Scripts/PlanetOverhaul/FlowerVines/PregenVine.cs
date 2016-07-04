@@ -9,7 +9,7 @@ public class PregenVine : MonoBehaviour
 
 	public List <PregenPlanet> ends = new List <PregenPlanet> ();
 
-	public PregenPlanet flowerPlanet;
+	public VinePlanet flowerPlanet;
 
 	public List <PregenSeedizen> seedizens = new List <PregenSeedizen> ();
 
@@ -68,7 +68,7 @@ public class PregenVine : MonoBehaviour
 			if (flowerPlanet != null)
 			{
 				flowerPlanet.DeleteConnectedPlanet (ends [1]);
-				flowerPlanet.flower.VineDelete ();
+				flowerPlanet.VineDelete ();
 			}
 			Destroy (this.gameObject);
 		}
@@ -83,12 +83,12 @@ public class PregenVine : MonoBehaviour
 	void OnCollisionEnter2D (Collision2D col)
 	{
 		//Debug.Log ("I collided with: " + col.gameObject);
-		if (ends.Count == 0 || ends [0] == null || ends [0].flower == null)
+		if (ends.Count == 0 || ends [0] == null || ends [0].planetType != "vine")
 		{
 			//Debug.Log ("No end! " + gameObject.name);
 			return;
 		}
-		if (col.gameObject == ends [0].gameObject || col.gameObject == ends [0].flower.gameObject)
+		if (col.gameObject == ends [0].gameObject || col.gameObject == ends [0].gameObject)
 		{
 			//Debug.Log ("Collisions with: " + col.gameObject.name + " don't count!");
 			return;

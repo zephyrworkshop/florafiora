@@ -52,7 +52,7 @@ public class PregenDemands : MonoBehaviour {
 						d = demandTypes [Random.Range (0, demandTypes.Length)];
 				}
 			}
-		} else if (pt == "flower" && planet.connectedPlanets.Count == 0) {
+		} else if (pt == "vine" && planet.connectedPlanets.Count == 0) {
 
 			//flowers need a person at first
 			AddDemand ("", true, true);
@@ -173,13 +173,13 @@ public class PregenDemands : MonoBehaviour {
 			return;
 		}*/
 
-		if (pt == "flower" && planet.flower != null) {
-			planet.flower.IncrementNumBridges ();
+		if (pt == "vine") {
+			planet.IncrementNumBridges ();
 		} else if (pt != "") {
 			ResourcesDisplay.instance.Add (Random.Range (1,2), pt);
 		}
 
-		if (planet != null && planet.flower != null && planet.flower.numBridges > 0 && planet.planetType != null && planet.planetType == "flower") {
+		if (planet != null && planet.planetType != null && planet.numBridges > 0 && planet.planetType != null && planet.planetType == "vine") {
 			Debug.Log ("Doing nothing");
 			//do nothing. Flowers wait until they are out of bridges
 		} else 
