@@ -15,6 +15,7 @@ public class PregenPlanet : MonoBehaviour
 
 	public bool demands;
 	public bool makesPollen;
+	public bool makesWater;
 
 	public int numBridges;
 	public int maxNumBridges;
@@ -96,6 +97,12 @@ public class PregenPlanet : MonoBehaviour
 	{
 		if (planetType != null && planetType == "pollen")
 		{
+			if (HasResources() == true)
+			seedizen.TurnOnPollen ();
+		}
+		if (planetType != null && planetType == "water")
+		{
+			if (HasResources() == true)
 			seedizen.TurnOnPollen ();
 		}
 
@@ -142,5 +149,10 @@ public class PregenPlanet : MonoBehaviour
 
 	public virtual void IncrementNumBridges ()
 	{
+	}
+
+	public virtual bool HasResources()
+	{
+		return false;
 	}
 }

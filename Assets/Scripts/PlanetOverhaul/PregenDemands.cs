@@ -10,7 +10,7 @@ public class PregenDemands : MonoBehaviour {
 
 	public bool startWithNoDemands = false;
 
-	public static string [] demandTypes = new string[] {"water", "fire", "life"};
+	public static string [] demandTypes = new string[] {"marsh", "marigold", "flora"};
 	//public static string [] seedizenDemandTypes = new string[] 
 	//		{"WaterSeedizen", "FireSeedizen", "LifeSeedizen", "SnowSeedizen", "SoilSeedizen"};
 
