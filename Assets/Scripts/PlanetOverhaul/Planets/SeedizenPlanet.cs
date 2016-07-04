@@ -40,6 +40,7 @@ public class SeedizenPlanet : PregenPlanet {
 			seedizen.GetComponent <PregenSeedizen> ().currentPlanet = this;
 			seedizen.GetComponent <PregenSeedizen> ().startPlanet = this;
 			seedizen.transform.position = gameObject.transform.position;
+			spawnedSeedizens.Add(seedizen);
 		}
 	}
 }

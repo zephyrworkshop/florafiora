@@ -9,6 +9,8 @@ public class PregenPlanet : MonoBehaviour
 
 	public List <PregenPlanet> connectedPlanets = new List<PregenPlanet> ();
 
+	public List <PregenSeedizen> spawnedSeedizens = new List<PregenSeedizen> ();
+
 	public Dictionary <PregenPlanet, PregenVine> vines = new Dictionary<PregenPlanet, PregenVine> ();
 
 	public string planetType;
