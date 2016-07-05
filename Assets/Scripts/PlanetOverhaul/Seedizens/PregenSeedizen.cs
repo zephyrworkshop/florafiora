@@ -51,6 +51,8 @@ public class PregenSeedizen : MonoBehaviour {
 			pollenParticles = pp.GetComponent <ParticleSystem> ();
 		TurnOffPollen ();
 		col = gameObject.GetComponent<BoxCollider2D> ();
+
+		startPlanet.spawnedSeedizens.Add (this);
 	}
 
 	// Update is called once per frame

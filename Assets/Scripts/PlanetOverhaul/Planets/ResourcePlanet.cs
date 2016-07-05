@@ -8,13 +8,14 @@ public class ResourcePlanet : PregenPlanet {
 
 	public override void Start()
 	{
-		
+		if (infiniteResource == null)
+			infiniteResource = true;
 	}
 
 	public override bool HasResources()
 	{
 
-		if ( ResourceCount != null && ResourceCount > 0 && infiniteResource == false)
+		if (ResourceCount > 0 && infiniteResource == false)
 		{
 			ResourceCount--;
 			return true;

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PregenDemands : MonoBehaviour {
+public class Demands : MonoBehaviour {
 
 	public List <IsDemandBubble> myDemandBubbles = new List<IsDemandBubble> ();
 

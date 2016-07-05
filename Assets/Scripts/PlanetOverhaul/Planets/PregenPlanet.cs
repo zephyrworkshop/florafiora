@@ -99,12 +99,12 @@ public class PregenPlanet : MonoBehaviour
 	{
 		if (planetType != null && planetType == "pollen")
 		{
-			if (HasResources() == true)
+			if (HasResources())
 			seedizen.TurnOnPollen ();
 		}
 		if (planetType != null && planetType == "water")
 		{
-			if (HasResources() == true)
+			if (HasResources())
 			seedizen.TurnOnPollen ();
 		}
 
