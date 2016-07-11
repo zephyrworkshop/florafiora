@@ -163,8 +163,8 @@ public class HasDemands : MonoBehaviour {
 
 	private void OnDemandsAllMet () {
 		Debug.Log ("CONGRATULATIONS! You met all the demands of: " + gameObject.name);
-
-		if (planet == null)
+        GetComponent<ParticleSystem>().Emit(Random.Range(10, 20));
+        if (planet == null)
 			planet = gameObject.GetComponent <PlanetComponent> ();
 		var pt = planet.planetType;
 

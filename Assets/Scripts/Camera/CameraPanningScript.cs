@@ -34,12 +34,11 @@ public class CameraPanningScript : MonoBehaviour {
 	public float zoomDrag = 10f;
 
 	private float baseSize = 20f;
-	private float opacity;
 
 	private float zoomLowLimit=10f;
 	private float zoomHighLimit=50f;
     //private float currentZoom = 2;
-
+    
 
 //    private float zoomAcceleration=100f;
 	private float pinchDistance=0f;
@@ -178,9 +177,6 @@ public class CameraPanningScript : MonoBehaviour {
             zoomHighLimit = 50;
         }*/
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, zoomLowLimit, zoomHighLimit);
-		opacity = (Camera.main.orthographicSize / baseSize);
-		opacity = Mathf.Clamp (opacity, 0.0f, 0.9f);
-		generator.Opacity (opacity);
 
 
         //keyboard
