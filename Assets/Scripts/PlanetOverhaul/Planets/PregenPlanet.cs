@@ -105,7 +105,7 @@ public class PregenPlanet : MonoBehaviour
 		if (planetType != null && planetType == "water")
 		{
 			if (HasResources())
-			seedizen.TurnOnPollen ();
+			seedizen.TurnOnWater ();
 		}
 
 		var hd = gameObject.GetComponent <PregenDemands> ();
@@ -117,6 +117,10 @@ public class PregenPlanet : MonoBehaviour
 		if (hd.MeetDemandWithPollen (seedizen))
 		{
 			seedizen.TurnOffPollen ();
+		}
+		if (hd.MeetDemandWithWater (seedizen))
+		{
+			seedizen.TurnOffWater ();
 		}
 	}
 

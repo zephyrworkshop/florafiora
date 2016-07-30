@@ -11,12 +11,16 @@ public class PregenDemands : MonoBehaviour
 
 	public bool startWithNoDemands = false;
 
-	public int[] pollenCounts = new int[5];
+	public int[] pollenCounts;
+	public int[] waterCounts;
 
 	public int currentLevel = 0;
 
-	public int currentGoal;
-	public int remaining;
+	public int currentGoalPollen;
+	public int remainingPollen;
+
+	public int currentGoalWater;
+	public int remainingWater;
 
 	public float distance = 10f;
 
@@ -37,17 +41,24 @@ public class PregenDemands : MonoBehaviour
 		if (!startWithNoDemands && (pt != null && planet.demands))
 		{
 			//needs pollen
-			for (int i = 0; i < pollenCounts [currentLevel]; i++)
-			{
-				AddDemand (false);
-				currentGoal = pollenCounts [currentLevel];
-				remaining = pollenCounts [currentLevel];
+			if (currentLevel <= pollenCounts.Length && pollenCounts.Length > 0) {
+				for (int i = 0; i < pollenCounts [currentLevel]; i++) {
+					AddDemand (false, false);
+					currentGoalPollen = pollenCounts [currentLevel];
+					remainingPollen = pollenCounts [currentLevel];
+				}
+			}
+			if (currentLevel <= waterCounts.Length && waterCounts.Length > 0) {
+				for (int i = 0; i < waterCounts [currentLevel]; i++) {
+					AddDemand (false, true);
+					currentGoalWater = waterCounts [currentLevel];
+					remainingWater = waterCounts [currentLevel];				}
 			}
 		} else if (pt == "vine" && planet.connectedPlanets.Count == 0)
 			{
 
 				//flowers need a person at first
-				AddDemand (true);
+				AddDemand (true, false);
 			}
 	}
 
@@ -57,23 +68,25 @@ public class PregenDemands : MonoBehaviour
 
 	}
 
-	public void AddDemand (bool isSeedizen)
+	public void AddDemand (bool isSeedizen, bool isWater)
 	{
 		GameObject db = GameObject.Instantiate (PregenGenericUtility.GetDemandBubblePrefab ()) as GameObject;
 
-		var idb = db.GetComponent <PregenDemandBubble> ();
+		var pdb = db.GetComponent <PregenDemandBubble> ();
 
-		idb.host = gameObject;
+		pdb.host = gameObject;
 
-		idb.distance = distance + .5f;
+		pdb.distance = distance + .5f;
 
-		//idb.angle = Random.Range (0f, 6.3f);
-		idb.angle = 1f + myDemandBubbles.Count * .5f;//TODO this should be based on angle
+		//pdb.angle = Random.Range (0f, 6.3f);
+		pdb.angle = 1f + myDemandBubbles.Count * .5f;//TODO this should be based on angle
 
 
-		idb.isSeedizenDemand = isSeedizen;
+		pdb.isSeedizenDemand = isSeedizen;
 
-		myDemandBubbles.Add (idb);
+		pdb.isWaterDemand = isWater;
+
+		myDemandBubbles.Add (pdb);
 
 		db.transform.parent = gameObject.transform;
 	}
@@ -127,7 +140,7 @@ public class PregenDemands : MonoBehaviour
 
 			if (myDemandBubbles.Count == 0)
 				OnDemandsAllMet ();
-			remaining--;
+			remainingPollen--;
 			return true;
 		} else
 		{
@@ -135,11 +148,39 @@ public class PregenDemands : MonoBehaviour
 		}
 	}
 
-	public bool NeedsPollenOf (PregenSeedizen sc)
+	public bool MeetDemandWithWater (PregenSeedizen sc)
+	{
+		PregenDemandBubble found = null;
+		foreach (var db in myDemandBubbles)
+		{
+			if (sc.hasWater && !db.isSeedizenDemand)
+			{
+				found = db;
+				break;
+			}
+		}
+
+		if (found)
+		{
+			myDemandBubbles.Remove (found);
+
+			GameObject.Destroy (found.gameObject);
+
+			if (myDemandBubbles.Count == 0)
+				OnDemandsAllMet ();
+			remainingWater--;
+			return true;
+		} else
+		{
+			return false;
+		}
+	}
+
+	public bool NeedsPollen (PregenSeedizen sc)
 	{
 		foreach (var db in myDemandBubbles)
 		{
-			if (sc.hasPollen && !db.isSeedizenDemand)
+			if (sc.hasPollen && !db.isSeedizenDemand && !db.isWaterDemand)
 			{
 				return true;
 			}
@@ -147,25 +188,61 @@ public class PregenDemands : MonoBehaviour
 		return false;
 	}
 
+	public bool NeedsWater (PregenSeedizen sc)
+	{
+		foreach (var db in myDemandBubbles)
+		{
+			if (sc.hasWater && !db.isSeedizenDemand && db.isWaterDemand)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+		
+
 	private void GainPollenDemands ()
 	{
 		for (int i = 0; i < pollenCounts [currentLevel]; i++)
 		{
-			AddDemand (false);
-			currentGoal = pollenCounts [currentLevel];
-			remaining = pollenCounts [currentLevel];
+			AddDemand (false, false);
+			currentGoalPollen = pollenCounts [currentLevel];
+			remainingPollen = pollenCounts [currentLevel];
 		}
 	}
 
-	public void GainPollenAfterWait (float waitTime)
+	private void GainWaterDemands ()
 	{
-		StartCoroutine (GainPollenCoroutine (waitTime));
+		for (int i = 0; i < waterCounts [currentLevel]; i++)
+		{
+			AddDemand (false, true);
+			currentGoalWater = waterCounts [currentLevel];
+			remainingWater = waterCounts [currentLevel];
+		}
 	}
 
-	public IEnumerator GainPollenCoroutine (float waitTime)
+	public void GainResourceAfterWait (float waitTime)
+	{
+		StartCoroutine (GainResourceCoroutine (waitTime));
+	}
+
+	public IEnumerator GainResourceCoroutine (float waitTime)
 	{
 		yield return new WaitForSeconds (waitTime);
-		GainPollenDemands ();
+		if (pollenCounts != null) {
+			if (currentLevel <= pollenCounts.Length && pollenCounts.Length > 0) {
+				if (pollenCounts [currentLevel] != null) {
+					GainPollenDemands ();
+				}
+			}
+		}
+		if (waterCounts != null) {
+			if (currentLevel <= waterCounts.Length && waterCounts.Length > 0) {
+				if (waterCounts [currentLevel] != null) {
+					GainWaterDemands ();
+				}
+			}
+		}
 	}
 
 	private void OnDemandsAllMet ()
@@ -195,7 +272,7 @@ public class PregenDemands : MonoBehaviour
 				//do nothing. Flowers wait until they are out of bridges
 			} else
 			{
-				GainPollenAfterWait (Random.Range (5f, 10f));
+				GainResourceAfterWait (Random.Range (5f, 10f));
 			}
 			currentLevel++;
 		}

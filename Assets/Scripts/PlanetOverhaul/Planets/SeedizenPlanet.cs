@@ -6,28 +6,28 @@ public class SeedizenPlanet : PregenPlanet {
 
 	public override void OnMouseDown ()
 	{
-		string neighbors = "";
+		if (hasDemands.remainingWater <= 0) {
+			string neighbors = "";
 
-		foreach (var p in connectedPlanets)
-			neighbors = neighbors + p.gameObject.name + ", ";
-		//Debug.Log ("Clicked on a planet! " + gameObject.name + " Neighbors: " + neighbors);
+			foreach (var p in connectedPlanets)
+				neighbors = neighbors + p.gameObject.name + ", ";
+			//Debug.Log ("Clicked on a planet! " + gameObject.name + " Neighbors: " + neighbors);
 
-		if (vines.Count <= 0)
-			return;
+			if (vines.Count <= 0)
+				return;
 
-		if (Time.time < lastSpawned + .5f)
-			return;
+			if (Time.time < lastSpawned + .5f)
+				return;
 
-		if (ResourcesDisplay.instance == null || planetType == null)
-		{
-			return;
-		}
+			if (PregenResourceDisplay.instance == null || planetType == null) {
+				return;
+			}
 
-		if (ResourcesDisplay.instance.GetAvailable (planetType) > 0)
-		{
-			ResourcesDisplay.instance.Add (-1, planetType);
-			LoadSeedizenHere ();
-			lastSpawned = Time.time;
+			if (PregenResourceDisplay.instance.GetAvailable (planetType) > 0) {
+				PregenResourceDisplay.instance.Add (-1, planetType);
+				LoadSeedizenHere ();
+				lastSpawned = Time.time;
+			}
 		}
 
 	}
