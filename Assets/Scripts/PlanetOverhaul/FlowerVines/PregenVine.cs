@@ -19,6 +19,9 @@ public class PregenVine : MonoBehaviour
 
 	public bool dispreferred = false;
 
+	//Color vineBaseColor;
+	//Color vineInvalidColor;
+
 	// Use this for initialization
 	void Start ()
 	{

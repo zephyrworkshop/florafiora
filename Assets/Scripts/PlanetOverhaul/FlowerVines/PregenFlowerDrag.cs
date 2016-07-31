@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PregenFlowerDrag : MonoBehaviour {
+public class PregenFlowerDrag : MonoBehaviour
+{
 
 	static VinePlanet VineDragPlanet;
 
@@ -11,6 +12,9 @@ public class PregenFlowerDrag : MonoBehaviour {
 
 	public GameObject vinePrefab;
 
+	Color vineBaseColor;
+	Color vineInvalidColor;
+
 	/// <summary>
 	/// The planet position
 	/// </summary>
@@ -19,11 +23,19 @@ public class PregenFlowerDrag : MonoBehaviour {
 	public static PregenFlowerDrag instance;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		instance = this;
+
+		vineBaseColor = vinePrefab.GetComponent<SpriteRenderer> ().sharedMaterial.color;
+		vineInvalidColor = vineBaseColor;
+		vineInvalidColor.r += 200;
+		//vineInvalidColor.g = 0;
+		vineInvalidColor.a = .8f;
 	}
 
-	void OnFlowerDragSuccessfulEnd () {
+	void OnFlowerDragSuccessfulEnd ()
+	{
 		VineDragPlanet.AddConnectedPlanet (currentPlanetByMouse, vine);
 		vine.ends.Add (currentPlanetByMouse);
 		vine.gameObject.name = "Vine from " + vine.ends [0].gameObject.name + " to " + vine.ends [1].gameObject.name;
@@ -35,9 +47,22 @@ public class PregenFlowerDrag : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		//get mouse position
-		Vector3 mousePos = MathTools.ScreenToWorldPosition(Input.mousePosition);
+		Vector3 mousePos = MathTools.ScreenToWorldPosition (Input.mousePosition);
+		if (VineDragPlanet != null) {
+			if ( Vector3.Distance (mousePos, startPos) > VineDragPlanet.maxDragDist 
+				|| (currentPlanetByMouse != null 
+					&& (!currentPlanetByMouse.CanConnectVine() || currentPlanetByMouse.connectedPlanets.Contains(VineDragPlanet)))) 
+			{
+				vine.GetComponent<SpriteRenderer> ().material.color = vineInvalidColor;
+			} else 
+			{
+				vine.GetComponent<SpriteRenderer> ().material.color = vineBaseColor;
+			}
+		}
+
 
 		bool end = false;
 		bool destroy = false;
@@ -45,11 +70,10 @@ public class PregenFlowerDrag : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0)) {
 			if (VineDragPlanet != null) {
 				if (currentPlanetByMouse == null
-					|| currentPlanetByMouse.connectedPlanets.Contains (VineDragPlanet)
-					|| currentPlanetByMouse == VineDragPlanet
-					|| !currentPlanetByMouse.CanConnectVine ()
-					|| Vector3.Distance(mousePos,startPos) > VineDragPlanet.maxDragDist
-				) {//|| !vine.IsNotColliding ()) {
+				    || currentPlanetByMouse.connectedPlanets.Contains (VineDragPlanet)
+				    || currentPlanetByMouse == VineDragPlanet
+				    || !currentPlanetByMouse.CanConnectVine ()
+				    || Vector3.Distance (mousePos, startPos) > VineDragPlanet.maxDragDist) {//|| !vine.IsNotColliding ()) {
 					destroy = true;
 				} else {
 					mousePos = currentPlanetByMouse.transform.position;
@@ -96,7 +120,8 @@ public class PregenFlowerDrag : MonoBehaviour {
 		}
 	}
 
-	public static void PlaceVine (Vector3 p1, Vector3 p2, GameObject v) {
+	public static void PlaceVine (Vector3 p1, Vector3 p2, GameObject v)
+	{
 		//position the vine between the two points
 		Vector3 pos = (p1 + p2) / 2f;
 		pos.z = .1f;
@@ -104,8 +129,8 @@ public class PregenFlowerDrag : MonoBehaviour {
 
 		//vine facing
 		Vector3 dir = p2 - p1;
-		var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-		v.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+		var angle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg;
+		v.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 
 		//vine stretching
 		var scale = v.transform.localScale;
@@ -115,7 +140,8 @@ public class PregenFlowerDrag : MonoBehaviour {
 		v.transform.localScale = scale;
 	}
 
-	public static void StartDrag (VinePlanet flo) {
+	public static void StartDrag (VinePlanet flo)
+	{
 		if (flo == null || flo.gameObject == null) {
 			Debug.Log ("ERRORS");
 			return;
@@ -137,11 +163,13 @@ public class PregenFlowerDrag : MonoBehaviour {
 		startPos = flo.gameObject.transform.position;
 	}
 
-	public static void RegisterMouseOnPlanet (PregenPlanet planet) {
+	public static void RegisterMouseOnPlanet (PregenPlanet planet)
+	{
 		currentPlanetByMouse = planet;
 	}
 
-	public static void RegisterNoMouseOnPlanet (PregenPlanet planet) {
+	public static void RegisterNoMouseOnPlanet (PregenPlanet planet)
+	{
 		if (currentPlanetByMouse == planet)
 			currentPlanetByMouse = null;
 	}
