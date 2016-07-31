@@ -22,6 +22,8 @@ public class PregenPlanet : MonoBehaviour
 	public int numBridges;
 	public int maxNumBridges;
 
+	public int maxConnectedVines;
+
 	public PregenDemands hasDemands;
 
 	/// <summary>
@@ -131,7 +133,7 @@ public class PregenPlanet : MonoBehaviour
 			if (db.isSeedizenDemand)
 				return false;
 		}
-		if (connectedPlanets.Count >= 4) 
+		if (connectedPlanets.Count >= maxConnectedVines) 
 		{
 			return false;
 		}
