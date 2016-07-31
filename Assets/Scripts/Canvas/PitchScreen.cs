@@ -24,7 +24,7 @@ public class PitchScreen : MonoBehaviour {
     void Update()
     {
         //detects if pitch intro is complete and begins loading scene
-        if (currentPage >= 3 && splashImages[currentPage].GetComponent<FadeScript>().fadeComplete)
+        if (currentPage >= 4 && splashImages[currentPage].GetComponent<FadeScript>().fadeComplete)
         {
             StartGame();
         }
