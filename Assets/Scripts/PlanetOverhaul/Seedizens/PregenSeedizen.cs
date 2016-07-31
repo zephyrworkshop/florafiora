@@ -16,6 +16,7 @@ public class PregenSeedizen : MonoBehaviour {
 	public ParticleSystem pollenParticles;
 
 	public bool hasPollen = false;
+	public bool hasWater = false;
 
 	public bool inTransit = true;
 
@@ -165,6 +166,18 @@ public class PregenSeedizen : MonoBehaviour {
 
 	public void TurnOnPollen () {
 		hasPollen = true;
+		ParticleSystem.EmissionModule em = pollenParticles.emission;
+		em.enabled = true;
+	}
+
+	public void TurnOffWater () {
+		hasWater = false;
+		ParticleSystem.EmissionModule em = pollenParticles.emission;
+		em.enabled = false;
+	}
+
+	public void TurnOnWater () {
+		hasWater = true;
 		ParticleSystem.EmissionModule em = pollenParticles.emission;
 		em.enabled = true;
 	}

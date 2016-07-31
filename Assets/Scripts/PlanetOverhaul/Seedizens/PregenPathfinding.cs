@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PregenPathfinding {
+public class PregenPathfinding
+{
 
-	public static PregenPlanet GetDirection (PregenPlanet planet, PregenSeedizen seedizen) {
+	public static PregenPlanet GetDirection (PregenPlanet planet, PregenSeedizen seedizen)
+	{
 		var q = new Queue <PregenPlanet> ();
 		var discovered = new HashSet <PregenPlanet> ();
 		var pathTo = new Dictionary <PregenPlanet, PregenPlanet> ();
@@ -60,11 +62,16 @@ public class PregenPathfinding {
 		return options [Random.Range (0, options.Count)];
 	}
 
-	private static bool PlanetIsDestination (PregenPlanet planet, PregenSeedizen seedizen) {
+	private static bool PlanetIsDestination (PregenPlanet planet, PregenSeedizen seedizen)
+	{
 		if (seedizen.hasPollen) {
-			return planet.hasDemands.NeedsPollenOf (seedizen);
-		} else {
+			return planet.hasDemands.NeedsPollen (seedizen);
+		} else if (seedizen.hasWater) {
+			return planet.hasDemands.NeedsWater (seedizen);
+		} else if (seedizen.type != "marsh") {
 			return planet.makesPollen;
+		} else {
+			return planet.makesWater;
 		}
 	}
 }

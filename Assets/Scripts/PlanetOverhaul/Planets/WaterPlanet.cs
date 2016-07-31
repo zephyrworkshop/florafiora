@@ -6,7 +6,7 @@ public class WaterPlanet : ResourcePlanet {
 	public override void Start()
 	{
 		planetType = "water";
-		makesPollen = true;
+		makesWater = true;
 	}
 
 	public override void OnMouseDown ()

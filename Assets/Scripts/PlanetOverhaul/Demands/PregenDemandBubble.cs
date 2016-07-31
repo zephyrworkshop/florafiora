@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PregenDemandBubble : MonoBehaviour {
+public class PregenDemandBubble : MonoBehaviour
+{
 
 	public GameObject demandedThing;
 
@@ -13,9 +14,11 @@ public class PregenDemandBubble : MonoBehaviour {
 
 	public bool isSeedizenDemand = false;
 
+	public bool isWaterDemand = false;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		if (host != null) {
 			Vector3 pos = host.transform.position;
 			pos.x += Mathf.Sin (angle) * distance;
@@ -30,22 +33,25 @@ public class PregenDemandBubble : MonoBehaviour {
 			var sr = demandedThing.GetComponent <SpriteRenderer> ();
 
 			Sprite sprite;
-				if (isSeedizenDemand) {
-					sprite = Resources.Load <Sprite> ("PlanetImages/GenericSeedizen");
-				} else {
-					sprite = Resources.Load <Sprite> ("PlanetImages/Generic");
-				}
+			if (isSeedizenDemand) {
+				sprite = Resources.Load <Sprite> ("PlanetImages/GenericSeedizen");
+			} else if (isWaterDemand) {
+				sprite = Resources.Load <Sprite> ("PlanetImages/water");
+			} else {
+				sprite = Resources.Load <Sprite> ("PlanetImages/Generic");
+			}
 
 			if (sprite != null) {
 				sr.sprite = sprite;
-			} else 
+			} else
 				Debug.Log ("I could not find the sprite: ");
-		} else 
+		} else
 			Debug.Log ("I have no host planet!");
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 
 	}
 }

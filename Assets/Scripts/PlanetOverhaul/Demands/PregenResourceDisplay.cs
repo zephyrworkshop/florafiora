@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PregenResourcesDisplay : MonoBehaviour {
+public class PregenResourceDisplay : MonoBehaviour {
 
 	public Dictionary <string, int> counts = new Dictionary<string, int> ();
 
@@ -10,7 +10,7 @@ public class PregenResourcesDisplay : MonoBehaviour {
 
 	public GameObject resourceCountPrefab;
 
-	public static PregenResourcesDisplay instance;
+	public static PregenResourceDisplay instance;
 
 	public static string [] demandTypes = new string[] {"marsh", "marigold", "flora"};
 

@@ -35,7 +35,7 @@ public class VinePlanet : PregenPlanet {
 		numBridges --;
 
 		if (numBridges <= 0) {
-			this.hasDemands.GainPollenAfterWait (maxNumBridges * maxNumBridges);
+			this.hasDemands.GainResourceAfterWait (maxNumBridges * maxNumBridges);
 		}
 
 		/*if (ftc != null)

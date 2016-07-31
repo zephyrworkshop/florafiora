@@ -62,7 +62,7 @@ public class PregenVine : MonoBehaviour
 		//add a falloff for the force on seedizens as a function of distance from the click location
 		if (PregenVineDrag.vineCut == false)
 		{
-			PregenVineDrag.StartVineDrag(this);
+			//PregenVineDrag.StartVineDrag(this);
 		} else
 		{
 			if (flowerPlanet != null)
