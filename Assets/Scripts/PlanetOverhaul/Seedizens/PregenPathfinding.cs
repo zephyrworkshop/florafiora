@@ -68,10 +68,10 @@ public class PregenPathfinding
 			return planet.hasDemands.NeedsPollen (seedizen);
 		} else if (seedizen.hasWater) {
 			return planet.hasDemands.NeedsWater (seedizen);
-		} else if (seedizen.type != "marsh") {
-			return planet.makesPollen;
-		} else {
+		} else if (seedizen.type == "marsh") {
 			return planet.makesWater;
+		} else {
+			return planet.makesPollen;
 		}
 	}
 }

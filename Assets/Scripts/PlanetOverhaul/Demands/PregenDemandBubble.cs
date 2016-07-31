@@ -12,6 +12,8 @@ public class PregenDemandBubble : MonoBehaviour
 
 	public float angle = 0f;
 
+	public bool isPollenDemand = false;
+
 	public bool isSeedizenDemand = false;
 
 	public bool isWaterDemand = false;

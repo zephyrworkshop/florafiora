@@ -43,14 +43,14 @@ public class PregenDemands : MonoBehaviour
 			//needs pollen
 			if (currentLevel <= pollenCounts.Length && pollenCounts.Length > 0) {
 				for (int i = 0; i < pollenCounts [currentLevel]; i++) {
-					AddDemand (false, false);
+					AddDemand (true, false, false);
 					currentGoalPollen = pollenCounts [currentLevel];
 					remainingPollen = pollenCounts [currentLevel];
 				}
 			}
 			if (currentLevel <= waterCounts.Length && waterCounts.Length > 0) {
 				for (int i = 0; i < waterCounts [currentLevel]; i++) {
-					AddDemand (false, true);
+					AddDemand (false, false, true);
 					currentGoalWater = waterCounts [currentLevel];
 					remainingWater = waterCounts [currentLevel];				}
 			}
@@ -58,7 +58,7 @@ public class PregenDemands : MonoBehaviour
 			{
 
 				//flowers need a person at first
-				AddDemand (true, false);
+				//AddDemand (false, true, false);
 			}
 	}
 
@@ -68,7 +68,7 @@ public class PregenDemands : MonoBehaviour
 
 	}
 
-	public void AddDemand (bool isSeedizen, bool isWater)
+	public void AddDemand (bool isPollen, bool isSeedizen, bool isWater)
 	{
 		GameObject db = GameObject.Instantiate (PregenGenericUtility.GetDemandBubblePrefab ()) as GameObject;
 
@@ -82,8 +82,9 @@ public class PregenDemands : MonoBehaviour
 		pdb.angle = 1f + myDemandBubbles.Count * .5f;//TODO this should be based on angle
 
 
+		//ADD NEW DEMAND TYPES HERE
+		pdb.isPollenDemand = isPollen;
 		pdb.isSeedizenDemand = isSeedizen;
-
 		pdb.isWaterDemand = isWater;
 
 		myDemandBubbles.Add (pdb);
@@ -125,7 +126,7 @@ public class PregenDemands : MonoBehaviour
 		PregenDemandBubble found = null;
 		foreach (var db in myDemandBubbles)
 		{
-			if (sc.hasPollen && !db.isSeedizenDemand)
+			if (sc.hasPollen && !db.isSeedizenDemand && db.isPollenDemand && !db.isWaterDemand)
 			{
 				found = db;
 				break;
@@ -153,7 +154,7 @@ public class PregenDemands : MonoBehaviour
 		PregenDemandBubble found = null;
 		foreach (var db in myDemandBubbles)
 		{
-			if (sc.hasWater && !db.isSeedizenDemand)
+			if (sc.hasWater && !db.isSeedizenDemand && !db.isPollenDemand && db.isWaterDemand)
 			{
 				found = db;
 				break;
@@ -205,7 +206,7 @@ public class PregenDemands : MonoBehaviour
 	{
 		for (int i = 0; i < pollenCounts [currentLevel]; i++)
 		{
-			AddDemand (false, false);
+			AddDemand (true, false, false);
 			currentGoalPollen = pollenCounts [currentLevel];
 			remainingPollen = pollenCounts [currentLevel];
 		}
@@ -215,7 +216,7 @@ public class PregenDemands : MonoBehaviour
 	{
 		for (int i = 0; i < waterCounts [currentLevel]; i++)
 		{
-			AddDemand (false, true);
+			AddDemand (false, false, true);
 			currentGoalWater = waterCounts [currentLevel];
 			remainingWater = waterCounts [currentLevel];
 		}
