@@ -29,8 +29,8 @@ public class PregenFlowerDrag : MonoBehaviour
 
 		vineBaseColor = vinePrefab.GetComponent<SpriteRenderer> ().sharedMaterial.color;
 		vineInvalidColor = vineBaseColor;
-		vineInvalidColor.r += 200;
-		//vineInvalidColor.g = 0;
+		vineInvalidColor.r += .5f;
+		//vineInvalidColor.g -= 20;
 		vineInvalidColor.a = .8f;
 	}
 
@@ -52,13 +52,11 @@ public class PregenFlowerDrag : MonoBehaviour
 		//get mouse position
 		Vector3 mousePos = MathTools.ScreenToWorldPosition (Input.mousePosition);
 		if (VineDragPlanet != null) {
-			if ( Vector3.Distance (mousePos, startPos) > VineDragPlanet.maxDragDist 
-				|| (currentPlanetByMouse != null 
-					&& (!currentPlanetByMouse.CanConnectVine() || currentPlanetByMouse.connectedPlanets.Contains(VineDragPlanet)))) 
-			{
+			if (Vector3.Distance (mousePos, startPos) > VineDragPlanet.maxDragDist
+			    || (currentPlanetByMouse != null
+			    && (!currentPlanetByMouse.CanConnectVine () || currentPlanetByMouse.connectedPlanets.Contains (VineDragPlanet)))) {
 				vine.GetComponent<SpriteRenderer> ().material.color = vineInvalidColor;
-			} else 
-			{
+			} else {
 				vine.GetComponent<SpriteRenderer> ().material.color = vineBaseColor;
 			}
 		}
@@ -120,24 +118,29 @@ public class PregenFlowerDrag : MonoBehaviour
 		}
 	}
 
+
 	public static void PlaceVine (Vector3 p1, Vector3 p2, GameObject v)
 	{
-		//position the vine between the two points
-		Vector3 pos = (p1 + p2) / 2f;
-		pos.z = .1f;
-		v.transform.position = pos;
+		if (!(Vector3.Distance (p2, p1) > VineDragPlanet.maxDragDist)) {
+			//position the vine between the two points
+			Vector3 pos = (p1 + p2) / 2f;
+			pos.z = .1f;
+			v.transform.position = pos;
+		
 
-		//vine facing
-		Vector3 dir = p2 - p1;
-		var angle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg;
-		v.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+			//vine rotation	
+			Vector3 dir = p2 - p1;
+			var angle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg;
+			v.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 
-		//vine stretching
-		var scale = v.transform.localScale;
-		scale.x = dir.magnitude / 10f;
-		scale.y = 2f;
-		//Debug.Log (mousePos + " " + startPos + " " + d
-		v.transform.localScale = scale;
+			//vine stretching
+			var scale = v.transform.localScale;
+			scale.x = dir.magnitude / 10f;
+			scale.y = 2f;
+			//Debug.Log (mousePos + " " + startPos + " " + d
+			v.transform.localScale = scale;
+		}
+		
 	}
 
 	public static void StartDrag (VinePlanet flo)

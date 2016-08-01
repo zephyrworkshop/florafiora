@@ -16,6 +16,8 @@ public class PitchScreen : MonoBehaviour {
 
 	private int currentPage = 0;
 
+	public bool premadeLevel; //Set this before hitting play to determine if you get a random level or the premade one
+
 	void Start () {
 		nextImage.enabled = false;
 		SetupSprites();
@@ -67,7 +69,12 @@ public class PitchScreen : MonoBehaviour {
 		
 	public void StartGame()
 	{
-		SceneManager.LoadScene("JacobWorkScene");
+		if (!premadeLevel) {
+			SceneManager.LoadScene ("JacobWorkScene");
+		}
+		else {
+			SceneManager.LoadScene ("ZachWorkScene");
+		}
 	}
 }
 
