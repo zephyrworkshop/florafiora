@@ -58,6 +58,9 @@ public class PregenSeedizen : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
+		AnimationHandler();
+
 		if (flingWithMouse) {
 			//flinging
 			if (Time.time > flingTime + flingDur) {
@@ -143,6 +146,17 @@ public class PregenSeedizen : MonoBehaviour {
 		}*/
 	}
 
+	void AnimationHandler()
+	{
+		if (inTransit)
+		{
+			GetComponent<Animator>().SetInteger("Stance", 1);
+		}
+		else
+		{
+			GetComponent<Animator>().SetInteger("Stance", 0);
+		}
+	}
 
 	public IEnumerator ColliderDisableCoroutine(float t){
 		col.enabled = false;
