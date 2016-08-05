@@ -20,8 +20,8 @@ public class VinePlanet : PregenPlanet {
 		//ftc.planet = planet;
 		//ftc.Refresh ();*/
 
-		numBridges = 2;
-		maxNumBridges = 2;
+		//numBridges = 2;
+		//maxNumBridges = 2;
 
 		planetType = "vine";
 	}
