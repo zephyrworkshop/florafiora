@@ -18,10 +18,14 @@ public class PregenSeedizen : MonoBehaviour {
 	public bool hasPollen = false;
 	public bool hasWater = false;
 
+	public int maxResources = 1;
+
 	public bool inTransit = true;
 
 	public float speed = 3.2f;
 	//	float flightSpeed = 8f;
+
+	public float attackPower = 0.0f;
 
 	bool inFling = false;
 
@@ -54,6 +58,7 @@ public class PregenSeedizen : MonoBehaviour {
 		col = gameObject.GetComponent<BoxCollider2D> ();
 
 		startPlanet.spawnedSeedizens.Add (this);
+		maxResources = 1;
 	}
 
 	// Update is called once per frame

@@ -13,6 +13,7 @@ public class PregenDemands : MonoBehaviour
 
 	public int[] pollenCounts;
 	public int[] waterCounts;
+	public int[] vineCounts;
 
 	public int currentLevel = 0;
 
@@ -21,6 +22,9 @@ public class PregenDemands : MonoBehaviour
 
 	public int currentGoalWater;
 	public int remainingWater;
+
+	public int currentGoalVines;
+	public int remainingVines;
 
 	public float distance = 10f;
 
@@ -43,16 +47,22 @@ public class PregenDemands : MonoBehaviour
 			//needs pollen
 			if (currentLevel <= pollenCounts.Length && pollenCounts.Length > 0) {
 				for (int i = 0; i < pollenCounts [currentLevel]; i++) {
-					AddDemand (true, false, false);
+					AddDemand (true, false, false, false);
 					currentGoalPollen = pollenCounts [currentLevel];
 					remainingPollen = pollenCounts [currentLevel];
 				}
 			}
 			if (currentLevel <= waterCounts.Length && waterCounts.Length > 0) {
 				for (int i = 0; i < waterCounts [currentLevel]; i++) {
-					AddDemand (false, false, true);
+					AddDemand (false, false, true, false);
 					currentGoalWater = waterCounts [currentLevel];
 					remainingWater = waterCounts [currentLevel];				}
+			}
+			if (currentLevel <= vineCounts.Length && vineCounts.Length > 0) {
+				for (int i = 0; i < vineCounts [currentLevel]; i++) {
+					AddDemand (false, false, false, true);
+					currentGoalVines = vineCounts [currentLevel];
+					remainingVines = vineCounts [currentLevel];				}
 			}
 		} else if (pt == "vine" && planet.connectedPlanets.Count == 0)
 			{
@@ -68,7 +78,7 @@ public class PregenDemands : MonoBehaviour
 
 	}
 
-	public void AddDemand (bool isPollen, bool isSeedizen, bool isWater)
+	public void AddDemand (bool isPollen, bool isSeedizen, bool isWater, bool isVine)
 	{
 		GameObject db = GameObject.Instantiate (PregenGenericUtility.GetDemandBubblePrefab ()) as GameObject;
 
@@ -86,6 +96,7 @@ public class PregenDemands : MonoBehaviour
 		pdb.isPollenDemand = isPollen;
 		pdb.isSeedizenDemand = isSeedizen;
 		pdb.isWaterDemand = isWater;
+		pdb.isVineDemand = isVine;
 
 		myDemandBubbles.Add (pdb);
 
@@ -139,9 +150,10 @@ public class PregenDemands : MonoBehaviour
 
 			GameObject.Destroy (found.gameObject);
 
+			remainingPollen--;
+
 			if (myDemandBubbles.Count == 0)
 				OnDemandsAllMet ();
-			remainingPollen--;
 			return true;
 		} else
 		{
@@ -167,13 +179,37 @@ public class PregenDemands : MonoBehaviour
 
 			GameObject.Destroy (found.gameObject);
 
+			remainingWater--;
+
 			if (myDemandBubbles.Count == 0)
 				OnDemandsAllMet ();
-			remainingWater--;
 			return true;
 		} else
 		{
 			return false;
+		}
+	}
+
+	public void MeetDemandWithVine ()
+	{
+		PregenDemandBubble found = null;
+		foreach (var db in myDemandBubbles)
+		{
+			if (db.isVineDemand)
+			{
+				found = db;
+				break;
+			}
+		}
+
+		if (found) {
+			myDemandBubbles.Remove (found);
+
+			GameObject.Destroy (found.gameObject);
+
+			remainingVines--;
+			if (myDemandBubbles.Count == 0)
+				OnDemandsAllMet ();
 		}
 	}
 
@@ -206,7 +242,7 @@ public class PregenDemands : MonoBehaviour
 	{
 		for (int i = 0; i < pollenCounts [currentLevel]; i++)
 		{
-			AddDemand (true, false, false);
+			AddDemand (true, false, false, false);
 			currentGoalPollen = pollenCounts [currentLevel];
 			remainingPollen = pollenCounts [currentLevel];
 		}
@@ -216,9 +252,19 @@ public class PregenDemands : MonoBehaviour
 	{
 		for (int i = 0; i < waterCounts [currentLevel]; i++)
 		{
-			AddDemand (false, false, true);
+			AddDemand (false, false, true, false);
 			currentGoalWater = waterCounts [currentLevel];
 			remainingWater = waterCounts [currentLevel];
+		}
+	}
+
+	private void GainVineDemands ()
+	{
+		for (int i = 0; i < waterCounts [currentLevel]; i++)
+		{
+			AddDemand (false, false, false, true);
+			currentGoalVines = vineCounts [currentLevel];
+			remainingVines = vineCounts [currentLevel];
 		}
 	}
 
@@ -244,6 +290,13 @@ public class PregenDemands : MonoBehaviour
 				}
 			}
 		}
+		if (vineCounts != null) {
+			if (currentLevel <= vineCounts.Length && vineCounts.Length > 0) {
+				if (vineCounts [currentLevel] != null) {
+					GainVineDemands ();
+				}
+			}
+		}
 	}
 
 	private void OnDemandsAllMet ()
@@ -264,7 +317,7 @@ public class PregenDemands : MonoBehaviour
 				planet.IncrementNumBridges ();
 			} else if (pt != "")
 				{
-					ResourcesDisplay.instance.Add (1, pt);
+					PregenResourceDisplay.instance.Add (1, pt);
 				}
 
 			if (planet != null && planet.planetType != null && planet.numBridges > 0 && planet.planetType != null && planet.planetType == "vine")
