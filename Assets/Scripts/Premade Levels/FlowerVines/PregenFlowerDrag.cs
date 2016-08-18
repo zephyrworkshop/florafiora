@@ -38,6 +38,7 @@ public class PregenFlowerDrag : MonoBehaviour
 	{
 		VineDragPlanet.AddConnectedPlanet (currentPlanetByMouse, vine);
 		vine.ends.Add (currentPlanetByMouse);
+		currentPlanetByMouse.hasDemands.MeetDemandWithVine ();
 		vine.gameObject.name = "Vine from " + vine.ends [0].gameObject.name + " to " + vine.ends [1].gameObject.name;
 		vine.StopStretching ();
 		VineDragPlanet.DecrementNumBridges ();
