@@ -31,6 +31,7 @@ public class PlanetArtAesthetics : MonoBehaviour {
         #region [Randomly Rotates MidPlanet]
         //forePlan.transform.Rotate(0, 0, rotSpeed);
         midPlan.transform.Rotate(0, 0, rotSpeed / 2);
+        backPlan.transform.Rotate(0, 0, rotSpeed / 3);
         tempSeedizen.transform.Rotate(0, 0, .65f);
         //backPlan.transform.Rotate(0, 0, rotSpeed / 4);
         #endregion
