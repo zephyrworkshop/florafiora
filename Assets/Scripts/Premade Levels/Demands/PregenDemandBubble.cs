@@ -12,9 +12,13 @@ public class PregenDemandBubble : MonoBehaviour
 
 	public float angle = 0f;
 
+	public bool isPollenDemand = false;
+
 	public bool isSeedizenDemand = false;
 
 	public bool isWaterDemand = false;
+
+	public bool isVineDemand = false;
 
 	// Use this for initialization
 	void Start ()
@@ -37,6 +41,8 @@ public class PregenDemandBubble : MonoBehaviour
 				sprite = Resources.Load <Sprite> ("PlanetImages/GenericSeedizen");
 			} else if (isWaterDemand) {
 				sprite = Resources.Load <Sprite> ("PlanetImages/water");
+			} else if (isVineDemand) {
+				sprite = Resources.Load <Sprite> ("PlanetImages/SadFlower");
 			} else {
 				sprite = Resources.Load <Sprite> ("PlanetImages/Generic");
 			}

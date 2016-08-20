@@ -22,6 +22,8 @@ public class PregenPlanet : MonoBehaviour
 	public int numBridges;
 	public int maxNumBridges;
 
+	public int maxConnectedVines;
+
 	public PregenDemands hasDemands;
 
 	/// <summary>
@@ -97,12 +99,12 @@ public class PregenPlanet : MonoBehaviour
 
 	public void ProcessSeedizen (PregenSeedizen seedizen)
 	{
-		if (planetType != null && planetType == "pollen")
+		if (planetType != null && makesPollen)
 		{
 			if (HasResources())
 			seedizen.TurnOnPollen ();
 		}
-		if (planetType != null && planetType == "water")
+		if (planetType != null  && seedizen.type == "marsh" && makesWater)
 		{
 			if (HasResources())
 			seedizen.TurnOnWater ();
@@ -131,12 +133,16 @@ public class PregenPlanet : MonoBehaviour
 			if (db.isSeedizenDemand)
 				return false;
 		}
+		if (connectedPlanets.Count >= maxConnectedVines) 
+		{
+			return false;
+		}
 		return true;
 
-		if (hasDemands != null && hasDemands.myDemandBubbles.Count > 0)
+		/*if (hasDemands != null && hasDemands.myDemandBubbles.Count > 0)
 			return false;
 		else
-			return true;
+			return true;*/
 	}
 
 
