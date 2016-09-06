@@ -2,10 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class VinePlanet : PregenPlanet {
+public class TravelPlanet : PregenPlanet {
 
-	public float maxDragDist = 300f;
-	public List <PregenVine> SpawnedVines = new List<PregenVine> ();
+	public float maxDragDist = 800f;
+	public TravelVine travelPath;
+
 
 	//public GameObject textPrefab;
 
@@ -13,19 +14,7 @@ public class VinePlanet : PregenPlanet {
 
 	// Use this for initialization
 	void Start () {
-		/*if (textPrefab == null)
-			textPrefab = Resources.Load <GameObject> ("FlowerText");
-		var t = GameObject.Instantiate (textPrefab);
-		t.transform.SetParent (GameObject.Find ("Canvas").transform, false);
-		//ftc = t.GetComponent <FlowerTextComponent> ();
-		//ftc.flower = this;
-		//ftc.planet = planet;
-		//ftc.Refresh ();*/
-
-		numBridges = 2;
-		maxNumBridges = 2;
-
-		planetType = "vine";
+		planetType = "travel";
 	}
 
 	// Update is called once per frame
@@ -44,28 +33,16 @@ public class VinePlanet : PregenPlanet {
 			ftc.Refresh ();*/
 	}
 
-	public override void IncrementNumBridges () {
-		numBridges ++;
-		maxNumBridges ++;
-
-		if (numBridges > 0) {
-		}
-
-		/*if (ftc != null)
-			ftc.Refresh ();*/
+	public void AddConnectedPlanet (PregenPlanet pc, TravelVine v)
+	{
+		connectedPlanets.Add (pc);
+		pc.connectedPlanets.Add (this);
 	}
 
 	public void VineDelete()
 	{
-		numBridges++;
+		travelPath = null;
 
-
-
-		if (numBridges > 0) 
-		{
-		}
-		/*if (ftc != null)
-			ftc.Refresh ();*/
 	}
 
 	public override void OnMouseDown()
@@ -76,7 +53,7 @@ public class VinePlanet : PregenPlanet {
 			neighbors = neighbors + p.gameObject.name + ", ";
 		//Debug.Log ("Clicked on a planet! " + gameObject.name + " Neighbors: " + neighbors);
 
-		PregenFlowerDrag.StartDrag (this);
+		TravelPlanetDrag.StartDrag (this);
 
 
 		if (vines.Count <= 0)
