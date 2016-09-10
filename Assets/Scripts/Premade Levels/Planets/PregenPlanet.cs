@@ -155,7 +155,7 @@ public class PregenPlanet : MonoBehaviour
 			return;
 		//change image
 		if (colonizedSprite != null)
-			transform.FindChild ("planet").GetComponent <SpriteRenderer> ().sprite = colonizedSprite;
+			//transform.FindChild ("planet").GetComponent <SpriteRenderer> ().sprite = colonizedSprite;
 		isColonized = true;
 	}
 

@@ -68,13 +68,23 @@ public class PregenVine : MonoBehaviour
 			//PregenVineDrag.StartVineDrag(this);
 		} else
 		{
-			if (flowerPlanet != null)
-			{
-				flowerPlanet.DeleteConnectedPlanet (ends [1]);
-				flowerPlanet.VineDelete ();
-			}
-			Destroy (this.gameObject);
+			vineDelete ();
 		}
+	}
+
+	public void vineDelete()
+	{
+		if (flowerPlanet != null)
+		{
+			seedizens.ForEach (p => seedizenClear (p));
+			flowerPlanet.DeleteConnectedPlanet (ends [1]);
+			flowerPlanet.VineDelete ();
+		}
+		Destroy (this.gameObject);
+	}
+	public void seedizenClear(PregenSeedizen seed)
+	{
+		seed.seedizenOffMap ();
 	}
 
 	/*public void VineDragStart (PregenSeedizen dragSeedizen)

@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class VinePlanet : PregenPlanet {
+
+	public List <PregenVine> spawnedVines = new List<PregenVine> ();
+
+	public PregenVine travelVine;
 
 	public float maxDragDist = 300f;
 
@@ -74,7 +79,7 @@ public class VinePlanet : PregenPlanet {
 			neighbors = neighbors + p.gameObject.name + ", ";
 		//Debug.Log ("Clicked on a planet! " + gameObject.name + " Neighbors: " + neighbors);
 
-		PregenFlowerDrag.StartDrag (this);
+		PregenFlowerDrag.StartDrag (this, true);
 
 
 		if (vines.Count <= 0)

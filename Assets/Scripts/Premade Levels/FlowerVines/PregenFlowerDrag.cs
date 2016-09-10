@@ -22,6 +22,8 @@ public class PregenFlowerDrag : MonoBehaviour
 
 	public static PregenFlowerDrag instance;
 
+	static bool vineVisible;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -58,7 +60,13 @@ public class PregenFlowerDrag : MonoBehaviour
 			    && (!currentPlanetByMouse.CanConnectVine () || currentPlanetByMouse.connectedPlanets.Contains (VineDragPlanet)))) {
 				vine.GetComponent<SpriteRenderer> ().material.color = vineInvalidColor;
 			} else {
-				vine.GetComponent<SpriteRenderer> ().material.color = vineBaseColor;
+				if (vineVisible) {
+					vineBaseColor.a = 1f;
+					vine.GetComponent<SpriteRenderer> ().material.color = vineBaseColor;
+				} else {
+					vineBaseColor.a = .5f;
+					vine.GetComponent<SpriteRenderer> ().material.color = vineBaseColor;
+				}
 			}
 		}
 
@@ -144,7 +152,7 @@ public class PregenFlowerDrag : MonoBehaviour
 		
 	}
 
-	public static void StartDrag (VinePlanet flo)
+	public static void StartDrag (VinePlanet flo, bool isVisible)
 	{
 		if (flo == null || flo.gameObject == null) {
 			Debug.Log ("ERRORS");
@@ -159,10 +167,13 @@ public class PregenFlowerDrag : MonoBehaviour
 		CameraPanningScript.Disable ();
 		VineDragPlanet = flo;
 
+		vineVisible = isVisible;
 		var v = GameObject.Instantiate (instance.vinePrefab);
 		vine = v.GetComponent <PregenVine> ();
 		vine.ends.Add (VineDragPlanet);
 		vine.flowerPlanet = VineDragPlanet;
+		VineDragPlanet.spawnedVines.Add (vine);
+		VineDragPlanet.travelVine = vine;
 		vine.gameObject.transform.SetAsFirstSibling ();
 		startPos = flo.gameObject.transform.position;
 	}

@@ -150,6 +150,10 @@ public class PregenSeedizen : MonoBehaviour {
 			AbyssComponent.instance.CaptureSeedizen (this);
 		}*/
 	}
+	public void seedizenOffMap(){
+		PregenResourceDisplay.instance.Add (1, startPlanet.planetType);
+		Destroy (this.gameObject);
+	}
 
 	void AnimationHandler()
 	{
@@ -298,7 +302,7 @@ public class PregenSeedizen : MonoBehaviour {
 		var g = col.gameObject.GetComponent<TheGroundComponent>();
 		if (g != null)
 		{
-			ResourcesDisplay.instance.Add (1, startPlanet.planetType);
+			PregenResourceDisplay.instance.Add (1, startPlanet.planetType);
 			Destroy (this.gameObject);
 		}
 

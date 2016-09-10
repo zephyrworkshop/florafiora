@@ -67,7 +67,7 @@ public class SingleVinePlanet : VinePlanet {
 			neighbors = neighbors + p.gameObject.name + ", ";
 		//Debug.Log ("Clicked on a planet! " + gameObject.name + " Neighbors: " + neighbors);
 
-		PregenFlowerDrag.StartDrag (this);
+		PregenFlowerDrag.StartDrag (this, true);
 
 
 		if (vines.Count <= 0)
