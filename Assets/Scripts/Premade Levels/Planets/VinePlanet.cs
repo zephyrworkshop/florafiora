@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class VinePlanet : PregenPlanet {
 
 	public float maxDragDist = 300f;
-	public List <PregenVine> SpawnedVines = new List<PregenVine> ();
 
 	//public GameObject textPrefab;
 

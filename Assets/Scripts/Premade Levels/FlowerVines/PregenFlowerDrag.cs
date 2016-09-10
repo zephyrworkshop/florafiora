@@ -163,7 +163,6 @@ public class PregenFlowerDrag : MonoBehaviour
 		vine = v.GetComponent <PregenVine> ();
 		vine.ends.Add (VineDragPlanet);
 		vine.flowerPlanet = VineDragPlanet;
-		VineDragPlanet.SpawnedVines.Add (vine);
 		vine.gameObject.transform.SetAsFirstSibling ();
 		startPos = flo.gameObject.transform.position;
 	}
