@@ -23,10 +23,12 @@ public class SeedizenPlanet : PregenPlanet {
 				return;
 			}
 
-			if (PregenResourceDisplay.instance.GetAvailable (planetType) > 0) {
-				PregenResourceDisplay.instance.Add (-1, planetType);
-				LoadSeedizenHere ();
-				lastSpawned = Time.time;
+			if (connectedPlanets.Count > 0) {
+				if (PregenResourceDisplay.instance.GetAvailable (planetType) > 0) {
+					PregenResourceDisplay.instance.Add (-1, planetType);
+					LoadSeedizenHere ();
+					lastSpawned = Time.time;
+				}
 			}
 		}
 

@@ -9,7 +9,7 @@ public class TravelPlanet : SingleVinePlanet {
 		numBridges = 1;
 		maxNumBridges = 1;
 
-		planetType = "travelVine";
+		planetType = "travelPlanet";
 	
 	}
 	

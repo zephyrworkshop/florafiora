@@ -34,7 +34,9 @@ public class PregenPlanet : MonoBehaviour
 	public void AddConnectedPlanet (PregenPlanet pc, PregenVine v)
 	{
 		connectedPlanets.Add (pc);
-		pc.connectedPlanets.Add (this);
+		if (planetType != "travelPlanet") {
+			pc.connectedPlanets.Add (this);
+		}
 
 		vines [pc] = v;
 		pc.vines [this] = v;
