@@ -45,7 +45,7 @@ public class PregenResourceDisplay : MonoBehaviour {
 			disp.transform.SetParent (gameObject.transform, false);
 
 			var rc = disp.GetComponent <ResourceCount> ();
-			rc.position = new Vector3 (0f, -75f * displays.Count, 0f);
+			rc.position = new Vector3 (0f, -50f * displays.Count, 0f);
 
 			displays [resource] = rc;
 		} 

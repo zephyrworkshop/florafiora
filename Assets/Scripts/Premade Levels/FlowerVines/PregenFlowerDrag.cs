@@ -170,6 +170,10 @@ public class PregenFlowerDrag : MonoBehaviour
 		vineVisible = isVisible;
 		var v = GameObject.Instantiate (instance.vinePrefab);
 		vine = v.GetComponent <PregenVine> ();
+		if (VineDragPlanet.planetType == "travelPlanet")
+			vine.travelVine = true;
+		else
+			vine.travelVine = false;
 		vine.ends.Add (VineDragPlanet);
 		vine.flowerPlanet = VineDragPlanet;
 		VineDragPlanet.spawnedVines.Add (vine);

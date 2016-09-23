@@ -19,6 +19,8 @@ public class PregenVine : MonoBehaviour
 
 	public bool dispreferred = false;
 
+	public bool travelVine = false;
+
 
 	//Color vineBaseColor;
 	//Color vineInvalidColor;
@@ -69,7 +71,10 @@ public class PregenVine : MonoBehaviour
 			//PregenVineDrag.StartVineDrag(this);
 		} else
 		{
-			vineDelete ();
+			if (travelVine == false) 
+			{
+				vineDelete ();
+			}
 		}
 	}
 
