@@ -16,6 +16,7 @@ public class PregenSeedizen : MonoBehaviour {
 	public ParticleSystem pollenParticles;
 
 	public bool hasPollen = false;
+	public bool hasDoublePollen = false;
 	public bool hasWater = false;
 
 	public int maxResources = 1;

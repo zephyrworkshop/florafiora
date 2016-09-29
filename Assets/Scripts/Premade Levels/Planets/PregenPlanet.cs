@@ -60,8 +60,7 @@ public class PregenPlanet : MonoBehaviour
 	{
 		//gameObject.name = GetPlanetName ();
 
-		foreach (var s in startConnected)
-		{
+		foreach (var s in startConnected) {
 			AddConnectedPlanet (s.ends [0], s);//so yeah, this is the behavior of startconnected
 		}
 
@@ -104,42 +103,35 @@ public class PregenPlanet : MonoBehaviour
 
 	public void ProcessSeedizen (PregenSeedizen seedizen)
 	{
-		if (planetType != null && makesPollen)
-		{
-			if (HasResources())
-			seedizen.TurnOnPollen ();
+		if (planetType != null && makesPollen) {
+			if (HasResources ())
+				seedizen.TurnOnPollen ();
 		}
-		if (planetType != null  && seedizen.type == "marsh" && makesWater)
-		{
-			if (HasResources())
-			seedizen.TurnOnWater ();
+		if (planetType != null && seedizen.type == "marsh" && makesWater) {
+			if (HasResources ())
+				seedizen.TurnOnWater ();
 		}
 
 		var hd = gameObject.GetComponent <PregenDemands> ();
-		if (hd.MeetDemandWithSeedizen (seedizen))
-		{
+		if (hd.MeetDemandWithSeedizen (seedizen)) {
 			GameObject.Destroy (seedizen.gameObject);
 		}
 
-		if (hd.MeetDemandWithPollen (seedizen))
-		{
+		if (hd.MeetDemandWithPollen (seedizen)) {
 			seedizen.TurnOffPollen ();
 		}
-		if (hd.MeetDemandWithWater (seedizen))
-		{
+		if (hd.MeetDemandWithWater (seedizen)) {
 			seedizen.TurnOffWater ();
 		}
 	}
 
 	public bool CanConnectVine ()
 	{
-		foreach (var db in hasDemands.myDemandBubbles)
-		{
+		foreach (var db in hasDemands.myDemandBubbles) {
 			if (db.isSeedizenDemand)
 				return false;
 		}
-		if (connectedPlanets.Count >= maxConnectedVines) 
-		{
+		if (connectedPlanets.Count >= maxConnectedVines) {
 			return false;
 		}
 		return true;
@@ -160,7 +152,7 @@ public class PregenPlanet : MonoBehaviour
 			return;
 		//change image
 		if (colonizedSprite != null)
-			transform.FindChild ("planet").FindChild("background").GetComponent <SpriteRenderer> ().sprite = colonizedSprite;
+			transform.FindChild ("planet").FindChild ("background").GetComponent <SpriteRenderer> ().sprite = colonizedSprite;
 		isColonized = true;
 	}
 
@@ -168,8 +160,12 @@ public class PregenPlanet : MonoBehaviour
 	{
 	}
 
-	public virtual bool HasResources()
+	public virtual bool HasResources ()
 	{
 		return false;
+	}
+
+	public virtual void updateLinkedPlanets ()
+	{
 	}
 }

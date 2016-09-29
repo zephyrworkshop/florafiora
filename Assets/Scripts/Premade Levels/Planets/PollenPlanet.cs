@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PollenPlanet : ResourcePlanet {
+public class PollenPlanet : ResourcePlanet
+{
 
-	public override void Start()
-	{
-		planetType = "pollen";
-		makesPollen = true;
-	}
+    public override void Start()
+    {
+        planetType = "pollen";
+        makesPollen = true;
+    }
 
-	public override void OnMouseDown ()
-	{
+    public override void OnMouseDown()
+    {
 		
-	}
+    }
 
 }
