@@ -40,10 +40,12 @@ public class PregenDemandBubble : MonoBehaviour
 			if (isSeedizenDemand) {
 				sprite = Resources.Load <Sprite> ("PlanetImages/GenericSeedizen");
 			} else if (isWaterDemand) {
-				sprite = Resources.Load <Sprite> ("PlanetImages/water");
+				sprite = Resources.Load <Sprite> ("PlanetImages/WaterIcon");
 			} else if (isVineDemand) {
-				sprite = Resources.Load <Sprite> ("PlanetImages/SadFlower");
-			} else {
+				sprite = Resources.Load <Sprite> ("PlanetImages/VineIcon");
+			} else if (isPollenDemand) {
+                sprite = Resources.Load<Sprite>("PlanetImages/PollenIcon");
+            } else {
 				sprite = Resources.Load <Sprite> ("PlanetImages/Generic");
 			}
 
