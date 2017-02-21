@@ -45,6 +45,12 @@ public class PregenFlowerDrag : MonoBehaviour
 		vine.StopStretching ();
 		VineDragPlanet.DecrementNumBridges ();
 
+		if (VineDragPlanet.planetType == "travelPlanet" && VineDragPlanet.travelVine != null && VineDragPlanet.travelVineOld != null) 
+		{
+			VineDragPlanet.travelVineOld.vineDelete ();
+		}
+
+
 		vine.ends [0].BeColonized ();
 		vine.ends [1].BeColonized ();
 	}

@@ -36,7 +36,7 @@ public class CameraPanningScript : MonoBehaviour {
 	private float baseSize = 20f;
 
 	private float zoomLowLimit=10f;
-	private float zoomHighLimit=50f;
+	private float zoomHighLimit=70f;
     //private float currentZoom = 2;
     
 

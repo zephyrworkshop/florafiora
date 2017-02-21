@@ -6,8 +6,8 @@ public class TravelPlanet : SingleVinePlanet {
 	// Use this for initialization
 	void Start () {
 
-		numBridges = 1;
-		maxNumBridges = 1;
+		numBridges = 2;
+		maxNumBridges = 2;
 
 		planetType = "travelPlanet";
 	
@@ -28,11 +28,13 @@ public class TravelPlanet : SingleVinePlanet {
 
 		if (travelVine != null) 
 		{
-			travelVine.vineDelete ();
+			travelVineOld=travelVine;
 		}
 		PregenFlowerDrag.StartDrag (this , false);
-
-
+		if (travelVineOld != null && travelVine == null) {
+			travelVine = travelVineOld;
+			travelVineOld = null;
+		}
 		if (vines.Count <= 0)
 			return;
 

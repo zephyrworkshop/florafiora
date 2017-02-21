@@ -2,14 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class VinePlanet : PregenPlanet {
-
-	public List <PregenVine> spawnedVines = new List<PregenVine> ();
-
-	public PregenVine travelVine;
-	public PregenVine travelVineOld;
-
-	public float maxDragDist = 300f;
+public class EndPlanet : VinePlanet {
 
 	//public GameObject textPrefab;
 
@@ -26,50 +19,15 @@ public class VinePlanet : PregenPlanet {
 		//ftc.planet = planet;
 		//ftc.Refresh ();*/
 
-		numBridges = 2;
-		maxNumBridges = 2;
+		numBridges = 8;
+		maxNumBridges = 8;
 
-		planetType = "vine";
+		planetType = "end";
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-	}
-
-	public void DecrementNumBridges () {
-		numBridges --;
-
-		if (numBridges <= 0) {
-			this.hasDemands.GainResourceAfterWait (maxNumBridges * maxNumBridges);
-		}
-
-		/*if (ftc != null)
-			ftc.Refresh ();*/
-	}
-
-	public override void IncrementNumBridges () {
-		numBridges ++;
-		maxNumBridges ++;
-
-		if (numBridges > 0) {
-		}
-
-		/*if (ftc != null)
-			ftc.Refresh ();*/
-	}
-
-	public void VineDelete()
-	{
-		numBridges++;
-
-
-
-		if (numBridges > 0) 
-		{
-		}
-		/*if (ftc != null)
-			ftc.Refresh ();*/
 	}
 
 	public override void OnMouseDown()

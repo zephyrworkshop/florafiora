@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour {
     public void RestartGame()
     {
         //Application.LoadLevel(Application.loadedLevel);
-        SceneManager.LoadScene("JacobWorkScene");
+        SceneManager.LoadScene("ZachWorkScene");
     }
 
     public void MainMenu()

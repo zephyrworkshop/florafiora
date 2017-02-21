@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PregenDemands : MonoBehaviour
 {
@@ -274,7 +275,7 @@ public class PregenDemands : MonoBehaviour
 
     private void GainVineDemands()
     {
-        for (int i = 0; i < waterCounts[currentLevel]; i++)
+        for (int i = 0; i < vineCounts[currentLevel]; i++)
         {
             AddDemand(false, false, false, true);
             currentGoalVines = vineCounts[currentLevel];
@@ -335,6 +336,10 @@ public class PregenDemands : MonoBehaviour
 		}*/
         if (currentLevel < pollenCounts.Length)
         {
+			if (pt == "end")
+			{
+				SceneManager.LoadScene("MainMenu");
+			}
             if (pt == "vine")
             {
                 planet.IncrementNumBridges();
