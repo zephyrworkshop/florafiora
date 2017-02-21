@@ -22,12 +22,12 @@ TextureImporter:
     21300030: Flora Idle_15
     21300032: Flora Idle_16
     21300034: Flora Idle_17
-  serializedVersion: 2
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -39,10 +39,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
@@ -53,9 +51,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -63,12 +59,60 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: Flora Idle_0
+    - serializedVersion: 2
+      name: Flora Idle_0
       rect:
         serializedVersion: 2
         x: 155
@@ -78,14 +122,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15.555553, y: 55.444443}
-        - {x: -25.555553, y: 49.444443}
-        - {x: -25.555553, y: -28.555557}
-        - {x: -7.5555534, y: -54.555557}
-        - {x: 26.444447, y: -54.555557}
-        - {x: 26.444447, y: 55.444443}
-    - name: Flora Idle_1
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_1
       rect:
         serializedVersion: 2
         x: 668
@@ -95,16 +135,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.055557, y: 54.61111}
-        - {x: -25.055557, y: 42.61111}
-        - {x: -25.055557, y: -18.38889}
-        - {x: -15.055557, y: -54.38889}
-        - {x: 23.944443, y: -54.38889}
-        - {x: 25.944443, y: -52.38889}
-        - {x: 25.944443, y: 24.61111}
-        - {x: 22.944443, y: 54.61111}
-    - name: Flora Idle_2
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_2
       rect:
         serializedVersion: 2
         x: 1181
@@ -114,16 +148,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 24.944458, y: 28.444443}
-        - {x: 22.944458, y: 55.444443}
-        - {x: -25.055542, y: 55.444443}
-        - {x: -25.055542, y: -41.555557}
-        - {x: -13.055542, y: -54.555557}
-        - {x: 13.944458, y: -54.555557}
-        - {x: 25.944458, y: -42.555557}
-        - {x: 25.944458, y: -35.555557}
-    - name: Flora Idle_3
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_3
       rect:
         serializedVersion: 2
         x: 1694
@@ -133,16 +161,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.055542, y: 55.444443}
-        - {x: -24.055542, y: 45.444443}
-        - {x: -24.055542, y: -20.555557}
-        - {x: -15.055542, y: -54.555557}
-        - {x: 14.944458, y: -54.555557}
-        - {x: 23.944458, y: -46.555557}
-        - {x: 24.944458, y: -44.555557}
-        - {x: 24.944458, y: 55.444443}
-    - name: Flora Idle_4
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_4
       rect:
         serializedVersion: 2
         x: 2207
@@ -152,16 +174,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15.055542, y: 55.444443}
-        - {x: -24.055542, y: 45.444443}
-        - {x: -24.055542, y: -25.555557}
-        - {x: -18.055542, y: -54.555557}
-        - {x: 16.944458, y: -54.555557}
-        - {x: 24.944458, y: -48.555557}
-        - {x: 24.944458, y: 46.444443}
-        - {x: 23.944458, y: 55.444443}
-    - name: Flora Idle_5
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_5
       rect:
         serializedVersion: 2
         x: 2716
@@ -171,15 +187,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24.944458, y: 55.444443}
-        - {x: -24.944458, y: -41.555557}
-        - {x: -8.944458, y: -54.555557}
-        - {x: 22.055542, y: -54.555557}
-        - {x: 26.055542, y: -50.555557}
-        - {x: 26.055542, y: 37.444443}
-        - {x: 23.055542, y: 55.444443}
-    - name: Flora Idle_6
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_6
       rect:
         serializedVersion: 2
         x: 3229
@@ -189,15 +200,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.944458, y: 55.444443}
-        - {x: -24.944458, y: 53.444443}
-        - {x: -24.944458, y: -32.555557}
-        - {x: -8.944458, y: -54.555557}
-        - {x: 13.055542, y: -54.555557}
-        - {x: 26.055542, y: -43.555557}
-        - {x: 26.055542, y: 55.444443}
-    - name: Flora Idle_7
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_7
       rect:
         serializedVersion: 2
         x: 3742
@@ -207,13 +213,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -25.444458, y: 55.444443}
-        - {x: -25.444458, y: -36.555557}
-        - {x: -9.444458, y: -54.555557}
-        - {x: 26.555542, y: -54.555557}
-        - {x: 26.555542, y: 55.444443}
-    - name: Flora Idle_8
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_8
       rect:
         serializedVersion: 2
         x: 4255
@@ -223,16 +226,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 26.055542, y: 9.444443}
-        - {x: 24.055542, y: 55.444443}
-        - {x: -24.944458, y: 55.444443}
-        - {x: -24.944458, y: -33.555557}
-        - {x: -12.944458, y: -54.555557}
-        - {x: 9.055542, y: -54.555557}
-        - {x: 11.055542, y: -51.555557}
-        - {x: 26.055542, y: -43.555557}
-    - name: Flora Idle_9
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_9
       rect:
         serializedVersion: 2
         x: 4763
@@ -242,15 +239,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -25.555542, y: -13.444443}
-        - {x: -24.555542, y: -18.444443}
-        - {x: -6.555542, y: -54.444443}
-        - {x: 26.444458, y: -54.444443}
-        - {x: 26.444458, y: 55.555557}
-        - {x: -17.555542, y: 55.555557}
-        - {x: -25.555542, y: 42.555557}
-    - name: Flora Idle_10
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_10
       rect:
         serializedVersion: 2
         x: 5276
@@ -260,15 +252,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.055542, y: -54.444443}
-        - {x: 23.944458, y: -54.444443}
-        - {x: 25.944458, y: -50.444443}
-        - {x: 25.944458, y: 48.555557}
-        - {x: 21.944458, y: 55.555557}
-        - {x: -25.055542, y: 55.555557}
-        - {x: -25.055542, y: -41.444443}
-    - name: Flora Idle_11
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_11
       rect:
         serializedVersion: 2
         x: 5789
@@ -278,15 +265,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19.055542, y: 55.555557}
-        - {x: -25.055542, y: 42.555557}
-        - {x: -25.055542, y: -16.444443}
-        - {x: -18.055542, y: -54.444443}
-        - {x: 11.944458, y: -54.444443}
-        - {x: 25.944458, y: -45.444443}
-        - {x: 25.944458, y: 55.555557}
-    - name: Flora Idle_12
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_12
       rect:
         serializedVersion: 2
         x: 6302
@@ -296,13 +278,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24.055542, y: 55.055557}
-        - {x: -24.055542, y: -39.944443}
-        - {x: -8.055542, y: -53.944443}
-        - {x: 24.944458, y: -53.944443}
-        - {x: 24.944458, y: 55.055557}
-    - name: Flora Idle_13
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_13
       rect:
         serializedVersion: 2
         x: 6815
@@ -312,14 +291,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 24.944458, y: 55.055557}
-        - {x: -24.055542, y: 55.055557}
-        - {x: -24.055542, y: -31.944443}
-        - {x: -11.055542, y: -53.944443}
-        - {x: 13.944458, y: -53.944443}
-        - {x: 24.944458, y: -44.944443}
-    - name: Flora Idle_14
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_14
       rect:
         serializedVersion: 2
         x: 7324
@@ -329,14 +304,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24.944458, y: -46.444443}
-        - {x: -22.944458, y: -54.444443}
-        - {x: 26.055542, y: -54.444443}
-        - {x: 26.055542, y: 55.555557}
-        - {x: -17.944458, y: 55.555557}
-        - {x: -24.944458, y: 54.555557}
-    - name: Flora Idle_15
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_15
       rect:
         serializedVersion: 2
         x: 7837
@@ -346,15 +317,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.944458, y: 55.555557}
-        - {x: -24.944458, y: 54.555557}
-        - {x: -24.944458, y: -33.444443}
-        - {x: -11.944458, y: -54.444443}
-        - {x: 21.055542, y: -54.444443}
-        - {x: 26.055542, y: -49.444443}
-        - {x: 26.055542, y: 55.555557}
-    - name: Flora Idle_16
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_16
       rect:
         serializedVersion: 2
         x: 8350
@@ -364,16 +330,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -22.444458, y: 55.555557}
-        - {x: -25.444458, y: 51.555557}
-        - {x: -25.444458, y: -15.444443}
-        - {x: -10.444458, y: -54.444443}
-        - {x: 17.555542, y: -54.444443}
-        - {x: 26.555542, y: -49.444443}
-        - {x: 26.555542, y: 3.5555573}
-        - {x: 23.555542, y: 55.555557}
-    - name: Flora Idle_17
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flora Idle_17
       rect:
         serializedVersion: 2
         x: 8863
@@ -383,15 +343,8 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 21.055542, y: 55.555557}
-        - {x: -24.944458, y: 55.555557}
-        - {x: -24.944458, y: -32.444443}
-        - {x: -7.944458, y: -54.444443}
-        - {x: 19.055542, y: -54.444443}
-        - {x: 26.055542, y: -45.444443}
-        - {x: 26.055542, y: 21.555557}
-        - {x: 21.055542, y: 54.555557}
+      outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

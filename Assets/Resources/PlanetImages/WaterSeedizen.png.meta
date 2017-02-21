@@ -35,12 +35,12 @@ TextureImporter:
     21300056: WaterSeedizen_28
     21300058: WaterSeedizen_29
     21300060: WaterSeedizen_30
-  serializedVersion: 2
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -52,10 +52,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 8
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -2
   maxTextureSize: 4096
@@ -66,9 +64,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -76,12 +72,60 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 200
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: WaterSeedizen_0
+    - serializedVersion: 2
+      name: WaterSeedizen_0
       rect:
         serializedVersion: 2
         x: 122
@@ -91,14 +135,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31.470703, y: 108.09375}
-        - {x: -31.470703, y: 17.09375}
-        - {x: -11.470703, y: 0.09375}
-        - {x: 32.529297, y: 0.09375}
-        - {x: 32.529297, y: 100.09375}
-        - {x: 18.529297, y: 108.09375}
-    - name: WaterSeedizen_1
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_1
       rect:
         serializedVersion: 2
         x: 525
@@ -108,21 +148,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 18.499023, y: 6.055176}
-        - {x: 31.499023, y: 7.055176}
-        - {x: 32.499023, y: 8.055176}
-        - {x: 32.499023, y: 63.055176}
-        - {x: 14.499023, y: 109.055176}
-        - {x: -29.500977, y: 109.055176}
-        - {x: -31.500977, y: 104.055176}
-        - {x: -31.500977, y: 45.055176}
-        - {x: -20.500977, y: 0.05517578}
-        - {x: 7.4990234, y: 0.05517578}
-        - {x: 9.499023, y: 3.0551758}
-        - {x: 10.499023, y: 8.055176}
-        - {x: 15.499023, y: 6.055176}
-    - name: WaterSeedizen_2
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_2
       rect:
         serializedVersion: 2
         x: 928
@@ -132,16 +161,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -32.03125, y: 61.0166}
-        - {x: -18.03125, y: 0.016601562}
-        - {x: 18.96875, y: 0.016601562}
-        - {x: 32.96875, y: 8.016602}
-        - {x: 32.96875, y: 49.0166}
-        - {x: 14.96875, y: 108.0166}
-        - {x: 8.96875, y: 110.0166}
-        - {x: -32.03125, y: 110.0166}
-    - name: WaterSeedizen_3
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_3
       rect:
         serializedVersion: 2
         x: 1331
@@ -151,14 +174,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -25.561523, y: 0.016601562}
-        - {x: 32.438477, y: 0.016601562}
-        - {x: 32.438477, y: 58.0166}
-        - {x: 15.438477, y: 110.0166}
-        - {x: -31.561523, y: 110.0166}
-        - {x: -31.561523, y: 3.0166016}
-    - name: WaterSeedizen_4
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_4
       rect:
         serializedVersion: 2
         x: 1734
@@ -168,14 +187,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31.591797, y: 109.055176}
-        - {x: -31.591797, y: 14.055176}
-        - {x: -16.591797, y: 0.05517578}
-        - {x: 32.408203, y: 0.05517578}
-        - {x: 32.408203, y: 38.055176}
-        - {x: 20.408203, y: 109.055176}
-    - name: WaterSeedizen_5
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_5
       rect:
         serializedVersion: 2
         x: 2135
@@ -185,14 +200,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31.237305, y: 108.09375}
-        - {x: -31.237305, y: 9.09375}
-        - {x: -18.237305, y: 0.09375}
-        - {x: 32.762695, y: 0.09375}
-        - {x: 32.762695, y: 74.09375}
-        - {x: 18.762695, y: 108.09375}
-    - name: WaterSeedizen_6
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_6
       rect:
         serializedVersion: 2
         x: 2537
@@ -202,16 +213,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 8.924805, y: 108.09375}
-        - {x: -31.075195, y: 108.09375}
-        - {x: -31.075195, y: 63.09375}
-        - {x: -19.075195, y: 0.09375}
-        - {x: 20.924805, y: 0.09375}
-        - {x: 31.924805, y: 8.09375}
-        - {x: 31.924805, y: 28.09375}
-        - {x: 20.924805, y: 98.09375}
-    - name: WaterSeedizen_7
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_7
       rect:
         serializedVersion: 2
         x: 2940
@@ -221,16 +226,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30.605469, y: 108.09375}
-        - {x: -31.605469, y: 105.09375}
-        - {x: -31.605469, y: 50.09375}
-        - {x: -17.605469, y: 0.09375}
-        - {x: 19.394531, y: 0.09375}
-        - {x: 32.39453, y: 5.09375}
-        - {x: 32.39453, y: 45.09375}
-        - {x: 15.394531, y: 108.09375}
-    - name: WaterSeedizen_8
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_8
       rect:
         serializedVersion: 2
         x: 3343
@@ -240,17 +239,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 3.3642578, y: 108.09375}
-        - {x: -30.635742, y: 108.09375}
-        - {x: -31.635742, y: 106.09375}
-        - {x: -31.635742, y: 46.09375}
-        - {x: -20.635742, y: 0.09375}
-        - {x: 15.364258, y: 0.09375}
-        - {x: 32.364258, y: 9.09375}
-        - {x: 32.364258, y: 21.09375}
-        - {x: 20.364258, y: 99.09375}
-    - name: WaterSeedizen_9
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_9
       rect:
         serializedVersion: 2
         x: 3746
@@ -260,16 +252,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 5.3339844, y: 108.09375}
-        - {x: -31.666016, y: 108.09375}
-        - {x: -31.666016, y: 19.09375}
-        - {x: -11.666016, y: 0.09375}
-        - {x: 10.333984, y: 0.09375}
-        - {x: 32.333984, y: 9.09375}
-        - {x: 32.333984, y: 27.09375}
-        - {x: 19.333984, y: 99.09375}
-    - name: WaterSeedizen_10
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_10
       rect:
         serializedVersion: 2
         x: 4149
@@ -279,16 +265,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31.19629, y: 108.09375}
-        - {x: -31.19629, y: 22.09375}
-        - {x: -12.196289, y: 0.09375}
-        - {x: 20.80371, y: 0.09375}
-        - {x: 31.80371, y: 6.09375}
-        - {x: 31.80371, y: 32.09375}
-        - {x: 18.80371, y: 98.09375}
-        - {x: 12.803711, y: 108.09375}
-    - name: WaterSeedizen_11
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_11
       rect:
         serializedVersion: 2
         x: 4552
@@ -298,16 +278,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31.226562, y: 108.09375}
-        - {x: -31.226562, y: 44.09375}
-        - {x: -19.226562, y: 0.09375}
-        - {x: 26.773438, y: 0.09375}
-        - {x: 31.773438, y: 2.09375}
-        - {x: 31.773438, y: 50.09375}
-        - {x: 20.773438, y: 98.09375}
-        - {x: 8.7734375, y: 108.09375}
-    - name: WaterSeedizen_12
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_12
       rect:
         serializedVersion: 2
         x: 4951
@@ -317,18 +291,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 4.0126953, y: 108.09375}
-        - {x: -29.987305, y: 108.09375}
-        - {x: -31.987305, y: 101.09375}
-        - {x: -31.987305, y: 58.09375}
-        - {x: -23.987305, y: 19.09375}
-        - {x: -11.987305, y: 0.09375}
-        - {x: 12.012695, y: 0.09375}
-        - {x: 32.012695, y: 9.09375}
-        - {x: 32.012695, y: 28.09375}
-        - {x: 19.012695, y: 98.09375}
-    - name: WaterSeedizen_13
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_13
       rect:
         serializedVersion: 2
         x: 99
@@ -338,19 +304,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -23.545898, y: 22.982422}
-        - {x: -17.545898, y: -0.017578125}
-        - {x: -16.545898, y: -0.017578125}
-        - {x: -9.545898, y: 1.9824219}
-        - {x: -6.5458984, y: -0.017578125}
-        - {x: 21.454102, y: -0.017578125}
-        - {x: 29.454102, y: 1.9824219}
-        - {x: 29.454102, y: 30.982422}
-        - {x: 17.454102, y: 99.98242}
-        - {x: -28.545898, y: 99.98242}
-        - {x: -28.545898, y: 52.98242}
-    - name: WaterSeedizen_14
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_14
       rect:
         serializedVersion: 2
         x: 466
@@ -360,14 +317,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.65039, y: 97.98242}
-        - {x: -28.65039, y: 7.982422}
-        - {x: -22.65039, y: -0.017578125}
-        - {x: 29.34961, y: -0.017578125}
-        - {x: 29.34961, y: 64.98242}
-        - {x: 23.34961, y: 97.98242}
-    - name: WaterSeedizen_15
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_15
       rect:
         serializedVersion: 2
         x: 837
@@ -377,23 +330,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 22.475586, y: 4.0976562}
-        - {x: 29.475586, y: 7.0976562}
-        - {x: 29.475586, y: 23.097656}
-        - {x: 19.475586, y: 90.09766}
-        - {x: 4.475586, y: 99.09766}
-        - {x: -26.524414, y: 99.09766}
-        - {x: -28.524414, y: 88.09766}
-        - {x: -28.524414, y: 45.097656}
-        - {x: -27.524414, y: 31.097656}
-        - {x: -15.524414, y: 0.09765625}
-        - {x: -1.5244141, y: 0.09765625}
-        - {x: 1.4755859, y: 1.0976562}
-        - {x: 1.4755859, y: 4.0976562}
-        - {x: 5.475586, y: 0.09765625}
-        - {x: 13.475586, y: 0.09765625}
-    - name: WaterSeedizen_16
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_16
       rect:
         serializedVersion: 2
         x: 1207
@@ -403,17 +343,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27.206055, y: 100.05908}
-        - {x: -28.206055, y: 98.05908}
-        - {x: -28.206055, y: 47.059082}
-        - {x: -21.206055, y: 21.059082}
-        - {x: -12.206055, y: 0.05908203}
-        - {x: 28.793945, y: 0.05908203}
-        - {x: 28.793945, y: 46.059082}
-        - {x: 23.793945, y: 93.05908}
-        - {x: 8.793945, y: 100.05908}
-    - name: WaterSeedizen_17
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_17
       rect:
         serializedVersion: 2
         x: 1578
@@ -423,15 +356,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.580078, y: 99.90527}
-        - {x: -28.580078, y: 40.905273}
-        - {x: -14.580078, y: -0.09472656}
-        - {x: 29.419922, y: -0.09472656}
-        - {x: 29.419922, y: 30.905273}
-        - {x: 18.419922, y: 89.90527}
-        - {x: 3.4199219, y: 99.90527}
-    - name: WaterSeedizen_18
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_18
       rect:
         serializedVersion: 2
         x: 1948
@@ -441,14 +369,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.761719, y: 98.05908}
-        - {x: -28.761719, y: 7.059082}
-        - {x: -22.761719, y: 0.05908203}
-        - {x: 29.238281, y: 0.05908203}
-        - {x: 29.238281, y: 45.059082}
-        - {x: 16.238281, y: 98.05908}
-    - name: WaterSeedizen_19
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_19
       rect:
         serializedVersion: 2
         x: 2316
@@ -458,15 +382,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.558594, y: 97.98242}
-        - {x: -28.558594, y: 34.98242}
-        - {x: -21.558594, y: -0.017578125}
-        - {x: 29.441406, y: -0.017578125}
-        - {x: 29.441406, y: 53.98242}
-        - {x: 25.441406, y: 92.98242}
-        - {x: 10.441406, y: 97.98242}
-    - name: WaterSeedizen_20
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_20
       rect:
         serializedVersion: 2
         x: 2686
@@ -476,18 +395,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 3.2597656, y: 98.94385}
-        - {x: -27.740234, y: 98.94385}
-        - {x: -29.740234, y: 90.94385}
-        - {x: -29.740234, y: 39.943848}
-        - {x: -26.740234, y: 16.943848}
-        - {x: -13.740234, y: -0.056152344}
-        - {x: 19.259766, y: -0.056152344}
-        - {x: 30.259766, y: 7.9438477}
-        - {x: 30.259766, y: 15.943848}
-        - {x: 19.259766, y: 89.94385}
-    - name: WaterSeedizen_21
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_21
       rect:
         serializedVersion: 2
         x: 3057
@@ -497,18 +408,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.614258, y: 89.98242}
-        - {x: -28.614258, y: 61.98242}
-        - {x: -22.614258, y: 19.982422}
-        - {x: -6.614258, y: -0.017578125}
-        - {x: 29.385742, y: -0.017578125}
-        - {x: 29.385742, y: 76.98242}
-        - {x: 28.385742, y: 94.98242}
-        - {x: 11.385742, y: 99.98242}
-        - {x: -26.614258, y: 99.98242}
-        - {x: -27.614258, y: 98.98242}
-    - name: WaterSeedizen_22
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_22
       rect:
         serializedVersion: 2
         x: 3427
@@ -518,17 +421,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.795898, y: 99.98242}
-        - {x: -28.795898, y: 33.98242}
-        - {x: -24.795898, y: 8.982422}
-        - {x: -16.795898, y: -0.017578125}
-        - {x: 24.204102, y: -0.017578125}
-        - {x: 29.204102, y: 0.9824219}
-        - {x: 29.204102, y: 28.982422}
-        - {x: 16.204102, y: 88.98242}
-        - {x: 11.204102, y: 99.98242}
-    - name: WaterSeedizen_23
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_23
       rect:
         serializedVersion: 2
         x: 3794
@@ -538,16 +434,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 11.099609, y: 93.98242}
-        - {x: 3.0996094, y: 97.98242}
-        - {x: -28.90039, y: 97.98242}
-        - {x: -28.90039, y: 37.98242}
-        - {x: -19.90039, y: -0.017578125}
-        - {x: 29.09961, y: -0.017578125}
-        - {x: 29.09961, y: 30.982422}
-        - {x: 18.09961, y: 88.98242}
-    - name: WaterSeedizen_24
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_24
       rect:
         serializedVersion: 2
         x: 4165
@@ -557,17 +447,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 17.225586, y: 88.05908}
-        - {x: 10.225586, y: 95.05908}
-        - {x: 5.225586, y: 98.05908}
-        - {x: -28.774414, y: 98.05908}
-        - {x: -28.774414, y: 19.059082}
-        - {x: -12.774414, y: 0.05908203}
-        - {x: 18.225586, y: 0.05908203}
-        - {x: 29.225586, y: 5.059082}
-        - {x: 29.225586, y: 24.059082}
-    - name: WaterSeedizen_25
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_25
       rect:
         serializedVersion: 2
         x: 4535
@@ -577,17 +460,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27.456055, y: 100.05908}
-        - {x: -28.456055, y: 98.05908}
-        - {x: -28.456055, y: 47.059082}
-        - {x: -21.456055, y: 21.059082}
-        - {x: -12.456055, y: 0.05908203}
-        - {x: 28.543945, y: 0.05908203}
-        - {x: 28.543945, y: 46.059082}
-        - {x: 23.543945, y: 93.05908}
-        - {x: 8.543945, y: 100.05908}
-    - name: WaterSeedizen_26
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_26
       rect:
         serializedVersion: 2
         x: 4906
@@ -597,15 +473,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.830078, y: 100.05908}
-        - {x: -28.830078, y: 20.059082}
-        - {x: -7.830078, y: 0.05908203}
-        - {x: 29.169922, y: 0.05908203}
-        - {x: 29.169922, y: 41.059082}
-        - {x: 24.169922, y: 92.05908}
-        - {x: 12.169922, y: 100.05908}
-    - name: WaterSeedizen_27
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_27
       rect:
         serializedVersion: 2
         x: 5276
@@ -615,16 +486,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15.488281, y: 98.05908}
-        - {x: -28.511719, y: 98.05908}
-        - {x: -28.511719, y: 22.059082}
-        - {x: -14.511719, y: 0.05908203}
-        - {x: 19.488281, y: 0.05908203}
-        - {x: 30.488281, y: 6.059082}
-        - {x: 30.488281, y: 24.059082}
-        - {x: 21.488281, y: 73.05908}
-    - name: WaterSeedizen_28
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_28
       rect:
         serializedVersion: 2
         x: 5644
@@ -634,15 +499,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.808594, y: 97.98242}
-        - {x: -28.808594, y: 34.98242}
-        - {x: -21.808594, y: -0.017578125}
-        - {x: 29.191406, y: -0.017578125}
-        - {x: 29.191406, y: 53.98242}
-        - {x: 25.191406, y: 92.98242}
-        - {x: 10.191406, y: 97.98242}
-    - name: WaterSeedizen_29
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_29
       rect:
         serializedVersion: 2
         x: 6014
@@ -652,18 +512,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 17.009766, y: 88.98242}
-        - {x: 4.0097656, y: 97.98242}
-        - {x: -28.990234, y: 97.98242}
-        - {x: -29.990234, y: 91.98242}
-        - {x: -29.990234, y: 10.982422}
-        - {x: -16.990234, y: -0.017578125}
-        - {x: 26.009766, y: -0.017578125}
-        - {x: 29.009766, y: 1.9824219}
-        - {x: 30.009766, y: 4.982422}
-        - {x: 30.009766, y: 24.982422}
-    - name: WaterSeedizen_30
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: WaterSeedizen_30
       rect:
         serializedVersion: 2
         x: 6385
@@ -673,14 +525,8 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.864258, y: 99.90527}
-        - {x: -28.864258, y: 14.905273}
-        - {x: -13.864258, y: -0.09472656}
-        - {x: 29.135742, y: -0.09472656}
-        - {x: 29.135742, y: 43.905273}
-        - {x: 23.135742, y: 92.90527}
-        - {x: 9.135742, y: 99.90527}
+      outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

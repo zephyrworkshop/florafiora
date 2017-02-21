@@ -30,12 +30,12 @@ TextureImporter:
     21300046: FireSeedizen_23
     21300048: FireSeedizen_24
     21300050: FireSeedizen_25
-  serializedVersion: 2
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -47,10 +47,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 8
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -2
   maxTextureSize: 4096
@@ -61,9 +59,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -71,12 +67,60 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 210
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 8192
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: FireSeedizen_0
+    - serializedVersion: 2
+      name: FireSeedizen_0
       rect:
         serializedVersion: 2
         x: 137
@@ -86,15 +130,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -36.87793, y: 159.9253}
-        - {x: -39.87793, y: 149.9253}
-        - {x: -39.87793, y: 14.925293}
-        - {x: -22.87793, y: -0.07470703}
-        - {x: 29.12207, y: -0.07470703}
-        - {x: 41.12207, y: 2.925293}
-        - {x: 41.12207, y: 159.9253}
-    - name: FireSeedizen_1
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_1
       rect:
         serializedVersion: 2
         x: 647
@@ -104,16 +143,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24.043945, y: 159.9253}
-        - {x: -40.043945, y: 145.9253}
-        - {x: -40.043945, y: 13.925293}
-        - {x: -28.043945, y: -0.07470703}
-        - {x: 27.956055, y: -0.07470703}
-        - {x: 40.956055, y: 5.925293}
-        - {x: 40.956055, y: 154.9253}
-        - {x: 33.956055, y: 159.9253}
-    - name: FireSeedizen_2
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_2
       rect:
         serializedVersion: 2
         x: 1157
@@ -123,15 +156,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -39.70996, y: 161.9253}
-        - {x: -39.70996, y: 7.925293}
-        - {x: -15.709961, y: -0.07470703}
-        - {x: 11.290039, y: -0.07470703}
-        - {x: 40.29004, y: 17.925293}
-        - {x: 40.29004, y: 151.9253}
-        - {x: 35.29004, y: 161.9253}
-    - name: FireSeedizen_3
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_3
       rect:
         serializedVersion: 2
         x: 1667
@@ -141,25 +169,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 30.124023, y: 124.7583}
-        - {x: 28.124023, y: 124.7583}
-        - {x: 32.124023, y: 125.7583}
-        - {x: 35.124023, y: 127.7583}
-        - {x: 33.124023, y: 133.7583}
-        - {x: 39.124023, y: 141.7583}
-        - {x: 40.124023, y: 146.7583}
-        - {x: 40.124023, y: 149.7583}
-        - {x: 29.124023, y: 162.7583}
-        - {x: -16.875977, y: 162.7583}
-        - {x: -39.875977, y: 153.7583}
-        - {x: -39.875977, y: 22.7583}
-        - {x: -22.875977, y: -0.24169922}
-        - {x: 19.124023, y: -0.24169922}
-        - {x: 40.124023, y: 11.758301}
-        - {x: 40.124023, y: 125.7583}
-        - {x: 31.124023, y: 125.7583}
-    - name: FireSeedizen_4
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_4
       rect:
         serializedVersion: 2
         x: 2180
@@ -169,17 +182,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24.042969, y: 160.9248}
-        - {x: -40.04297, y: 145.9248}
-        - {x: -40.04297, y: 26.924805}
-        - {x: -32.04297, y: 16.924805}
-        - {x: -13.042969, y: -0.07519531}
-        - {x: 15.957031, y: -0.07519531}
-        - {x: 41.95703, y: 13.924805}
-        - {x: 41.95703, y: 154.9248}
-        - {x: 26.957031, y: 160.9248}
-    - name: FireSeedizen_5
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_5
       rect:
         serializedVersion: 2
         x: 2693
@@ -189,14 +195,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40.20996, y: 160.9248}
-        - {x: -40.20996, y: 13.924805}
-        - {x: -24.20996, y: -0.07519531}
-        - {x: 17.79004, y: -0.07519531}
-        - {x: 41.79004, y: 14.924805}
-        - {x: 41.79004, y: 160.9248}
-    - name: FireSeedizen_6
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_6
       rect:
         serializedVersion: 2
         x: 3209
@@ -206,15 +208,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -25.87793, y: 159.9253}
-        - {x: -39.87793, y: 142.9253}
-        - {x: -39.87793, y: 10.925293}
-        - {x: -19.87793, y: -0.07470703}
-        - {x: 22.12207, y: -0.07470703}
-        - {x: 41.12207, y: 19.925293}
-        - {x: 41.12207, y: 159.9253}
-    - name: FireSeedizen_7
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_7
       rect:
         serializedVersion: 2
         x: 3722
@@ -224,21 +221,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 39.95508, y: 140.9253}
-        - {x: 40.95508, y: 141.9253}
-        - {x: 40.95508, y: 158.9253}
-        - {x: 37.95508, y: 159.9253}
-        - {x: -31.044922, y: 159.9253}
-        - {x: -38.04492, y: 156.9253}
-        - {x: -40.04492, y: 130.9253}
-        - {x: -40.04492, y: 16.925293}
-        - {x: -32.04492, y: -0.07470703}
-        - {x: 21.955078, y: -0.07470703}
-        - {x: 40.95508, y: 6.925293}
-        - {x: 40.95508, y: 125.92529}
-        - {x: 31.955078, y: 131.9253}
-    - name: FireSeedizen_8
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_8
       rect:
         serializedVersion: 2
         x: 4235
@@ -248,13 +234,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 40.288086, y: 160.9248}
-        - {x: -39.711914, y: 160.9248}
-        - {x: -39.711914, y: -0.07519531}
-        - {x: 13.288086, y: -0.07519531}
-        - {x: 40.288086, y: 19.924805}
-    - name: FireSeedizen_9
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_9
       rect:
         serializedVersion: 2
         x: 4748
@@ -264,17 +247,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30.378906, y: 160.9248}
-        - {x: -39.378906, y: 158.9248}
-        - {x: -39.378906, y: 28.924805}
-        - {x: -30.378906, y: 21.924805}
-        - {x: -27.378906, y: 22.924805}
-        - {x: -20.378906, y: -0.07519531}
-        - {x: 13.621094, y: -0.07519531}
-        - {x: 39.621094, y: 19.924805}
-        - {x: 39.621094, y: 160.9248}
-    - name: FireSeedizen_10
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_10
       rect:
         serializedVersion: 2
         x: 5261
@@ -284,14 +260,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -38.0459, y: 160.9248}
-        - {x: -38.0459, y: 16.924805}
-        - {x: -25.045898, y: -0.07519531}
-        - {x: 13.954102, y: -0.07519531}
-        - {x: 40.9541, y: 11.924805}
-        - {x: 40.9541, y: 160.9248}
-    - name: FireSeedizen_11
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_11
       rect:
         serializedVersion: 2
         x: 5768
@@ -301,26 +273,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -37.710938, y: 159.9253}
-        - {x: -38.710938, y: 156.9253}
-        - {x: -38.710938, y: 26.925293}
-        - {x: -33.710938, y: 23.925293}
-        - {x: -25.710938, y: 19.925293}
-        - {x: -23.710938, y: 24.925293}
-        - {x: -23.710938, y: 27.925293}
-        - {x: -23.710938, y: 26.925293}
-        - {x: -21.710938, y: 21.925293}
-        - {x: -16.710938, y: 1.925293}
-        - {x: -7.7109375, y: -0.07470703}
-        - {x: -6.7109375, y: -0.07470703}
-        - {x: -4.7109375, y: 3.925293}
-        - {x: -2.7109375, y: 0.92529297}
-        - {x: -1.7109375, y: -0.07470703}
-        - {x: 12.2890625, y: -0.07470703}
-        - {x: 41.289062, y: 13.925293}
-        - {x: 41.289062, y: 159.9253}
-    - name: FireSeedizen_12
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_12
       rect:
         serializedVersion: 2
         x: 143
@@ -330,13 +286,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.379883, y: 141.08496}
-        - {x: -35.379883, y: 0.08496094}
-        - {x: 31.620117, y: 0.08496094}
-        - {x: 36.620117, y: 7.084961}
-        - {x: 36.620117, y: 141.08496}
-    - name: FireSeedizen_13
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_13
       rect:
         serializedVersion: 2
         x: 581
@@ -346,29 +299,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 36.47754, y: 58.08545}
-        - {x: 36.47754, y: 109.08545}
-        - {x: 29.47754, y: 109.08545}
-        - {x: 28.47754, y: 108.08545}
-        - {x: 25.47754, y: 108.08545}
-        - {x: 27.47754, y: 108.08545}
-        - {x: 31.47754, y: 111.08545}
-        - {x: 29.47754, y: 117.08545}
-        - {x: 35.47754, y: 123.08545}
-        - {x: 35.47754, y: 131.08545}
-        - {x: 28.47754, y: 137.08545}
-        - {x: 22.47754, y: 140.08545}
-        - {x: -14.522461, y: 140.08545}
-        - {x: -27.52246, y: 139.08545}
-        - {x: -35.52246, y: 116.08545}
-        - {x: -35.52246, y: 13.085449}
-        - {x: -19.52246, y: 0.08544922}
-        - {x: 23.47754, y: 0.08544922}
-        - {x: 32.47754, y: 11.085449}
-        - {x: 34.47754, y: 18.08545}
-        - {x: 34.47754, y: 27.08545}
-    - name: FireSeedizen_14
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_14
       rect:
         serializedVersion: 2
         x: 1019
@@ -378,16 +312,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.665039, y: 140.91943}
-        - {x: -24.66504, y: 136.91943}
-        - {x: -35.66504, y: 117.91943}
-        - {x: -35.66504, y: 11.919434}
-        - {x: -32.66504, y: -0.080566406}
-        - {x: 27.33496, y: -0.080566406}
-        - {x: 36.33496, y: 2.9194336}
-        - {x: 36.33496, y: 140.91943}
-    - name: FireSeedizen_15
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_15
       rect:
         serializedVersion: 2
         x: 1460
@@ -397,14 +325,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.308594, y: 143.08594}
-        - {x: -35.308594, y: 16.085938}
-        - {x: -15.308594, y: 0.0859375}
-        - {x: 28.691406, y: 0.0859375}
-        - {x: 35.691406, y: 2.0859375}
-        - {x: 35.691406, y: 143.08594}
-    - name: FireSeedizen_16
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_16
       rect:
         serializedVersion: 2
         x: 1898
@@ -414,17 +338,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.451172, y: 143.25244}
-        - {x: -29.451172, y: 141.25244}
-        - {x: -35.45117, y: 131.25244}
-        - {x: -35.45117, y: 8.252441}
-        - {x: -6.451172, y: 0.2524414}
-        - {x: 26.548828, y: 0.2524414}
-        - {x: 35.54883, y: 7.2524414}
-        - {x: 35.54883, y: 140.25244}
-        - {x: 26.548828, y: 143.25244}
-    - name: FireSeedizen_17
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_17
       rect:
         serializedVersion: 2
         x: 2774
@@ -434,15 +351,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -29.736328, y: 0.084472656}
-        - {x: 31.263672, y: 0.084472656}
-        - {x: 37.26367, y: 1.0844727}
-        - {x: 37.26367, y: 140.08447}
-        - {x: -33.73633, y: 140.08447}
-        - {x: -35.73633, y: 139.08447}
-        - {x: -35.73633, y: 8.084473}
-    - name: FireSeedizen_18
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_18
       rect:
         serializedVersion: 2
         x: 3215
@@ -452,13 +364,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.379883, y: 141.08496}
-        - {x: -35.379883, y: 4.084961}
-        - {x: -25.379883, y: 0.08496094}
-        - {x: 36.620117, y: 0.08496094}
-        - {x: 36.620117, y: 141.08496}
-    - name: FireSeedizen_19
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_19
       rect:
         serializedVersion: 2
         x: 3653
@@ -468,19 +377,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.52246, y: 140.08447}
-        - {x: -35.52246, y: 19.084473}
-        - {x: -28.52246, y: 16.084473}
-        - {x: -24.52246, y: 17.084473}
-        - {x: -22.52246, y: 19.084473}
-        - {x: -8.522461, y: 2.0844727}
-        - {x: -5.522461, y: 0.084472656}
-        - {x: 7.477539, y: 0.084472656}
-        - {x: 36.47754, y: 11.084473}
-        - {x: 36.47754, y: 138.08447}
-        - {x: 34.47754, y: 140.08447}
-    - name: FireSeedizen_20
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_20
       rect:
         serializedVersion: 2
         x: 4091
@@ -490,21 +390,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 23.33496, y: 141.08594}
-        - {x: 2.334961, y: 141.08594}
-        - {x: -22.66504, y: 135.08594}
-        - {x: -25.66504, y: 131.08594}
-        - {x: -29.66504, y: 124.08594}
-        - {x: -33.66504, y: 111.08594}
-        - {x: -33.66504, y: 106.08594}
-        - {x: -35.66504, y: 78.08594}
-        - {x: -35.66504, y: 17.085938}
-        - {x: -29.66504, y: 0.0859375}
-        - {x: 36.33496, y: 0.0859375}
-        - {x: 36.33496, y: 133.08594}
-        - {x: 34.33496, y: 134.08594}
-    - name: FireSeedizen_21
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_21
       rect:
         serializedVersion: 2
         x: 4532
@@ -514,17 +403,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31.308594, y: 142.08545}
-        - {x: -35.308594, y: 140.08545}
-        - {x: -35.308594, y: 20.08545}
-        - {x: -27.308594, y: 18.08545}
-        - {x: -24.308594, y: 19.08545}
-        - {x: -14.308594, y: 0.08544922}
-        - {x: 22.691406, y: 0.08544922}
-        - {x: 35.691406, y: 10.085449}
-        - {x: 35.691406, y: 142.08545}
-    - name: FireSeedizen_22
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_22
       rect:
         serializedVersion: 2
         x: 4970
@@ -534,18 +416,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 23.548828, y: 143.25244}
-        - {x: -9.451172, y: 143.25244}
-        - {x: -28.451172, y: 141.25244}
-        - {x: -35.45117, y: 130.25244}
-        - {x: -35.45117, y: 9.252441}
-        - {x: -6.451172, y: 0.2524414}
-        - {x: 34.54883, y: 0.2524414}
-        - {x: 35.54883, y: 1.2524414}
-        - {x: 35.54883, y: 135.25244}
-        - {x: 28.548828, y: 141.25244}
-    - name: FireSeedizen_23
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_23
       rect:
         serializedVersion: 2
         x: 5846
@@ -555,17 +429,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19.736328, y: 140.08447}
-        - {x: -33.73633, y: 135.08447}
-        - {x: -34.73633, y: 118.08447}
-        - {x: -34.73633, y: 9.084473}
-        - {x: -26.736328, y: 0.084472656}
-        - {x: 36.26367, y: 0.084472656}
-        - {x: 37.26367, y: 4.0844727}
-        - {x: 37.26367, y: 136.08447}
-        - {x: 33.26367, y: 140.08447}
-    - name: FireSeedizen_24
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_24
       rect:
         serializedVersion: 2
         x: 2336
@@ -575,14 +442,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11.09375, y: 141.08594}
-        - {x: -35.09375, y: 132.08594}
-        - {x: -35.09375, y: 0.0859375}
-        - {x: 36.90625, y: 0.0859375}
-        - {x: 36.90625, y: 137.08594}
-        - {x: 31.90625, y: 141.08594}
-    - name: FireSeedizen_25
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FireSeedizen_25
       rect:
         serializedVersion: 2
         x: 5405
@@ -592,13 +455,8 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.592773, y: 141.08594}
-        - {x: -34.592773, y: 131.08594}
-        - {x: -34.592773, y: 0.0859375}
-        - {x: 37.407227, y: 0.0859375}
-        - {x: 37.407227, y: 140.08594}
-        - {x: 36.407227, y: 141.08594}
+      outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 
